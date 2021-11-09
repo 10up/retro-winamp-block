@@ -12,5 +12,6 @@
 	"textdomain": "webamp-block",
 	"editorScript": "file:./build/index.js",
 	"editorStyle": "file:./build/index.css",
+	"script": "webamp-block-frontend",
 	"style": "file:./build/style-index.css"
 }
