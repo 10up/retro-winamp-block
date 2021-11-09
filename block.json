@@ -6,6 +6,12 @@
 	"category": "widgets",
 	"icon": "smiley",
 	"description": "Example block written with ESNext standard and JSX support – build step required.",
+	"attributes": {
+		"currentSkin": {
+			"type": "string",
+			"default": ""
+		}
+	},
 	"supports": {
 		"html": false
 	},

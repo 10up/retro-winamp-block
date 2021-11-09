@@ -2,9 +2,14 @@ import Webamp from "webamp";
 import domReady from "@wordpress/dom-ready";
 
 domReady(() => {
-	console.log(document.querySelector(".wp-block-tenup-webamp-block"));
+	const container = document.querySelector(".wp-block-tenup-webamp-block");
 
-	new Webamp({
+	if (!container) {
+		return;
+	}
+
+	const skin = container.dataset.skin || "";
+	const options = {
 		initialTracks: [
 			{
 				metaData: {
@@ -19,5 +24,16 @@ domReady(() => {
 				duration: 5.322286,
 			},
 		],
-	}).renderWhenReady(document.querySelector(".wp-block-tenup-webamp-block"));
+	};
+
+	if (skin) {
+		const match = skin.match(/(?:https?:)?(?:\/\/)?skins\.webamp\.org\/skin\/(\w+)\/(?:.*)?/);
+		if (match && match.length === 2) {
+			options.initialSkin = {
+				url: `https://cdn.webampskins.org/skins/${match[1]}.wsz`
+			}
+		}
+	};
+
+	new Webamp(options).renderWhenReady(container);
 });
