@@ -37,14 +37,14 @@ const PLACEHOLDER_TEXT = Platform.isNative
  *
  * @return {WPElement} Element to render.
  */
-export default function Edit({
+export default function Edit( {
 	attributes,
 	clientId,
 	isSelected,
 	noticeOperations,
 	noticeUI,
 	setAttributes,
-}) {
+} ) {
 
 	const { currentSkin } = attributes;
 	const blockProps = useBlockProps();
@@ -196,6 +196,7 @@ export default function Edit({
 			{ noticeUI }
 			<Audio
 				audio={ audio }
+				currentSkin={ currentSkin }
 				mediaPlaceholder={ mediaPlaceholder }
 				blockProps={ blockProps }
 			/>

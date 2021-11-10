@@ -10,19 +10,24 @@ import { __experimentalUseInnerBlocksProps as useInnerBlocksProps } from '@wordp
 import { __ } from '@wordpress/i18n';
 import { View } from '@wordpress/primitives';
 
+/**
+ * Internal dependencies
+ */
+import WebAmp from './webamp';
+
 const allowedBlocks = [ 'core/audio' ];
 
 export const Audio = ( props ) => {
 	const {
+		audio,
+		currentSkin,
 		mediaPlaceholder,
 		blockProps,
 	} = props;
 
 	const { children, ...innerBlocksProps } = useInnerBlocksProps( blockProps, {
 		allowedBlocks,
-		orientation: 'horizontal',
 		renderAppender: false,
-		__experimentalLayout: { type: 'default', alignments: [] },
 	} );
 
 	return (
@@ -30,9 +35,11 @@ export const Audio = ( props ) => {
 			{ ...innerBlocksProps }
 			className={ classnames(
 				blockProps.className,
-				'blocks-audio-grid',
+				'blocks-audio-list',
 			) }
 		>
+			<WebAmp audio={ audio } currentSkin={ currentSkin } />
+
 			{ children }
 
 			<View
