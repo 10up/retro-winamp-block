@@ -24,6 +24,7 @@ domReady(() => {
 				duration: 5.322286,
 			},
 		],
+		initialSkin: {},
 	};
 
 	if (skin) {

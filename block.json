@@ -3,8 +3,8 @@
 	"name": "tenup/webamp-block",
 	"version": "0.1.0",
 	"title": "Webamp Block",
-	"category": "widgets",
-	"icon": "smiley",
+	"category": "media",
+	"icon": "playlist-audio",
 	"description": "Example block written with ESNext standard and JSX support – build step required.",
 	"attributes": {
 		"currentSkin": {

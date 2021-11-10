@@ -4,7 +4,7 @@
  *
  * @see https://developer.wordpress.org/block-editor/packages/packages-block-editor/#useBlockProps
  */
-import { useBlockProps } from "@wordpress/block-editor";
+import { InnerBlocks, useBlockProps } from "@wordpress/block-editor";
 
 /**
  * The save function defines the way in which the different attributes should
@@ -16,5 +16,9 @@ import { useBlockProps } from "@wordpress/block-editor";
  * @return {WPElement} Element to render.
  */
 export default function save({ attributes }) {
-	return <div {...useBlockProps.save()} data-skin={attributes.currentSkin}></div>;
+	return (
+		<figure { ...useBlockProps.save() } data-skin={ attributes.currentSkin }>
+			<InnerBlocks.Content />
+		</figure>
+	);
 }
