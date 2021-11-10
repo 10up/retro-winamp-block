@@ -4,29 +4,31 @@ import domReady from "@wordpress/dom-ready";
 domReady(() => {
 	const container = document.querySelector(".wp-block-tenup-webamp-block");
 
+	// Ensure our container exists
 	if (!container) {
 		return;
 	}
 
-	const skin = container.dataset.skin || "";
+	// Ensure we actually have some audio to play
+	const audioElements = container.querySelectorAll("audio");
+	if (!audioElements) {
+		return;
+	}
+
 	const options = {
-		initialTracks: [
-			{
-				metaData: {
-					artist: "DJ Mike Llama",
-					title: "Llama Whippin' Intro",
-				},
-				// NOTE: Your audio file must be served from the same domain as your HTML
-				// file, or served with permissive CORS HTTP headers:
-				// https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
-				url:
-					"https://cdn.jsdelivr.net/gh/captbaritone/webamp@43434d82cfe0e37286dbbe0666072dc3190a83bc/mp3/llama-2.91.mp3",
-				duration: 5.322286,
-			},
-		],
-		initialSkin: {},
+		initialTracks: []
 	};
 
+	audioElements.forEach(audio => options.initialTracks.push( { url: audio.src } ));
+
+	// Ensure our audio tracks were added correctly
+	if (options.initialTracks.length === 0) {
+		return;
+	}
+
+	const skin = container.dataset.skin || "";
+
+	// Add the custom skin if it was set
 	if (skin) {
 		const match = skin.match(/(?:https?:)?(?:\/\/)?skins\.webamp\.org\/skin\/(\w+)\/(?:.*)?/);
 		if (match && match.length === 2) {
@@ -36,5 +38,6 @@ domReady(() => {
 		}
 	};
 
+	// Render the player
 	new Webamp(options).renderWhenReady(container);
 });

@@ -38,7 +38,7 @@ const PLACEHOLDER_TEXT = Platform.isNative
  * @return {WPElement} Element to render.
  */
 export default function Edit({
-	attributes: { currentSkin },
+	attributes,
 	clientId,
 	isSelected,
 	noticeOperations,
@@ -46,6 +46,7 @@ export default function Edit({
 	setAttributes,
 }) {
 
+	const { currentSkin } = attributes;
 	const blockProps = useBlockProps();
 	const { replaceInnerBlocks } = useDispatch( blockEditorStore );
 
@@ -61,7 +62,7 @@ export default function Edit({
 			innerBlockAudio?.map( ( block ) => ( {
 				clientId: block.clientId,
 				id: block.attributes.id,
-				url: block.attributes.url,
+				url: block.attributes.src,
 				attributes: block.attributes,
 				fromSavedContent: Boolean( block.originalContent ),
 			} ) ),
@@ -89,12 +90,6 @@ export default function Edit({
 
 		const audioArray = newFileUploads
 			? Array.from( selectedAudio ).map( ( file ) => {
-					if ( ! file.url ) {
-						return pickRelevantMediaFiles( {
-							url: createBlobURL( file ),
-						} );
-					}
-
 					return file;
 			  } )
 			: selectedAudio;
@@ -110,12 +105,6 @@ export default function Edit({
 		const processedAudio = audioArray
 			.filter( ( file ) => file.url || isValidFileType( file ) )
 			.map( ( file ) => {
-				if ( ! file.url ) {
-					return pickRelevantMediaFiles( {
-						url: createBlobURL( file ),
-					} );
-				}
-
 				return file;
 			} );
 
@@ -168,9 +157,9 @@ export default function Edit({
 
 	const mediaPlaceholder = (
 		<MediaPlaceholder
-			icon="format-audio"
+			addToGallery={ hasAudioIds }
+			icon={ ! hasAudio && "format-audio" }
 			onSelect={ onSelectAudio }
-			handleUpload={ false }
 			isAppender={ hasAudio }
 			disableMediaButtons={
 				( hasAudio && ! isSelected ) || audioUploading
@@ -181,7 +170,7 @@ export default function Edit({
 			} }
 			accept="audio/*"
 			allowedTypes={ ALLOWED_MEDIA_TYPES }
-			multiple
+			multiple={ true }
 			value={ hasAudioIds ? audio : {} }
 			onError={ onUploadError }
 			notices={ hasAudio ? undefined : noticeUI }

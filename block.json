@@ -7,6 +7,27 @@
 	"icon": "playlist-audio",
 	"description": "Example block written with ESNext standard and JSX support – build step required.",
 	"attributes": {
+		"audio": {
+			"type": "array",
+			"default": [],
+			"source": "query",
+			"selector": ".blocks-audio-grid",
+			"query": {
+				"url": {
+					"type": "string",
+					"source": "attribute",
+					"selector": "audio",
+					"attribute": "src"
+				}
+			}
+		},
+		"ids": {
+			"type": "array",
+			"items": {
+				"type": "number"
+			},
+			"default": []
+		},
 		"currentSkin": {
 			"type": "string",
 			"default": ""
