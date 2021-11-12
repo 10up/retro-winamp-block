@@ -19,6 +19,7 @@ import "./style.scss";
  */
 import Edit from "./edit";
 import save from "./save";
+import { LightningIcon } from './icon';
 
 /**
  * Every block starts by registering a new block type definition.
@@ -26,6 +27,8 @@ import save from "./save";
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
  */
 registerBlockType("tenup/webamp-block", {
+
+	icon: LightningIcon,
 	/**
 	 * @see ./edit.js
 	 */
