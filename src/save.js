@@ -15,6 +15,6 @@ import { useBlockProps } from "@wordpress/block-editor";
  *
  * @return {WPElement} Element to render.
  */
-export default function save() {
-	return <div {...useBlockProps.save()}></div>;
+export default function save({ attributes }) {
+	return <div {...useBlockProps.save()} data-skin={attributes.currentSkin}></div>;
 }

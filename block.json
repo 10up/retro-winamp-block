@@ -6,11 +6,18 @@
 	"category": "widgets",
 	"icon": "smiley",
 	"description": "A Winamp-styled audio block for all your retro music player needs.",
+	"attributes": {
+		"currentSkin": {
+			"type": "string",
+			"default": ""
+		}
+	},
 	"supports": {
 		"html": false
 	},
 	"textdomain": "webamp-block",
 	"editorScript": "file:./build/index.js",
 	"editorStyle": "file:./build/index.css",
+	"script": "webamp-block-frontend",
 	"style": "file:./build/style-index.css"
 }

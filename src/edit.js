@@ -1,24 +1,6 @@
-/**
- * Retrieves the translation of text.
- *
- * @see https://developer.wordpress.org/block-editor/packages/packages-i18n/
- */
 import { __ } from '@wordpress/i18n';
-
-/**
- * React hook that is used to mark the block wrapper element.
- * It provides all the necessary props like the class name.
- *
- * @see https://developer.wordpress.org/block-editor/packages/packages-block-editor/#useBlockProps
- */
-import { useBlockProps } from '@wordpress/block-editor';
-
-/**
- * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
- * Those files can contain any CSS code that gets applied to the editor.
- *
- * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
- */
+import { PanelBody, TextControl } from '@wordpress/components';
+import { useBlockProps, InspectorControls } from '@wordpress/block-editor';
 import './editor.scss';
 
 /**
@@ -29,9 +11,22 @@ import './editor.scss';
  *
  * @return {WPElement} Element to render.
  */
-export default function Edit() {
+export default function Edit({
+	attributes: { currentSkin },
+	setAttributes,
+}) {
 	return (
 		<p { ...useBlockProps() }>
+			<InspectorControls key="skin">
+				<PanelBody title={ __( 'Skin', 'webamp-block' ) }>
+					<TextControl
+						label={ __( 'Skin URL', 'webamp-block' ) }
+						help={ __( 'The URL of the skin to use. Find skins at https://skins.webamp.org/', 'webamp-block' ) }
+						value={ currentSkin }
+						onChange={ skin => setAttributes( { currentSkin: skin } ) }
+					/>
+				</PanelBody>
+			</InspectorControls>
 			{ __( 'Webamp Block – hello from the editor!', 'webamp-block' ) }
 		</p>
 	);

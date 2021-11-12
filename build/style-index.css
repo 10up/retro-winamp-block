@@ -8,9 +8,10 @@
  * Replace them with your own styles or remove the file completely.
  */
 .wp-block-tenup-webamp-block {
-  background-color: #21759b;
+  background-color: transparent;
   color: #fff;
   padding: 2px;
+  min-height: 350px;
 }
 
 /*# sourceMappingURL=style-index.css.map*/

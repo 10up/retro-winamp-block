@@ -22,17 +22,24 @@
  *
  * @see https://developer.wordpress.org/block-editor/tutorials/block-tutorial/writing-your-first-block-type/
  */
-add_action( 'init', function () {
-	register_block_type( __DIR__ );
-} );
+add_action(
+	'init',
+	function () {
+		register_block_type( __DIR__ );
+	}
+);
 
-add_action( 'wp_enqueue_scripts', function () {
-	$asset_file = include( plugin_dir_path( __FILE__ ) . 'build/frontend.asset.php');
+add_action(
+	'wp_enqueue_scripts',
+	function () {
+		$asset_file = include plugin_dir_path( __FILE__ ) . 'build/frontend.asset.php';
 
-	wp_enqueue_script(
-		'webamp-block-frontend',
-		plugins_url( 'build/frontend.js', __FILE__ ),
-		$asset_file['dependencies'],
-        $asset_file['version']
-	);
-} );
+		wp_register_script(
+			'webamp-block-frontend',
+			plugins_url( 'build/frontend.js', __FILE__ ),
+			$asset_file['dependencies'],
+			$asset_file['version'],
+			true
+		);
+	}
+);

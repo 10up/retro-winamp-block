@@ -8,6 +8,7 @@
 	"scripts": {
 		"build": "wp-scripts build ",
 		"format": "wp-scripts format",
+		"wp-env": "wp-env",
 		"lint:css": "wp-scripts lint-style",
 		"lint:js": "wp-scripts lint-js",
 		"start": "wp-scripts start",
@@ -20,6 +21,7 @@
 		"webamp": "^1.5.0"
 	},
 	"devDependencies": {
+		"@wordpress/env": "^4.1.2",
 		"@wordpress/scripts": "^19.0.0"
 	}
 }
