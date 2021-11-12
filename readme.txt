@@ -44,4 +44,4 @@ Details on how to create a new skin is available [here](https://github.com/WACUP
 == Changelog ==
 
 = 0.1.0 =
-* Initial plugin release! 🎉
+* Initial release of the Webamp Block plugin. 🎉
