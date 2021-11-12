@@ -20,6 +20,7 @@ import "./style.scss";
 import Edit from "./edit";
 import save from "./save";
 import metadata from '../block.json';
+import { LightningIcon } from './icon';
 
 /**
  * Every block starts by registering a new block type definition.
@@ -27,6 +28,7 @@ import metadata from '../block.json';
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
  */
 registerBlockType( metadata, {
+	icon: LightningIcon,
 	/**
 	 * @see ./edit.js
 	 */

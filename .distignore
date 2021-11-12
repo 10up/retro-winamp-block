@@ -1,0 +1,21 @@
+# Directories
+/.git
+/.github
+/.wordpress-org
+/node_modules
+/src
+/vendor
+
+# Files
+.distignore
+.editorconfig
+.gitignore
+CHANGELOG.md
+CODE_OF_CONDUCT.md
+CONTRIBUTING.md
+CREDITS.md
+LICENSE.md
+package-lock.json
+package.json
+README.md
+webpack.config.js
