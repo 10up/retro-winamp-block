@@ -1,16 +1,18 @@
 <?php
 /**
  * Plugin Name:       Webamp Block
- * Description:       Example block written with ESNext standard and JSX support – build step required.
- * Requires at least: 5.8
- * Requires PHP:      7.0
+ * Plugin URI:        https://wordpress.org/plugins/webamp-block/
+ * Description:       A Winamp-styled audio block for all your retro music player needs.
  * Version:           0.1.0
- * Author:            The WordPress Contributors
- * License:           GPL-2.0-or-later
+ * Requires at least: 5.2
+ * Requires PHP:      7.2
+ * Author:            10up
+ * Author URI:        https://10up.com
+ * License:           GPL v2 or later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       webamp-block
  *
- * @package           tenup
+ * @package           tenup\Webamp_Block
  */
 
 /**
