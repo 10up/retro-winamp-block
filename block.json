@@ -5,7 +5,7 @@
 	"title": "Webamp Block",
 	"category": "widgets",
 	"icon": "smiley",
-	"description": "Example block written with ESNext standard and JSX support – build step required.",
+	"description": "A Winamp-styled audio block for all your retro music player needs.",
 	"supports": {
 		"html": false
 	},
