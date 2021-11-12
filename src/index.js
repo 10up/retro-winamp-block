@@ -19,6 +19,7 @@ import "./style.scss";
  */
 import Edit from "./edit";
 import save from "./save";
+import metadata from '../block.json';
 import { LightningIcon } from './icon';
 
 /**
@@ -26,8 +27,7 @@ import { LightningIcon } from './icon';
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
  */
-registerBlockType("tenup/webamp-block", {
-
+registerBlockType( metadata, {
 	icon: LightningIcon,
 	/**
 	 * @see ./edit.js
@@ -38,4 +38,4 @@ registerBlockType("tenup/webamp-block", {
 	 * @see ./save.js
 	 */
 	save,
-});
+} );
