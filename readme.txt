@@ -39,7 +39,7 @@ Details on how to create a new skin is available [here](https://github.com/WACUP
 == Screenshots ==
 
 1. The Winamp player with the base, default skin.
-2. Webamp Block settings showing the Skin URL setting to update to alternate Winamp skins.
+2. Webamp Block settings showing the Skin URL setting updated to an alternate Winamp skin.
 
 == Changelog ==
 
