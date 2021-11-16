@@ -5,9 +5,19 @@
  * Replace them with your own styles or remove the file completely.
  */
 
+.editor-styles-wrapper {
+	.wp-block-tenup-webamp-block audio {
+		display: block;
+	}
+}
+
 .wp-block-tenup-webamp-block {
 	background-color: transparent;
-	color: #fff;
+	color: #aaa;
 	padding: 2px;
 	min-height: 350px;
+
+	audio {
+		display: none;
+	}
 }
