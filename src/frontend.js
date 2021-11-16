@@ -19,7 +19,7 @@ domReady(() => {
 		initialTracks: []
 	};
 
-	audioElements.forEach(audio => options.initialTracks.push( { url: audio.src } ));
+	audioElements.forEach(audio => options.initialTracks.push( { url: audio.dataset.src } ));
 
 	// Ensure our audio tracks were added correctly
 	if (options.initialTracks.length === 0) {
