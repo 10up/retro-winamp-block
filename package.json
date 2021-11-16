@@ -2,9 +2,18 @@
 	"name": "webamp-block",
 	"version": "0.1.0",
 	"description": "A Winamp-styled audio block for all your retro music player needs.",
-	"author": "The WordPress Contributors",
+	"author": {
+      "name": "10up",
+      "email": "opensource@10up.com",
+      "url": "https://10up.com",
+      "role": "developer"
+    },
 	"license": "GPL-2.0-or-later",
 	"main": "build/index.js",
+	"repository": {
+      "type": "git",
+      "url": "https://github.com/10up/webamp-block"
+    },
 	"scripts": {
 		"build": "wp-scripts build ",
 		"format": "wp-scripts format",
