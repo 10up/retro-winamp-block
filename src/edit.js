@@ -26,8 +26,8 @@ import Audio from './audio';
 
 const ALLOWED_MEDIA_TYPES = [ 'audio' ];
 const PLACEHOLDER_TEXT = Platform.isNative
-	? __( 'ADD MEDIA', 'webamp-block' )
-	: __( 'To view the Webamp player, drag audio files, upload new ones, or select files from your library.', 'webamp-block' );
+	? __( 'ADD MEDIA', 'winamp-block' )
+	: __( 'To view the Winamp player, drag audio files, upload new ones, or select files from your library.', 'winamp-block' );
 
 /**
  * The edit function describes the structure of your block in the context of the
@@ -97,8 +97,8 @@ export default function Edit( {
 		if ( ! audioArray.every( isValidFileType ) ) {
 			noticeOperations.removeAllNotices();
 			noticeOperations.createErrorNotice(
-				__( 'All files need to be in an audio format', 'webamp-block' ),
-				{ id: 'webamp-upload-invalid-file' }
+				__( 'All files need to be in an audio format', 'winamp-block' ),
+				{ id: 'winamp-upload-invalid-file' }
 			);
 		}
 
@@ -165,7 +165,7 @@ export default function Edit( {
 				( hasAudio && ! isSelected ) || audioUploading
 			}
 			labels={ {
-				title: ! hasAudio && __( 'Add Audio', 'webamp-block' ),
+				title: ! hasAudio && __( 'Add Audio', 'winamp-block' ),
 				instructions: ! hasAudio && PLACEHOLDER_TEXT,
 			} }
 			accept="audio/*"
@@ -184,10 +184,10 @@ export default function Edit( {
 	return (
 		<>
 			<InspectorControls>
-				<PanelBody title={ __( 'Webamp Player Skin', 'webamp-block' ) }>
+				<PanelBody title={ __( 'Winamp Player Skin', 'winamp-block' ) }>
 					<TextControl
-						label={ __( 'Skin URL', 'webamp-block' ) }
-						help={ __( 'The URL of the player skin to use. Find skins at https://skins.webamp.org/.', 'webamp-block' ) }
+						label={ __( 'Skin URL', 'winamp-block' ) }
+						help={ __( 'The URL of the player skin to use. Find skins at https://skins.webamp.org/.', 'winamp-block' ) }
 						value={ currentSkin }
 						onChange={ skin => setAttributes( { currentSkin: skin } ) }
 					/>

@@ -1,7 +1,7 @@
 <?php
 /**
- * Plugin Name:       Webamp Block
- * Plugin URI:        https://wordpress.org/plugins/webamp-block/
+ * Plugin Name:       Winamp Block
+ * Plugin URI:        https://wordpress.org/plugins/winamp-block/
  * Description:       A Winamp-styled audio block for all your retro music player needs.
  * Version:           0.1.0
  * Requires at least: 5.2
@@ -10,9 +10,9 @@
  * Author URI:        https://10up.com
  * License:           GPL v2 or later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:       webamp-block
+ * Text Domain:       winamp-block
  *
- * @package           tenup\Webamp_Block
+ * @package           tenup\Winamp_Block
  */
 
 /**
@@ -35,7 +35,7 @@ add_action(
 		$asset_file = include plugin_dir_path( __FILE__ ) . 'build/frontend.asset.php';
 
 		wp_register_script(
-			'webamp-block-frontend',
+			'winamp-block-frontend',
 			plugins_url( 'build/frontend.js', __FILE__ ),
 			$asset_file['dependencies'],
 			$asset_file['version'],

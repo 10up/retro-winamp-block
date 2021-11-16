@@ -1,6 +1,6 @@
-=== Webamp Block ===
+=== Winamp Block ===
 Contributors:      10up, dinhtungdu, fabiankaegy, dkotter, melchoyce, jeffpaul
-Tags:              webamp, winamp, mp3, music, audio, player, playlist, equalizer, block
+Tags:              winamp, webamp, mp3, music, audio, player, playlist, equalizer, block
 Requires at least: 5.2
 Tested up to:      5.8
 Stable tag:        0.1.0
@@ -24,24 +24,24 @@ Do you miss the days of filling up your computer's harddrive with MP3 files, bur
 
 == Changing Player Skins ==
 
-In order to select alternate player skins, browse [the Winamp Skin Museum](https://skins.webamp.org/) and find a preferred skin, copy the URL of the specific skin (e.g., https://skins.webamp.org/skin/bb0bf8064d108271afea419308dcb6ea/NES_Duck_Hunt.wsz/), and paste that URL in the `Skin URL` field in the Webamp Block Skin settings.
+In order to select alternate player skins, browse [the Winamp Skin Museum](https://skins.webamp.org/) and find a preferred skin, copy the URL of the specific skin (e.g., https://skins.webamp.org/skin/bb0bf8064d108271afea419308dcb6ea/NES_Duck_Hunt.wsz/), and paste that URL in the `Skin URL` field in the Winamp Block Skin settings.
 
 == Frequently Asked Questions ==
 
 = This is amazing, how can I help contribute to this plugin? =
 
-Great question and I could not agree with you more!  You can help contribute to this [Webamp Block plugin on GitHub](https://github.com/10up/webamp-block) or to the [Webamp project on GitHub](https://github.com/captbaritone/webamp).
+Great question and I could not agree with you more!  You can help contribute to this [Winamp Block plugin on GitHub](https://github.com/10up/winamp-block) or to the [Webamp project on GitHub](https://github.com/captbaritone/webamp).
 
 = Ok this is making me nostalgic, how can I submit a new skin for the player? =
 
-Details on how to create a new skin is available [here](https://github.com/WACUP/Winamp-Skinning-Archive/blob/master/Classic%20Skins/Winamp_skinning_tutorial_1_5_0.pdf).  I would recommend downloading the [base Winamp skin](https://skins.webamp.org/skin/5e4f10275dcb1fb211d4a8b4f1bda236/base-2.91.wsz/), renaming the file extension from .WSZ to .ZIP, unzipping that file and inspecting all the bitmap and textfiles.  Then use your favorite design program to craft a skin design, cut it up into the component bitmap parts, add your info to the relevant textfiles, then ZIP all that up and rename the extension to WSZ.  Finally, [upload your custom skin](https://skins.webamp.org/upload/) to the Winamp Skin Museum and once its accepted you'll be able to reference it within the Webamp Block's Skin settings.  Good luck!
+Details on how to create a new skin is available [here](https://github.com/WACUP/Winamp-Skinning-Archive/blob/master/Classic%20Skins/Winamp_skinning_tutorial_1_5_0.pdf).  We recommend downloading the [base Winamp skin](https://skins.webamp.org/skin/5e4f10275dcb1fb211d4a8b4f1bda236/base-2.91.wsz/), renaming the file extension from .WSZ to .ZIP, unzipping that file and inspecting all the bitmap and textfiles.  Then use your favorite design program to craft a skin design, cut it up into the component bitmap parts, add your info to the relevant textfiles, then ZIP all that up and rename the extension to WSZ.  Finally, [upload your custom skin](https://skins.webamp.org/upload/) to the Winamp Skin Museum and once its accepted you'll be able to reference it within the Winamp Block's Skin settings.  Good luck!
 
 == Screenshots ==
 
 1. The Winamp player with the base, default skin.
-2. Webamp Block settings showing the Skin URL setting updated to an alternate Winamp skin.
+2. Winamp Block settings showing the Skin URL setting updated to an alternate Winamp skin.
 
 == Changelog ==
 
 = 0.1.0 =
-* Initial release of the Webamp Block plugin. 🎉
+* Initial release of the Winamp Block plugin. 🎉
