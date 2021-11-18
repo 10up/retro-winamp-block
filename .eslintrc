@@ -1,5 +1,4 @@
 {
 	"extends": [ "plugin:@wordpress/eslint-plugin/recommended" ],
-	"ignorePatterns": ["**/vendor/**"],
-	"parserOptions": { "requireConfigFile" : false }
+	"ignorePatterns": ["**/vendor/**"]
 }
