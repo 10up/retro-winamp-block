@@ -7,16 +7,18 @@ import { concat } from 'lodash';
  * WordPress dependencies
  */
 import { __ } from '@wordpress/i18n';
+import { compose } from '@wordpress/compose';
 import { createBlock } from '@wordpress/blocks';
-import { PanelBody, TextControl } from '@wordpress/components';
+import { PanelBody, TextControl, withNotices } from '@wordpress/components';
 import {
 	useBlockProps,
 	InspectorControls,
 	store as blockEditorStore,
-	MediaPlaceholder
+	MediaPlaceholder,
 } from '@wordpress/block-editor';
 import { useSelect, useDispatch } from '@wordpress/data';
 import { Platform, useMemo } from '@wordpress/element';
+import { createBlobURL } from '@wordpress/blob';
 
 /**
  * Internal dependencies
@@ -38,7 +40,7 @@ const PLACEHOLDER_TEXT = Platform.isNative
  *
  * @return {WPElement} Element to render.
  */
-export default function Edit( {
+function Edit( {
 	attributes,
 	clientId,
 	isSelected,
@@ -85,36 +87,32 @@ export default function Edit( {
 		( audioItem ) => ! audioItem.id && audioItem.url?.indexOf( 'blob:' ) === 0
 	);
 
-	function isValidFileType( file ) {
-		return (
-			ALLOWED_MEDIA_TYPES.some(
-				( mediaType ) => file.type?.indexOf( mediaType ) === 0
-			) || file.url?.indexOf( 'blob:' ) === 0
-		);
-	}
-
 	function onSelectAudio( selectedAudio ) {
 		const newFileUploads =
 			Object.prototype.toString.call( selectedAudio ) ===
-			'[object FileList]';
+			'[object Array]';
 
 		const audioArray = newFileUploads
 			? Array.from( selectedAudio ).map( ( file ) => {
-					return file;
+				if ( ! file.url ) {
+					return {
+						url: createBlobURL( file ),
+					};
+				}
+
+				return file;
 			  } )
 			: selectedAudio;
 
-		if ( ! audioArray.every( isValidFileType ) ) {
-			noticeOperations.removeAllNotices();
-			noticeOperations.createErrorNotice(
-				__( 'All files need to be in an audio format', 'winamp-block' ),
-				{ id: 'winamp-upload-invalid-file' }
-			);
-		}
-
 		const processedAudio = audioArray
-			.filter( ( file ) => file.url || isValidFileType( file ) )
+			.filter( ( file ) => file.url )
 			.map( ( file ) => {
+				if ( ! file.url ) {
+					return {
+						url: createBlobURL( file ),
+					};
+				}
+
 				return file;
 			} );
 
@@ -213,3 +211,5 @@ export default function Edit( {
 		</>
 	);
 }
+
+export default compose( withNotices )( Edit );
