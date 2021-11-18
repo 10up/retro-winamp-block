@@ -34,23 +34,11 @@ export const WebAmp = ( props ) => {
 		const player = new Webamp( options );
 		setWebamp( player );
 		player.renderWhenReady( divRef.current );
+
+		return () => {
+			player.dispose();
+		};
 	}, [ divRef.current ] );
-
-	// Add/remove tracks as they change
-	useEffect( () => {
-		const audioUploading = audio.some(
-			( audioItem ) => ! audioItem.id && audioItem.url?.indexOf( 'blob:' ) === 0
-		);
-
-		if ( webamp === null || audioUploading ) {
-			return;
-		}
-
-		const tracks = [];
-		audio.forEach( audio => tracks.push( { url: audio.url } ) );
-		webamp.setTracksToPlay( tracks );
-		webamp.stop();
-	}, audio );
 
 	// Change the skin as it changes
 	useEffect( () => {
@@ -63,7 +51,9 @@ export const WebAmp = ( props ) => {
 			if ( match && match.length === 2 ) {
 				webamp.setSkinFromUrl( `https://cdn.webampskins.org/skins/${match[1]}.wsz` );
 			}
-		};
+		} else {
+			webamp.setSkinFromUrl( 'https://cdn.webampskins.org/skins/5e4f10275dcb1fb211d4a8b4f1bda236.wsz' );
+		}
 	}, [ currentSkin ] );
 
 	return (
