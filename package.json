@@ -20,7 +20,6 @@
 		"wp-env": "wp-env",
 		"lint:css": "wp-scripts lint-style",
 		"lint:js": "wp-scripts lint-js",
-		"lint": "./node_modules/eslint/bin/eslint.js --ext js,jsx,ts,tsx src/",
 		"start": "wp-scripts start",
 		"packages-update": "wp-scripts packages-update"
 	},
