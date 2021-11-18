@@ -43,5 +43,5 @@ Details on how to create a new skin is available [here](https://github.com/WACUP
 
 == Changelog ==
 
-= 0.1.0 =
+= 1.0.0 =
 * Initial release of the Winamp Block plugin. 🎉
