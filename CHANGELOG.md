@@ -7,5 +7,5 @@ All notable changes to this project will be documented in this file, per [the Ke
 ## [1.0.0] - 2021-11-18
 - Initial release of the Winamp Block plugin. 🎉
 
-[Unreleased]: https://github.com/10up/winamp-block/compare/trunk...develop
-[1.0.0]: https://github.com/10up/winamp-block/tree/COMMIT-HASH-HERE
+[Unreleased]: https://github.com/10up/retro-winamp-block/compare/trunk...develop
+[1.0.0]: https://github.com/10up/retro-winamp-block/tree/COMMIT-HASH-HERE
