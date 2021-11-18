@@ -31,6 +31,15 @@
 		"currentSkin": {
 			"type": "string",
 			"default": ""
+		},
+		"preview": {
+			"type": "boolean",
+			"default": false
+		}
+	},
+	"example": {
+		"attributes": {
+			"preview" : true
 		}
 	},
 	"supports": {

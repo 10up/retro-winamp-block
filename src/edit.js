@@ -23,6 +23,7 @@ import { Platform, useMemo } from '@wordpress/element';
  */
 import './editor.scss';
 import Audio from './audio';
+import previewImg from '../assets/default-player.jpg';
 
 const ALLOWED_MEDIA_TYPES = [ 'audio' ];
 const PLACEHOLDER_TEXT = Platform.isNative
@@ -46,7 +47,16 @@ export default function Edit( {
 	setAttributes,
 } ) {
 
-	const { currentSkin } = attributes;
+	const { currentSkin, preview } = attributes;
+
+	if ( preview && previewImg ) {
+		return(
+			<>
+				<img src={ previewImg } alt={ __( 'Winamp Player', 'winamp-block' ) } />
+			</>
+		);
+	}
+
 	const blockProps = useBlockProps();
 	const { replaceInnerBlocks } = useDispatch( blockEditorStore );
 
