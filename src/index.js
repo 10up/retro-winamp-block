@@ -3,7 +3,7 @@
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
  */
-import { registerBlockType } from "@wordpress/blocks";
+import { registerBlockType } from '@wordpress/blocks';
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -12,20 +12,23 @@ import { registerBlockType } from "@wordpress/blocks";
  *
  * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
  */
-import "./style.scss";
+import './style.scss';
 
 /**
  * Internal dependencies
  */
-import Edit from "./edit";
-import save from "./save";
+import Edit from './edit';
+import save from './save';
+import metadata from '../block.json';
+import { LightningIcon } from './icon';
 
 /**
  * Every block starts by registering a new block type definition.
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
  */
-registerBlockType("tenup/webamp-block", {
+registerBlockType( metadata, {
+	icon: LightningIcon,
 	/**
 	 * @see ./edit.js
 	 */
@@ -35,4 +38,4 @@ registerBlockType("tenup/webamp-block", {
 	 * @see ./save.js
 	 */
 	save,
-});
+} );
