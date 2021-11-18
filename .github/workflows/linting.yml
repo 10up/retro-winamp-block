@@ -34,7 +34,7 @@ jobs:
         uses: 10up/wpcs-action@stable
         with:
           standard: 'WordPress'
-  phpcs:
+  vipcs:
       name: VIPCS
       runs-on: ubuntu-latest
       steps:
