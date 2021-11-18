@@ -1,4 +1,4 @@
-import { useEffect, useState } from '@wordpress/element';
+import { useEffect, useState, useRef } from '@wordpress/element';
 import Webamp from "webamp";
 
 export const WebAmp = ( props ) => {
@@ -6,7 +6,7 @@ export const WebAmp = ( props ) => {
 		audio = [],
 		currentSkin = '',
 	} = props;
-	const [ divRef, setDivRef ] = useState( null );
+	const divRef = useRef( null );
 	const [ webamp, setWebamp ] = useState( null );
 
 	// Initial player load
@@ -33,12 +33,8 @@ export const WebAmp = ( props ) => {
 
 		const player = new Webamp( options );
 		setWebamp( player );
-		player.renderWhenReady( divRef );
-
-		return () => {
-			player.dispose();
-		};
-	}, [ divRef ] );
+		player.renderWhenReady( divRef.current );
+	}, [ divRef.current ] );
 
 	// Add/remove tracks as they change
 	useEffect( () => {
@@ -67,7 +63,7 @@ export const WebAmp = ( props ) => {
 	}, [ currentSkin ] );
 
 	return (
-		<div style={{"minHeight": "350px"}} ref={ setDivRef } />
+		<div ref={ divRef } />
 	);
 }
 

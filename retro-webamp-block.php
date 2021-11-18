@@ -25,10 +25,21 @@
 add_action(
 	'init',
 	function () {
-		register_block_type( __DIR__ );
+		register_block_type(
+			__DIR__,
+			[
+				'render_callback' => function( $attributes = [], $content = '' ) {
+					// Replace src with data-src to avoid loading the file.
+					return str_replace( 'src="', 'data-src="', $content );
+				},
+			]
+		);
 	}
 );
 
+/**
+ * Register our script.
+ */
 add_action(
 	'wp_enqueue_scripts',
 	function () {
