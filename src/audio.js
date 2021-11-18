@@ -6,8 +6,10 @@ import classnames from 'classnames';
 /**
  * WordPress dependencies
  */
-import { __experimentalUseInnerBlocksProps as useInnerBlocksProps } from '@wordpress/block-editor';
+import { __experimentalUseInnerBlocksProps as useInnerBlocksProps, BlockControls } from '@wordpress/block-editor';
 import { __ } from '@wordpress/i18n';
+import { ToolbarButton, ToolbarGroup } from '@wordpress/components';
+import { useState } from '@wordpress/element';
 import { View } from '@wordpress/primitives';
 
 /**
@@ -25,10 +27,20 @@ export const Audio = ( props ) => {
 		blockProps,
 	} = props;
 
+	const [ isPreview, setIsPreview ] = useState();
+
 	const { children, ...innerBlocksProps } = useInnerBlocksProps( blockProps, {
 		allowedBlocks,
 		renderAppender: false,
 	} );
+
+	function switchToPreview() {
+		setIsPreview( true );
+	}
+
+	function switchToList() {
+		setIsPreview( false );
+	}
 
 	return (
 		<figure
@@ -38,15 +50,38 @@ export const Audio = ( props ) => {
 				'blocks-audio-list',
 			) }
 		>
-			<WebAmp audio={ audio } currentSkin={ currentSkin } />
+			<BlockControls>
+				<ToolbarGroup>
+					<ToolbarButton
+						className="components-tab-button"
+						isPressed={ ! isPreview }
+						onClick={ switchToList }
+					>
+						<span>{ __( 'Audio List', 'winamp-block' ) }</span>
+					</ToolbarButton>
+					<ToolbarButton
+						className="components-tab-button"
+						isPressed={ isPreview }
+						onClick={ switchToPreview }
+					>
+						<span>{ __( 'Preview Player', 'winamp-block' ) }</span>
+					</ToolbarButton>
+				</ToolbarGroup>
+			</BlockControls>
 
-			{ children }
+			{ isPreview  ? (
+				<WebAmp audio={ audio } currentSkin={ currentSkin } />
+			) : (
+				<>
+					{ children }
 
-			<View
-				className="blocks-winamp-media-placeholder-wrapper"
-			>
-				{ mediaPlaceholder }
-			</View>
+					<View
+						className="blocks-winamp-media-placeholder-wrapper"
+					>
+						{ mediaPlaceholder }
+					</View>
+				</>
+			) }
 		</figure>
 	);
 };

@@ -34,6 +34,10 @@ export const WebAmp = ( props ) => {
 		const player = new Webamp( options );
 		setWebamp( player );
 		player.renderWhenReady( divRef.current );
+
+		return () => {
+			player.dispose();
+		};
 	}, [ divRef.current ] );
 
 	// Add/remove tracks as they change
