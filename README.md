@@ -1,8 +1,8 @@
-# Webamp Block for WordPress
+# Winamp Block for WordPress
 
 > A Winamp-styled audio block for all your retro music player needs.
 
-[![Support Level](https://img.shields.io/badge/support-active-green.svg)](#support-level) [![Release Version](https://img.shields.io/github/release/10up/webamp-block.svg)](https://github.com/10up/webamp-block/releases/latest) ![WordPress tested up to version](https://img.shields.io/badge/WordPress-v5.8%20tested-success.svg) [![GPLv2 License](https://img.shields.io/github/license/10up/webamp-block.svg)](https://github.com/10up/webamp-block/blob/develop/LICENSE.md)
+[![Support Level](https://img.shields.io/badge/support-active-green.svg)](#support-level) [![Release Version](https://img.shields.io/github/release/10up/winamp-block.svg)](https://github.com/10up/winamp-block/releases/latest) ![WordPress tested up to version](https://img.shields.io/badge/WordPress-v5.8%20tested-success.svg) [![GPLv2 License](https://img.shields.io/github/license/10up/winamp-block.svg)](https://github.com/10up/winamp-block/blob/develop/LICENSE.md)
 
 ## Overview
 
@@ -10,7 +10,7 @@ Do you miss the days of filling up your computer's harddrive with MP3 files, bur
 
 **Disclaimer:** _[Winamp](https://en.wikipedia.org/wiki/Winamp) and the Winamp logo are property of [Nullsoft Inc.](https://en.wikipedia.org/wiki/Nullsoft) and its owner [Radionomy Group](https://en.wikipedia.org/wiki/Radionomy) (now defunct).  This project also leverages the [MIT-licensed](https://github.com/captbaritone/webamp/blob/master/LICENSE.txt) [Webamp player](https://webamp.org/), many thanks to  Jordan Eldredge for his efforts there._
 
-![Webamp Block](.wordpress-org/screenshot-1.png "The Winamp player with the base, default skin.")
+![Winamp Block](.wordpress-org/screenshot-1.png "The Winamp player with the base, default skin.")
 
 ## Requirements
 
@@ -25,19 +25,19 @@ Do you miss the days of filling up your computer's harddrive with MP3 files, bur
 
 ## Changing Player Skins
 
-In order to select alternate player skins, browse [the Winamp Skin Museum](https://skins.webamp.org/) and find a preferred skin, copy the URL of the specific skin (e.g., https://skins.webamp.org/skin/bb0bf8064d108271afea419308dcb6ea/NES_Duck_Hunt.wsz/), and paste that URL in the `Skin URL` field in the Webamp Block Skin settings.
+In order to select alternate player skins, browse [the Winamp Skin Museum](https://skins.webamp.org/) and find a preferred skin, copy the URL of the specific skin (e.g., https://skins.webamp.org/skin/bb0bf8064d108271afea419308dcb6ea/NES_Duck_Hunt.wsz/), and paste that URL in the `Skin URL` field in the Winamp Block Skin settings.
 
-![Webamp Block settings](.wordpress-org/screenshot-2.png "Webamp Block settings showing the Skin URL setting updated to an alternate Winamp skin.")
+![Winamp Block settings](.wordpress-org/screenshot-2.png "Winamp Block settings showing the Skin URL setting updated to an alternate Winamp skin.")
 
 ## Frequently Asked Questions
 
 ### This is amazing, how can I help contribute to this plugin?
 
-Great question and I could not agree with you more!  You can help contribute to this [Webamp Block plugin on GitHub](https://github.com/10up/webamp-block) or to the [Webamp project on GitHub](https://github.com/captbaritone/webamp).
+Great question and I could not agree with you more!  You can help contribute to this [Winamp Block plugin on GitHub](https://github.com/10up/winamp-block) or to the [Webamp project on GitHub](https://github.com/captbaritone/webamp).
 
 ### Ok this is making me nostalgic, how can I submit a new skin for the player?
 
-Details on how to create a new skin is available [here](https://github.com/WACUP/Winamp-Skinning-Archive/blob/master/Classic%20Skins/Winamp_skinning_tutorial_1_5_0.pdf).  I would recommend downloading the [base Winamp skin](https://skins.webamp.org/skin/5e4f10275dcb1fb211d4a8b4f1bda236/base-2.91.wsz/), renaming the file extension from .WSZ to .ZIP, unzipping that file and inspecting all the bitmap and textfiles.  Then use your favorite design program to craft a skin design, cut it up into the component bitmap parts, add your info to the relevant textfiles, then ZIP all that up and rename the extension to WSZ.  Finally, [upload your custom skin](https://skins.webamp.org/upload/) to the Winamp Skin Museum and once its accepted you'll be able to reference it within the Webamp Block's Skin settings.  Good luck!
+Details on how to create a new skin is available [here](https://github.com/WACUP/Winamp-Skinning-Archive/blob/master/Classic%20Skins/Winamp_skinning_tutorial_1_5_0.pdf).  We recommend downloading the [base Winamp skin](https://skins.webamp.org/skin/5e4f10275dcb1fb211d4a8b4f1bda236/base-2.91.wsz/), renaming the file extension from .WSZ to .ZIP, unzipping that file and inspecting all the bitmap and textfiles.  Then use your favorite design program to craft a skin design, cut it up into the component bitmap parts, add your info to the relevant textfiles, then ZIP all that up and rename the extension to WSZ.  Finally, [upload your custom skin](https://skins.webamp.org/upload/) to the Winamp Skin Museum and once its accepted you'll be able to reference it within the Winamp Block's Skin settings.  Good luck!
 
 ## Support Level
 
@@ -45,11 +45,11 @@ Details on how to create a new skin is available [here](https://github.com/WACUP
 
 ## Changelog
 
-A complete listing of all notable changes to Webamp Block are documented in [CHANGELOG.md](https://github.com/10up/webamp-block/blob/develop/CHANGELOG.md).
+A complete listing of all notable changes to Winamp Block for WordPress are documented in [CHANGELOG.md](https://github.com/10up/winamp-block/blob/develop/CHANGELOG.md).
 
 ## Contributing
 
-Please read [CODE_OF_CONDUCT.md](https://github.com/10up/webamp-block/blob/develop/CODE_OF_CONDUCT.md) for details on our code of conduct, [CONTRIBUTING.md](https://github.com/10up/webamp-block/blob/develop/CONTRIBUTING.md) for details on the process for submitting pull requests to us, and [CREDITS.md](https://github.com/10up/webamp-block/blob/develop/CREDITS.md) for a listing of maintainers of, contributors to, and libraries used by Apple Maps for WordPress.
+Please read [CODE_OF_CONDUCT.md](https://github.com/10up/winamp-block/blob/develop/CODE_OF_CONDUCT.md) for details on our code of conduct, [CONTRIBUTING.md](https://github.com/10up/winamp-block/blob/develop/CONTRIBUTING.md) for details on the process for submitting pull requests to us, and [CREDITS.md](https://github.com/10up/winamp-block/blob/develop/CREDITS.md) for a listing of maintainers of, contributors to, and libraries used by Winamp Block for WordPress.
 
 ## Like what you see?
 

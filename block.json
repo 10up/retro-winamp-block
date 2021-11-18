@@ -1,8 +1,8 @@
 {
 	"apiVersion": 2,
-	"name": "tenup/webamp-block",
+	"name": "tenup/winamp-block",
 	"version": "0.1.0",
-	"title": "Webamp Block",
+	"title": "Winamp Block",
 	"category": "media",
 	"icon": "playlist-audio",
 	"description": "A Winamp-styled audio block for all your retro music player needs.",
@@ -36,9 +36,9 @@
 	"supports": {
 		"html": false
 	},
-	"textdomain": "webamp-block",
+	"textdomain": "winamp-block",
 	"editorScript": "file:./build/index.js",
 	"editorStyle": "file:./build/index.css",
-	"script": "webamp-block-frontend",
+	"script": "winamp-block-frontend",
 	"style": "file:./build/style-index.css"
 }

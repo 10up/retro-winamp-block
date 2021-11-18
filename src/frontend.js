@@ -2,7 +2,7 @@ import Webamp from "webamp";
 import domReady from "@wordpress/dom-ready";
 
 domReady(() => {
-	const container = document.querySelector(".wp-block-tenup-webamp-block");
+	const container = document.querySelector(".wp-block-tenup-winamp-block");
 
 	// Ensure our container exists
 	if (!container) {

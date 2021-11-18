@@ -43,7 +43,7 @@ export const Audio = ( props ) => {
 			{ children }
 
 			<View
-				className="blocks-webamp-media-placeholder-wrapper"
+				className="blocks-winamp-media-placeholder-wrapper"
 			>
 				{ mediaPlaceholder }
 			</View>
