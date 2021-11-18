@@ -38,7 +38,11 @@ export const WebAmp = ( props ) => {
 
 	// Add/remove tracks as they change
 	useEffect( () => {
-		if ( webamp === null ) {
+		const audioUploading = audio.some(
+			( audioItem ) => ! audioItem.id && audioItem.url?.indexOf( 'blob:' ) === 0
+		);
+
+		if ( webamp === null || audioUploading ) {
 			return;
 		}
 
