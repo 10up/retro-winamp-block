@@ -3,17 +3,17 @@
 	"version": "1.0.0",
 	"description": "A Winamp-styled audio block for all your retro music player needs.",
 	"author": {
-      "name": "10up",
-      "email": "opensource@10up.com",
-      "url": "https://10up.com",
-      "role": "developer"
-    },
+		"name": "10up",
+		"email": "opensource@10up.com",
+		"url": "https://10up.com",
+		"role": "developer"
+	},
 	"license": "GPL-2.0-or-later",
 	"main": "build/index.js",
 	"repository": {
-      "type": "git",
-      "url": "https://github.com/10up/winamp-block"
-    },
+		"type": "git",
+		"url": "https://github.com/10up/winamp-block"
+	},
 	"scripts": {
 		"build": "wp-scripts build ",
 		"format": "wp-scripts format",
@@ -24,9 +24,18 @@
 		"packages-update": "wp-scripts packages-update"
 	},
 	"dependencies": {
+		"@wordpress/blob": "^3.2.2",
 		"@wordpress/block-editor": "^7.0.4",
 		"@wordpress/blocks": "^11.1.2",
+		"@wordpress/components": "^19.0.3",
+		"@wordpress/compose": "^5.0.6",
+		"@wordpress/data": "^6.1.4",
+		"@wordpress/dom-ready": "^3.2.3",
+		"@wordpress/element": "^4.0.4",
 		"@wordpress/i18n": "^4.2.3",
+		"@wordpress/primitives": "^3.0.4",
+		"classnames": "^2.3.1",
+		"lodash": "^4.17.21",
 		"webamp": "^1.5.0"
 	},
 	"devDependencies": {

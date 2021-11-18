@@ -30,38 +30,46 @@ import previewImg from '../assets/default-player.jpg';
 const ALLOWED_MEDIA_TYPES = [ 'audio' ];
 const PLACEHOLDER_TEXT = Platform.isNative
 	? __( 'ADD MEDIA', 'winamp-block' )
-	: __( 'To view the Winamp player, drag audio files, upload new ones, or select files from your library.', 'winamp-block' );
+	: __(
+			'To view the Winamp player, drag audio files, upload new ones, or select files from your library.',
+			'winamp-block'
+	  );
 
 /**
  * The edit function describes the structure of your block in the context of the
  * editor. This represents what the editor will render when the block is used.
  *
+ * @param {Object} props Block edit props.
  * @see https://developer.wordpress.org/block-editor/developers/block-api/block-edit-save/#edit
  *
  * @return {WPElement} Element to render.
  */
-function Edit( {
-	attributes,
-	clientId,
-	isSelected,
-	noticeOperations,
-	noticeUI,
-	setAttributes,
-} ) {
-
+function Edit( props ) {
+	const {
+		attributes,
+		clientId,
+		isSelected,
+		noticeOperations,
+		noticeUI,
+		setAttributes,
+	} = props;
 	const { currentSkin, preview } = attributes;
 
 	if ( preview && previewImg ) {
-		return(
+		return (
 			<>
-				<img src={ previewImg } alt={ __( 'Winamp Player', 'winamp-block' ) } />
+				<img
+					src={ previewImg }
+					alt={ __( 'Winamp Player', 'winamp-block' ) }
+				/>
 			</>
 		);
 	}
 
-	const blockProps = useBlockProps();
-	const { replaceInnerBlocks } = useDispatch( blockEditorStore );
+	const blockProps = useBlockProps(); // eslint-disable-line react-hooks/rules-of-hooks
+	const { replaceInnerBlocks } = useDispatch( blockEditorStore ); // eslint-disable-line react-hooks/rules-of-hooks
 
+	// eslint-disable-next-line react-hooks/rules-of-hooks
 	const innerBlockAudio = useSelect(
 		( select ) => {
 			return select( blockEditorStore ).getBlock( clientId )?.innerBlocks;
@@ -69,6 +77,7 @@ function Edit( {
 		[ clientId ]
 	);
 
+	// eslint-disable-next-line react-hooks/rules-of-hooks
 	const audio = useMemo(
 		() =>
 			innerBlockAudio?.map( ( block ) => ( {
@@ -82,9 +91,11 @@ function Edit( {
 	);
 
 	const hasAudio = !! audio.length;
-	const hasAudioIds = hasAudio && audio.some( ( audioItem ) => !! audioItem.id );
+	const hasAudioIds =
+		hasAudio && audio.some( ( audioItem ) => !! audioItem.id );
 	const audioUploading = audio.some(
-		( audioItem ) => ! audioItem.id && audioItem.url?.indexOf( 'blob:' ) === 0
+		( audioItem ) =>
+			! audioItem.id && audioItem.url?.indexOf( 'blob:' ) === 0
 	);
 
 	function onSelectAudio( selectedAudio ) {
@@ -94,13 +105,13 @@ function Edit( {
 
 		const audioArray = newFileUploads
 			? Array.from( selectedAudio ).map( ( file ) => {
-				if ( ! file.url ) {
-					return {
-						url: createBlobURL( file ),
-					};
-				}
+					if ( ! file.url ) {
+						return {
+							url: createBlobURL( file ),
+						};
+					}
 
-				return file;
+					return file;
 			  } )
 			: selectedAudio;
 
@@ -137,14 +148,15 @@ function Edit( {
 		const newAudioList = processedAudio.filter(
 			( media ) =>
 				! existingAudioBlocks.find(
-					( existingAudio ) => media.id === existingAudio.attributes.id
+					( existingAudio ) =>
+						media.id === existingAudio.attributes.id
 				)
 		);
 
-		const newBlocks = newAudioList.map( ( audio ) => {
+		const newBlocks = newAudioList.map( ( audioTrack ) => {
 			return createBlock( 'core/audio', {
-				id: audio.id,
-				src: audio.url,
+				id: audioTrack.id,
+				src: audioTrack.url,
 			} );
 		} );
 
@@ -166,7 +178,7 @@ function Edit( {
 	const mediaPlaceholder = (
 		<MediaPlaceholder
 			addToGallery={ hasAudioIds }
-			icon={ ! hasAudio && "format-audio" }
+			icon={ ! hasAudio && 'format-audio' }
 			onSelect={ onSelectAudio }
 			isAppender={ hasAudio }
 			disableMediaButtons={
@@ -195,9 +207,14 @@ function Edit( {
 				<PanelBody title={ __( 'Winamp Player Skin', 'winamp-block' ) }>
 					<TextControl
 						label={ __( 'Skin URL', 'winamp-block' ) }
-						help={ __( 'The URL of the player skin to use. Find skins at https://skins.webamp.org/.', 'winamp-block' ) }
+						help={ __(
+							'The URL of the player skin to use. Find skins at https://skins.webamp.org/.',
+							'winamp-block'
+						) }
 						value={ currentSkin }
-						onChange={ skin => setAttributes( { currentSkin: skin } ) }
+						onChange={ ( skin ) =>
+							setAttributes( { currentSkin: skin } )
+						}
 					/>
 				</PanelBody>
 			</InspectorControls>

@@ -6,7 +6,10 @@ import classnames from 'classnames';
 /**
  * WordPress dependencies
  */
-import { __experimentalUseInnerBlocksProps as useInnerBlocksProps, BlockControls } from '@wordpress/block-editor';
+import {
+	__experimentalUseInnerBlocksProps as useInnerBlocksProps, // eslint-disable-line @wordpress/no-unsafe-wp-apis
+	BlockControls,
+} from '@wordpress/block-editor';
 import { __ } from '@wordpress/i18n';
 import { ToolbarButton, ToolbarGroup } from '@wordpress/components';
 import { useState } from '@wordpress/element';
@@ -20,12 +23,7 @@ import WebAmp from './webamp';
 const allowedBlocks = [ 'core/audio' ];
 
 export const Audio = ( props ) => {
-	const {
-		audio,
-		currentSkin,
-		mediaPlaceholder,
-		blockProps,
-	} = props;
+	const { audio, currentSkin, mediaPlaceholder, blockProps } = props;
 
 	const [ isPreview, setIsPreview ] = useState();
 
@@ -47,7 +45,7 @@ export const Audio = ( props ) => {
 			{ ...innerBlocksProps }
 			className={ classnames(
 				blockProps.className,
-				'blocks-audio-list',
+				'blocks-audio-list'
 			) }
 		>
 			<BlockControls>
@@ -69,15 +67,13 @@ export const Audio = ( props ) => {
 				</ToolbarGroup>
 			</BlockControls>
 
-			{ isPreview  ? (
+			{ isPreview ? (
 				<WebAmp audio={ audio } currentSkin={ currentSkin } />
 			) : (
 				<>
 					{ children }
 
-					<View
-						className="blocks-winamp-media-placeholder-wrapper"
-					>
+					<View className="blocks-winamp-media-placeholder-wrapper">
 						{ mediaPlaceholder }
 					</View>
 				</>

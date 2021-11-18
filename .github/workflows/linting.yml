@@ -34,12 +34,3 @@ jobs:
         uses: 10up/wpcs-action@stable
         with:
           standard: 'WordPress'
-  phpcs:
-      name: VIPCS
-      runs-on: ubuntu-latest
-      steps:
-        - uses: actions/checkout@v2
-        - name: VIPCS check
-          uses: 10up/wpcs-action@stable
-          with:
-            standard: 'WordPress-VIP-Go'
