@@ -3,7 +3,7 @@
  * Plugin Name:       Retro Winamp Block
  * Plugin URI:        https://wordpress.org/plugins/winamp-block/
  * Description:       A Winamp-styled audio block for all your retro music player needs.
- * Version:           0.1.0
+ * Version:           1.0.0
  * Requires at least: 5.2
  * Requires PHP:      7.2
  * Author:            10up
