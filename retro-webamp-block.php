@@ -27,12 +27,12 @@ add_action(
 	function () {
 		register_block_type(
 			__DIR__,
-			[
-				'render_callback' => function( $attributes = [], $content = '' ) {
+			array(
+				'render_callback' => function( $attributes = array(), $content = '' ) {
 					// Replace src with data-src to avoid loading the file.
 					return str_replace( 'src="', 'data-src="', $content );
 				},
-			]
+			)
 		);
 	}
 );
