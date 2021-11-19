@@ -2,7 +2,7 @@
 
 > A Winamp-styled audio block for all your retro music player needs.
 
-[![Support Level](https://img.shields.io/badge/support-active-green.svg)](#support-level) [![Release Version](https://img.shields.io/github/release/10up/winamp-block.svg)](https://github.com/10up/winamp-block/releases/latest) ![WordPress tested up to version](https://img.shields.io/badge/WordPress-v5.8%20tested-success.svg) [![GPLv2 License](https://img.shields.io/github/license/10up/winamp-block.svg)](https://github.com/10up/winamp-block/blob/develop/LICENSE.md)
+[![Support Level](https://img.shields.io/badge/support-active-green.svg)](#support-level) [![Release Version](https://img.shields.io/github/release/10up/retro-winamp-block.svg)](https://github.com/10up/retro-winamp-block/releases/latest) ![WordPress tested up to version](https://img.shields.io/badge/WordPress-v5.8%20tested-success.svg) [![GPLv2 License](https://img.shields.io/github/license/10up/retro-winamp-block.svg)](https://github.com/10up/retro-winamp-block/blob/develop/LICENSE.md)
 
 ## Overview
 
@@ -45,11 +45,11 @@ Details on how to create a new skin is available [here](https://github.com/WACUP
 
 ## Changelog
 
-A complete listing of all notable changes to Winamp Block for WordPress are documented in [CHANGELOG.md](https://github.com/10up/winamp-block/blob/develop/CHANGELOG.md).
+A complete listing of all notable changes to Winamp Block for WordPress are documented in [CHANGELOG.md](https://github.com/10up/retro-winamp-block/blob/develop/CHANGELOG.md).
 
 ## Contributing
 
-Please read [CODE_OF_CONDUCT.md](https://github.com/10up/winamp-block/blob/develop/CODE_OF_CONDUCT.md) for details on our code of conduct, [CONTRIBUTING.md](https://github.com/10up/winamp-block/blob/develop/CONTRIBUTING.md) for details on the process for submitting pull requests to us, and [CREDITS.md](https://github.com/10up/winamp-block/blob/develop/CREDITS.md) for a listing of maintainers of, contributors to, and libraries used by Winamp Block for WordPress.
+Please read [CODE_OF_CONDUCT.md](https://github.com/10up/retro-winamp-block/blob/develop/CODE_OF_CONDUCT.md) for details on our code of conduct, [CONTRIBUTING.md](https://github.com/10up/retro-winamp-block/blob/develop/CONTRIBUTING.md) for details on the process for submitting pull requests to us, and [CREDITS.md](https://github.com/10up/retro-winamp-block/blob/develop/CREDITS.md) for a listing of maintainers of, contributors to, and libraries used by Winamp Block for WordPress.
 
 ## Like what you see?
 
