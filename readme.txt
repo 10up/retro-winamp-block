@@ -24,13 +24,13 @@ Do you miss the days of filling up your computer's harddrive with MP3 files, bur
 
 == Changing Player Skins ==
 
-In order to select alternate player skins, browse [the Winamp Skin Museum](https://skins.webamp.org/) and find a preferred skin, copy the URL of the specific skin (e.g., https://skins.webamp.org/skin/bb0bf8064d108271afea419308dcb6ea/NES_Duck_Hunt.wsz/), and paste that URL in the `Skin URL` field in the Winamp Block Skin settings.
+In order to select alternate player skins, browse [the Winamp Skin Museum](https://skins.webamp.org/) and find a preferred skin, copy the URL of the specific skin (e.g., [https://skins.webamp.org/skin/bb0bf8064d108271afea419308dcb6ea/NES_Duck_Hunt.wsz/](https://skins.webamp.org/skin/bb0bf8064d108271afea419308dcb6ea/NES_Duck_Hunt.wsz/)), and paste that URL in the `Skin URL` field in the Winamp Block Skin settings.
 
 == Frequently Asked Questions ==
 
 = This is amazing, how can I help contribute to this plugin? =
 
-Great question and I could not agree with you more!  You can help contribute to this [Winamp Block plugin on GitHub](https://github.com/10up/winamp-block) or to the [Webamp project on GitHub](https://github.com/captbaritone/webamp).
+Great question and I could not agree with you more!  You can help contribute to this [Winamp Block plugin on GitHub](https://github.com/10up/retro-winamp-block) or to the [Webamp project on GitHub](https://github.com/captbaritone/webamp).
 
 = Ok this is making me nostalgic, how can I submit a new skin for the player? =
 
