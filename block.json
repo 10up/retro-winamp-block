@@ -1,11 +1,14 @@
 {
-	"apiVersion": 2,
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": "2",
 	"name": "tenup/winamp-block",
-	"version": "0.1.0",
 	"title": "Winamp Block",
 	"category": "media",
 	"icon": "playlist-audio",
 	"description": "A Winamp-styled audio block for all your retro music player needs.",
+	"keywords": [ "winamp", "webamp", "mp3", "music", "audio", "player", "playlist", "equalizer", "block" ],
+	"version": "1.0.0",
+	"textdomain": "winamp-block",
 	"attributes": {
 		"audio": {
 			"type": "array",
@@ -45,9 +48,8 @@
 	"supports": {
 		"html": false
 	},
-	"textdomain": "winamp-block",
 	"editorScript": "file:./build/index.js",
 	"editorStyle": "file:./build/index.css",
-	"script": "winamp-block-frontend",
+	"script": "winamp-block-frontend.js",
 	"style": "file:./build/style-index.css"
 }
