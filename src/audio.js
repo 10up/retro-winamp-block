@@ -6,10 +6,13 @@ import classnames from 'classnames';
 /**
  * WordPress dependencies
  */
-import {
-	__experimentalUseInnerBlocksProps as useInnerBlocksProps, // eslint-disable-line @wordpress/no-unsafe-wp-apis
-	BlockControls,
-} from '@wordpress/block-editor';
+import { BlockControls } from '@wordpress/block-editor';
+
+// since we want to support both 5.6+ & 5.9 we need to conditional import it this way
+const useInnerBlocksProps = wp.blockEditor.useInnerBlocksProps
+	? wp.blockEditor.useInnerBlocksProps
+	: wp.blockEditor.__experimentalUseInnerBlocksProps;
+
 import { __ } from '@wordpress/i18n';
 import { ToolbarButton, ToolbarGroup } from '@wordpress/components';
 import { useState } from '@wordpress/element';
