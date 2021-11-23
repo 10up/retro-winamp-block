@@ -1,6 +1,6 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
-	"apiVersion": "2",
+	"apiVersion": 2,
 	"name": "tenup/winamp-block",
 	"title": "Winamp Block",
 	"category": "media",
@@ -50,6 +50,6 @@
 	},
 	"editorScript": "file:./build/index.js",
 	"editorStyle": "file:./build/index.css",
-	"script": "winamp-block-frontend.js",
+	"script": "winamp-block-frontend",
 	"style": "file:./build/style-index.css"
 }
