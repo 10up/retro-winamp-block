@@ -15,7 +15,7 @@
 		"url": "https://github.com/10up/winamp-block"
 	},
 	"scripts": {
-		"build": "wp-scripts build ",
+		"build": "wp-scripts build",
 		"format": "wp-scripts format",
 		"wp-env": "wp-env",
 		"lint:css": "wp-scripts lint-style",
@@ -40,8 +40,6 @@
 	},
 	"devDependencies": {
 		"@wordpress/env": "^4.1.2",
-		"@wordpress/eslint-plugin": "^9.3.0",
-		"@wordpress/scripts": "^19.0.0",
-		"prettier": "^2.4.1"
+		"@wordpress/scripts": "^19.2.2"
 	}
 }

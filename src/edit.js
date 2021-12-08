@@ -31,9 +31,9 @@ const ALLOWED_MEDIA_TYPES = [ 'audio' ];
 const PLACEHOLDER_TEXT = Platform.isNative
 	? __( 'ADD MEDIA', 'winamp-block' )
 	: __(
-			'To view the Winamp player, drag audio files, upload new ones, or select files from your library.',
-			'winamp-block'
-	  );
+		'To view the Winamp player, drag audio files, upload new ones, or select files from your library.',
+		'winamp-block'
+	);
 
 /**
  * The edit function describes the structure of your block in the context of the
@@ -105,14 +105,14 @@ function Edit( props ) {
 
 		const audioArray = newFileUploads
 			? Array.from( selectedAudio ).map( ( file ) => {
-					if ( ! file.url ) {
-						return {
-							url: createBlobURL( file ),
-						};
-					}
+				if ( ! file.url ) {
+					return {
+						url: createBlobURL( file ),
+					};
+				}
 
-					return file;
-			  } )
+				return file;
+			} )
 			: selectedAudio;
 
 		const processedAudio = audioArray
@@ -139,10 +139,10 @@ function Edit( props ) {
 
 		const existingAudioBlocks = ! newFileUploads
 			? innerBlockAudio.filter( ( block ) =>
-					processedAudio.find(
-						( img ) => img.id === block.attributes.id
-					)
-			  )
+				processedAudio.find(
+					( img ) => img.id === block.attributes.id
+				)
+			)
 			: innerBlockAudio;
 
 		const newAudioList = processedAudio.filter(
