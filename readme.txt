@@ -3,7 +3,7 @@ Contributors:      10up, dinhtungdu, fabiankaegy, dkotter, melchoyce, jeffpaul
 Tags:              winamp, webamp, mp3, music, audio, player, playlist, equalizer, block
 Requires at least: 5.2
 Tested up to:      5.8
-Stable tag:        1.0.0
+Stable tag:        1.0.1
 Requires PHP:      7.2
 License:           GPLv2 or later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -42,6 +42,11 @@ Details on how to create a new skin is available [here](https://github.com/WACUP
 2. Winamp Block settings showing the Skin URL setting updated to an alternate Winamp skin.
 
 == Changelog ==
+
+= 1.0.1 =
+* **Changed:** Documentation and linting updates (props [@dkotter](https://profiles.wordpress.org/dkotter/), [@mitogh](https://profiles.wordpress.org/mitogh/), [@jeffpaul](https://profiles.wordpress.org/jeffpaul/)).
+* **Fixed:** WordPress 5.9 compatibility to ensure `useInnerBlocksProps` import works and does not crash the block when selecting audio files (props [@fabiankaegy](https://profiles.wordpress.org/fabiankaegy/), [@helen](https://profiles.wordpress.org/helen/)).
+* **Fixed:** `block.json` errors limiting appearance in Block Directory (props [@jeffpaul](https://profiles.wordpress.org/jeffpaul/), [@fabiankaegy](https://profiles.wordpress.org/fabiankaegy/)).
 
 = 1.0.0 =
 * Initial release of the Winamp Block plugin. 🎉
