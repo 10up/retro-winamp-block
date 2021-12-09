@@ -9,7 +9,7 @@
 # Files
 .distignore
 .editorconfig
-.eslintrc
+.eslintrc.js
 .gitignore
 .wp-env.json
 CHANGELOG.md
