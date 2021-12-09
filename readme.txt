@@ -43,5 +43,10 @@ Details on how to create a new skin is available [here](https://github.com/WACUP
 
 == Changelog ==
 
+= 1.0.1 =
+* **Changed:** Documentation and linting updates (props [@dkotter](https://profiles.wordpress.org/dkotter/), [@mitogh](https://profiles.wordpress.org/mitogh/), [@jeffpaul](https://profiles.wordpress.org/jeffpaul/)).
+* **Fixed:** WordPress 5.9 compatibility to ensure `useInnerBlocksProps` import works and does not crash the block when selecting audio files (props [@fabiankaegy](https://profiles.wordpress.org/fabiankaegy/), [@helen](https://profiles.wordpress.org/helen/)).
+* **Fixed:** `block.json` errors limiting appearance in Block Directory (props [@jeffpaul](https://profiles.wordpress.org/jeffpaul/), [@fabiankaegy](https://profiles.wordpress.org/fabiankaegy/)).
+
 = 1.0.0 =
 * Initial release of the Winamp Block plugin. 🎉
