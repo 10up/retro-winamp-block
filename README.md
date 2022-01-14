@@ -2,7 +2,7 @@
 
 > A Winamp-styled audio block for all your retro music player needs.
 
-[![Support Level](https://img.shields.io/badge/support-active-green.svg)](#support-level) [![Release Version](https://img.shields.io/github/release/10up/retro-winamp-block.svg)](https://github.com/10up/retro-winamp-block/releases/latest) ![WordPress tested up to version](https://img.shields.io/badge/WordPress-v5.8%20tested-success.svg) [![GPLv2 License](https://img.shields.io/github/license/10up/retro-winamp-block.svg)](https://github.com/10up/retro-winamp-block/blob/develop/LICENSE.md)
+[![Support Level](https://img.shields.io/badge/support-active-green.svg)](#support-level) [![Release Version](https://img.shields.io/github/release/10up/retro-winamp-block.svg)](https://github.com/10up/retro-winamp-block/releases/latest) ![WordPress tested up to version](https://img.shields.io/wordpress/plugin/tested/retro-winamp-block?label=WordPress) [![GPLv2 License](https://img.shields.io/github/license/10up/retro-winamp-block.svg)](https://github.com/10up/retro-winamp-block/blob/develop/LICENSE.md)
 
 ## Overview
 
