@@ -29,11 +29,8 @@ jobs:
           tools: composer:v2
           coverage: none
 
-      - name: Remove non-production dependencies
-        run: rm composer.lock && composer remove --dev phpunit/phpunit yoast/phpunit-polyfills
-
       - name: Install dependencies
         run: composer install
 
       - name: Run PHP Compatibility
-        run: vendor/bin/phpcs autoshare-for-twitter.php includes/ --standard=PHPCompatibilityWP --extensions=php --runtime-set testVersion 7.0-
+        run: vendor/bin/phpcs retro-webamp-block.php --standard=PHPCompatibilityWP --extensions=php --runtime-set testVersion 7.0-
