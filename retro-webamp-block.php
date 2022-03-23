@@ -4,7 +4,7 @@
  * Plugin URI:        https://wordpress.org/plugins/retro-winamp-block/
  * Description:       A Winamp-styled audio block for all your retro music player needs.
  * Version:           1.0.1
- * Requires at least: 5.2
+ * Requires at least: 5.8
  * Requires PHP:      7.2
  * Author:            10up
  * Author URI:        https://10up.com
