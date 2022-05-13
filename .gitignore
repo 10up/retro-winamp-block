@@ -26,6 +26,10 @@ node_modules/
 # dotenv environment variables file
 .env
 
+# Developer tools
+/.phpcs.xml
+/phpcs.xml
+
 # Miscellaneous
 node_modules
 bower_components
