@@ -45,8 +45,9 @@ Details on how to create a new skin is available [here](https://github.com/WACUP
 
 = 1.1.0 =
 * **Added:** Dependency security scanning (props [@jeffpaul](https://github.com/jeffpaul), [@peterwilsoncc](https://github.com/peterwilsoncc)) via [#48](https://github.com/10up/retro-winamp-block/pull/48))
+* **Added:** PHPCS ruleset (props [@peterwilsoncc](https://github.com/peterwilsoncc), [@iamdharmesh](https://github.com/iamdharmesh)) via [#53](https://github.com/10up/retro-winamp-block/pull/53))
 * **Added:** PHP8 compatibility workflow (props [@Sidsector9](https://github.com/Sidsector9), [@jeffpaul](https://github.com/jeffpaul)) via [#39](https://github.com/10up/retro-winamp-block/pull/39))
-* **Changed:** Bump WordPress version "tested up to" 6.0. (props [@jeffpaul](https://github.com/jeffpaul), [@peterwilsoncc](https://github.com/peterwilsoncc) [@sudip-10up](https://github.com/sudip-10up)) via [#35](https://github.com/10up/retro-winamp-block/pull/35))
+* **Changed:** Bump WordPress version "tested up to" 6.0. (props [@jeffpaul](https://github.com/jeffpaul), [@peterwilsoncc](https://github.com/peterwilsoncc), [@sudip-10up](https://github.com/sudip-10up), [@dinhtungdu](https://github.com/dinhtungdu)) via [#35](https://github.com/10up/retro-winamp-block/pull/35), [#51](https://github.com/10up/retro-winamp-block/pull/51), [#52](https://github.com/10up/retro-winamp-block/pull/52))
 * **Security:** Bump ansi-regex from 4.1.0 to 4.1.1 (props [@dependabot[bot]](https://github.com/apps/dependabot), [@jeffpaul](https://github.com/jeffpaul)) via [#42](https://github.com/10up/retro-winamp-block/pull/42))
 * **Security:** Bump async from 2.6.3 to 2.6.4 (props [@dependabot[bot]](https://github.com/apps/dependabot), [@jeffpaul](https://github.com/jeffpaul)) via [#49](https://github.com/10up/retro-winamp-block/pull/49))
 * **Security:** Bump follow-redirects from 1.14.5 to 1.14.8 (props [@dependabot[bot]](https://github.com/apps/dependabot), [@jeffpaul](https://github.com/jeffpaul)) via [#36](https://github.com/10up/retro-winamp-block/pull/36))
