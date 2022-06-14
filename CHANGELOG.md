@@ -5,21 +5,23 @@ All notable changes to this project will be documented in this file, per [the Ke
 ## [Unreleased] - TBD
 
 ## 1.1.0 - TBD
+**Note that this release changes the minimum WordPress version to 5.8 and minimum PHP version to 5.6.**
+
 ### Added
-- Dependency security scanning (props [@jeffpaul](https://github.com/jeffpaul), [@peterwilsoncc](https://github.com/peterwilsoncc)) via [#48](https://github.com/10up/retro-winamp-block/pull/48))
-- PHPCS ruleset (props [@peterwilsoncc](https://github.com/peterwilsoncc), [@iamdharmesh](https://github.com/iamdharmesh)) via [#53](https://github.com/10up/retro-winamp-block/pull/53))
-- PHP8 compatibility workflow (props [@Sidsector9](https://github.com/Sidsector9), [@faisal-alvi](https://github.com/faisal-alvi), [@jeffpaul](https://github.com/jeffpaul)) via [#39](https://github.com/10up/retro-winamp-block/pull/39))
+- PHP 8 compatibility and GitHub Action workflow (props [@Sidsector9](https://github.com/Sidsector9), [@faisal-alvi](https://github.com/faisal-alvi), [@jeffpaul](https://github.com/jeffpaul) via [#39](https://github.com/10up/retro-winamp-block/pull/39)).
+- Dependency security scanning (props [@jeffpaul](https://github.com/jeffpaul), [@peterwilsoncc](https://github.com/peterwilsoncc) via [#48](https://github.com/10up/retro-winamp-block/pull/48)).
+- PHPCS ruleset (props [@peterwilsoncc](https://github.com/peterwilsoncc), [@iamdharmesh](https://github.com/iamdharmesh) via [#53](https://github.com/10up/retro-winamp-block/pull/53)).
 
 ### Changed
-- Bump WordPress version "tested up to" 6.0. (props [@jeffpaul](https://github.com/jeffpaul), [@peterwilsoncc](https://github.com/peterwilsoncc), [@sudip-10up](https://github.com/sudip-10up), [@dinhtungdu](https://github.com/dinhtungdu)) via [#35](https://github.com/10up/retro-winamp-block/pull/35), [#51](https://github.com/10up/retro-winamp-block/pull/51), [#52](https://github.com/10up/retro-winamp-block/pull/52)
+- Bump WordPress version "tested up to" 6.0 (props [@jeffpaul](https://github.com/jeffpaul), [@sudip-10up](https://github.com/sudip-10up), [@peterwilsoncc](https://github.com/peterwilsoncc), [@dinhtungdu](https://github.com/dinhtungdu), [@vikrampm1](https://github.com/vikrampm1) via [#35](https://github.com/10up/retro-winamp-block/pull/35), [#51](https://github.com/10up/retro-winamp-block/pull/51), [#52](https://github.com/10up/retro-winamp-block/pull/52).
 
 ### Security
-- Bump ansi-regex from 4.1.0 to 4.1.1 (props [@dependabot[bot]](https://github.com/apps/dependabot), [@jeffpaul](https://github.com/jeffpaul)) via [#42](https://github.com/10up/retro-winamp-block/pull/42))
-- Bump async from 2.6.3 to 2.6.4 (props [@dependabot[bot]](https://github.com/apps/dependabot), [@jeffpaul](https://github.com/jeffpaul)) via [#49](https://github.com/10up/retro-winamp-block/pull/49))
-- Bump follow-redirects from 1.14.5 to 1.14.8 (props [@dependabot[bot]](https://github.com/apps/dependabot), [@jeffpaul](https://github.com/jeffpaul)) via [#36](https://github.com/10up/retro-winamp-block/pull/36))
-- Bump minimist from 1.2.5 to 1.2.6 (props [@dependabot[bot]](https://github.com/apps/dependabot), [@jeffpaul](https://github.com/jeffpaul)) via [#41](https://github.com/10up/retro-winamp-block/pull/41))
-- Bump moment from 2.29.1 to 2.29.2 (props [@dependabot[bot]](https://github.com/apps/dependabot), [@jeffpaul](https://github.com/jeffpaul)) via [#43](https://github.com/10up/retro-winamp-block/pull/43))
-- Bump nanoid from 3.1.30 to 3.3.1 (props [@dependabot[bot]](https://github.com/apps/dependabot), [@jeffpaul](https://github.com/jeffpaul)) via [#37](https://github.com/10up/retro-winamp-block/pull/37))
+- Bump `follow-redirects` from 1.14.5 to 1.14.8 (props [@dependabot](https://github.com/apps/dependabot) via [#36](https://github.com/10up/retro-winamp-block/pull/36)).
+- Bump `nanoid` from 3.1.30 to 3.3.1 (props [@dependabot](https://github.com/apps/dependabot) via [#37](https://github.com/10up/retro-winamp-block/pull/37)).
+- Bump `minimist` from 1.2.5 to 1.2.6 (props [@dependabot](https://github.com/apps/dependabot) via [#41](https://github.com/10up/retro-winamp-block/pull/41)).
+- Bump `ansi-regex` from 4.1.0 to 4.1.1 (props [@dependabot](https://github.com/apps/dependabot) via [#42](https://github.com/10up/retro-winamp-block/pull/42)).
+- Bump `moment` from 2.29.1 to 2.29.2 (props [@dependabot](https://github.com/apps/dependabot) via [#43](https://github.com/10up/retro-winamp-block/pull/43)).
+- Bump `async` from 2.6.3 to 2.6.4 (props [@dependabot](https://github.com/apps/dependabot) via [#49](https://github.com/10up/retro-winamp-block/pull/49)).
 
 ## [1.0.1] - 2021-12-08
 ### Changed
