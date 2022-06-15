@@ -36,7 +36,6 @@ bower_components
 release
 build
 vendor
-composer.lock
 phpunit.xml
 .idea
 
