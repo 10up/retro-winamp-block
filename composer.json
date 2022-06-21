@@ -1,0 +1,26 @@
+{
+    "name": "10up/retro-winamp-block",
+    "description": "A Winamp-styled audio block for all your retro music player needs.",
+    "type": "wordpress-plugin",
+    "license": "GPL-2.0-or-later",
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "10up",
+            "email": "opensource@10up.com",
+            "homepage": "https://10up.com",
+            "role": "Developer"
+        }
+    ],
+    "require-dev": {
+        "10up/phpcs-composer": "dev-master"
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    },
+    "scripts": {
+        "phpcs": "phpcs --extensions=php --standard=WordPress retro-webamp-block.php"
+    }
+}

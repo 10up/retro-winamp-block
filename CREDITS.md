@@ -12,7 +12,7 @@ The following individuals are responsible for curating the list of issues, respo
 
 Thank you to all the people who have already contributed to this repository via bug reports, code, design, ideas, project management, translation, testing, etc.
 
-[Jeffrey Paul (@jeffpaul)](https://github.com/jeffpaul), [Tung Du (@dinhtungdu)](https://github.com/dinhtungdu), [Fabian Kägy (@fabiankaegy)](https://github.com/fabiankaegy), [Darin Kotter (@dkotter)](https://github.com/dkotter), [Mel Choyce-Dwan (@melchoyce)](https://github.com/melchoyce), [Crisoforo Gaspar Hernández (@mitogh)](https://github.com/mitogh), [Helen Hou-Sandi (@helen)](https://github.com/helen).
+[Jeffrey Paul (@jeffpaul)](https://github.com/jeffpaul), [Tung Du (@dinhtungdu)](https://github.com/dinhtungdu), [Fabian Kägy (@fabiankaegy)](https://github.com/fabiankaegy), [Darin Kotter (@dkotter)](https://github.com/dkotter), [Mel Choyce-Dwan (@melchoyce)](https://github.com/melchoyce), [Crisoforo Gaspar Hernández (@mitogh)](https://github.com/mitogh), [Helen Hou-Sandi (@helen)](https://github.com/helen), [Sudip Dadhaniya (@sudip-10up)](https://github.com/sudip-10up), [Dharmesh Patel (@iamdharmesh)](https://github.com/iamdharmesh), [Peter Wilson (@peterwilsoncc)](https://github.com/peterwilsoncc), [Faisal Alvi (@faisal-alvi)](https://github.com/faisal-alvi), [Siddharth Thevaril (@Sidsector9)](https://github.com/Sidsector9), [Vikram Moparthy (@vikrampm1)](https://github.com/vikrampm1).
 
 ## Libraries
 

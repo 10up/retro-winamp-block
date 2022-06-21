@@ -1,4 +1,4 @@
-name: Test
+name: JS and CSS lint
 
 on:
   push:
@@ -25,12 +25,3 @@ jobs:
       run: npm run lint:js
     - name: Run CSS linting
       run: npm run lint:css
-  phpcs:
-    name: WPCS
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: WPCS check
-        uses: 10up/wpcs-action@stable
-        with:
-          standard: 'WordPress'

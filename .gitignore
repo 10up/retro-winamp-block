@@ -26,13 +26,16 @@ node_modules/
 # dotenv environment variables file
 .env
 
+# Developer tools
+/.phpcs.xml
+/phpcs.xml
+
 # Miscellaneous
 node_modules
 bower_components
 release
 build
 vendor
-composer.lock
 phpunit.xml
 .idea
 
