@@ -43,7 +43,7 @@ Details on how to create a new skin is available [here](https://github.com/WACUP
 
 == Changelog ==
 
-= 1.1.0 - TBD =
+= 1.1.0 - 2021-06-21 =
 **Note that this release changes the minimum WordPress version to 5.8 and minimum PHP version to 5.6.**
 
 * **Added:** PHP 8 compatibility and GitHub Action workflow (props [@Sidsector9](https://github.com/Sidsector9), [@faisal-alvi](https://github.com/faisal-alvi), [@jeffpaul](https://github.com/jeffpaul) via [#39](https://github.com/10up/retro-winamp-block/pull/39)).
@@ -67,5 +67,5 @@ Details on how to create a new skin is available [here](https://github.com/WACUP
 
 == Upgrade Notice ==
 
-= 1.1.0 - TBD =
+= 1.1.0 - 2021-06-21 =
 **Note that this release changes the minimum WordPress version to 5.8 and minimum PHP version to 5.6.**

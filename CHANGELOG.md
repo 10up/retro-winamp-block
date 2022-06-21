@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file, per [the Ke
 
 ## [Unreleased] - TBD
 
-## 1.1.0 - TBD
+## 1.1.0 - 2021-06-21
 **Note that this release changes the minimum WordPress version to 5.8 and minimum PHP version to 5.6.**
 
 ### Added
