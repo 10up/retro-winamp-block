@@ -11,9 +11,11 @@
 .editorconfig
 .eslintrc.js
 .gitignore
+.phpcs.xml.dist
 .wp-env.json
 CHANGELOG.md
 CODE_OF_CONDUCT.md
+composer.json
 CONTRIBUTING.md
 CREDITS.md
 LICENSE.md
