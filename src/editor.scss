@@ -7,3 +7,23 @@
 .wp-block-tenup-winamp-block {
 	border: 1px dotted #f00;
 }
+
+.preview-wrapper {
+	margin-bottom: 15px;
+
+	.winamp-radio-wrapper [type=radio] {
+		position: absolute;
+		opacity: 0;
+		width: 0;
+		height: 0;
+	
+		& + img {
+			cursor: pointer;
+			margin: 0 2px;
+		}
+	
+		&:checked + img {
+			outline: 2px solid var(--wp-admin-theme-color);
+		}
+	}
+}
