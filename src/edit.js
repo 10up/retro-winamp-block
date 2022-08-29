@@ -77,7 +77,7 @@ function Edit( props ) {
 		[ clientId ]
 	);
 
-	const[ useCustomUrl, setUseCustomUrl ] = useState( false );
+	const [ useCustomUrl, setUseCustomUrl ] = useState( false );
 
 	const defaultSkins = [
 		'https://skins.webamp.org/skin/5e4f10275dcb1fb211d4a8b4f1bda236/base-2.91.wsz/',
