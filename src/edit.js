@@ -54,6 +54,7 @@ function Edit( props ) {
 		setAttributes,
 	} = props;
 	const { currentSkin, preview } = attributes;
+	const [ useCustomUrl, setUseCustomUrl ] = useState( false );
 
 	if ( preview && previewImg ) {
 		return (
@@ -76,8 +77,6 @@ function Edit( props ) {
 		},
 		[ clientId ]
 	);
-
-	const [ useCustomUrl, setUseCustomUrl ] = useState( false );
 
 	const defaultSkins = [
 		'https://skins.webamp.org/skin/5e4f10275dcb1fb211d4a8b4f1bda236/base-2.91.wsz/',
@@ -244,8 +243,9 @@ function Edit( props ) {
 						<div className="preview-wrapper">
 							{ defaultSkins.length && defaultSkins.map( ( skin, index ) => {
 								return (
-									<label key={ index } className="winamp-radio-wrapper">
+									<label htmlFor={skin} key={ index } className="winamp-radio-wrapper">
 										<input
+											id={skin}
 											type="radio"
 											name="current-skin"
 											value={ skin }
