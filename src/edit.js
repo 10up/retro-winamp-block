@@ -214,12 +214,12 @@ function Edit( props ) {
 			const match = skin.match(
 				/(?:https?:)?(?:\/\/)?skins\.webamp\.org\/skin\/(\w+)\/(?:.*)?/
 			);
-	
+
 			if ( match && match.length === 2 ) {
 				return `https://cdn.webampskins.org/screenshots/${ match[ 1 ] }.png`;
 			}
 		}
-	}
+	};
 
 	return (
 		<>
@@ -237,29 +237,28 @@ function Edit( props ) {
 								setAttributes( { currentSkin: skin } )
 							}
 						/>
-						)
-						:
-						(
-						<div className="preview-wrapper">
-							{ defaultSkins.length && defaultSkins.map( ( skin, index ) => {
-								return (
-									<label htmlFor={skin} key={ index } className="winamp-radio-wrapper">
-										<input
-											id={skin}
-											type="radio"
-											name="current-skin"
-											value={ skin }
-											checked={ currentSkin === skin }
-											onChange={ ( e ) => 
-												setAttributes( { currentSkin: e.target.value } )
-											}
-										/>
-										<img src={ skinPreviewUrl( skin ) } width="100" alt="winamp-skin" />
-									</label>
-									)
+					)
+						:						(
+							<div className="preview-wrapper">
+								{ defaultSkins.length && defaultSkins.map( ( skin, index ) => {
+									return (
+										<label htmlFor={ skin } key={ index } className="winamp-radio-wrapper">
+											<input
+												id={ skin }
+												type="radio"
+												name="current-skin"
+												value={ skin }
+												checked={ currentSkin === skin }
+												onChange={ ( e ) =>
+													setAttributes( { currentSkin: e.target.value } )
+												}
+											/>
+											<img src={ skinPreviewUrl( skin ) } width="100" alt="winamp-skin" />
+										</label>
+									);
 								} )
-							}
-						</div>
+								}
+							</div>
 						)
 					}
 					<ToggleControl
