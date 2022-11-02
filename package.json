@@ -30,7 +30,6 @@
 		"@wordpress/components": "^19.0.3",
 		"@wordpress/compose": "^5.0.6",
 		"@wordpress/data": "^6.1.4",
-		"@wordpress/dom-ready": "^3.2.3",
 		"@wordpress/element": "^4.0.4",
 		"@wordpress/i18n": "^4.2.3",
 		"@wordpress/primitives": "^3.0.4",
