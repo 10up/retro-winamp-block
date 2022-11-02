@@ -9,7 +9,7 @@ import { concat } from 'lodash';
 import { __ } from '@wordpress/i18n';
 import { compose } from '@wordpress/compose';
 import { createBlock } from '@wordpress/blocks';
-import { PanelBody, TextControl, withNotices } from '@wordpress/components';
+import { PanelBody, TextControl, withNotices, ToggleControl } from '@wordpress/components';
 import {
 	useBlockProps,
 	InspectorControls,
@@ -17,7 +17,7 @@ import {
 	MediaPlaceholder,
 } from '@wordpress/block-editor';
 import { useSelect, useDispatch } from '@wordpress/data';
-import { Platform, useMemo } from '@wordpress/element';
+import { Platform, useMemo, useState } from '@wordpress/element';
 import { createBlobURL } from '@wordpress/blob';
 
 /**
@@ -54,6 +54,7 @@ function Edit( props ) {
 		setAttributes,
 	} = props;
 	const { currentSkin, preview } = attributes;
+	const [ useCustomUrl, setUseCustomUrl ] = useState( false );
 
 	if ( preview && previewImg ) {
 		return (
@@ -76,6 +77,13 @@ function Edit( props ) {
 		},
 		[ clientId ]
 	);
+
+	const defaultSkins = [
+		'https://skins.webamp.org/skin/5e4f10275dcb1fb211d4a8b4f1bda236/base-2.91.wsz/',
+		'https://skins.webamp.org/skin/cd251187a5e6ff54ce938d26f1f2de02/Winamp3_Classified_v5.5.wsz/',
+		'https://skins.webamp.org/skin/6856045909b0040283b43c53a002de69/Blue_Fade.wsz/',
+		'https://skins.webamp.org/skin/a5b4d732f406dd30164ef88358044f03/Samsara-amp.wsz/',
+	];
 
 	// eslint-disable-next-line react-hooks/rules-of-hooks
 	const audio = useMemo(
@@ -201,20 +209,62 @@ function Edit( props ) {
 		return <div { ...blockProps }>{ mediaPlaceholder }</div>;
 	}
 
+	const skinPreviewUrl = ( skin ) => {
+		if ( skin ) {
+			const match = skin.match(
+				/(?:https?:)?(?:\/\/)?skins\.webamp\.org\/skin\/(\w+)\/(?:.*)?/
+			);
+
+			if ( match && match.length === 2 ) {
+				return `https://cdn.webampskins.org/screenshots/${ match[ 1 ] }.png`;
+			}
+		}
+	};
+
 	return (
 		<>
 			<InspectorControls>
 				<PanelBody title={ __( 'Winamp Player Skin', 'winamp-block' ) }>
-					<TextControl
-						label={ __( 'Skin URL', 'winamp-block' ) }
-						help={ __(
-							'The URL of the player skin to use. Find skins at https://skins.webamp.org/.',
-							'winamp-block'
-						) }
-						value={ currentSkin }
-						onChange={ ( skin ) =>
-							setAttributes( { currentSkin: skin } )
-						}
+					{ useCustomUrl ? (
+						<TextControl
+							label={ __( 'Skin URL', 'winamp-block' ) }
+							help={ __(
+								'The URL of the player skin to use. Find skins at https://skins.webamp.org/.',
+								'winamp-block'
+							) }
+							value={ currentSkin }
+							onChange={ ( skin ) =>
+								setAttributes( { currentSkin: skin } )
+							}
+						/>
+					)
+						:						(
+							<div className="preview-wrapper">
+								{ defaultSkins.length && defaultSkins.map( ( skin, index ) => {
+									return (
+										<label htmlFor={ skin } key={ index } className="winamp-radio-wrapper">
+											<input
+												id={ skin }
+												type="radio"
+												name="current-skin"
+												value={ skin }
+												checked={ currentSkin === skin }
+												onChange={ ( e ) =>
+													setAttributes( { currentSkin: e.target.value } )
+												}
+											/>
+											<img src={ skinPreviewUrl( skin ) } width="100" alt="winamp-skin" />
+										</label>
+									);
+								} )
+								}
+							</div>
+						)
+					}
+					<ToggleControl
+						label={ __( 'Use Custom Skin?', 'winamp-block' ) }
+						checked={ useCustomUrl }
+						onChange={ () => setUseCustomUrl( ! useCustomUrl ) }
 					/>
 				</PanelBody>
 			</InspectorControls>
