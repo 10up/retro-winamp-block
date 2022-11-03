@@ -1,6 +1,11 @@
 import { useEffect, useState, useRef } from '@wordpress/element';
 import Webamp from 'webamp';
 
+/**
+ * Internal dependencies
+ */
+import milkdropOptions from './milkdrop';
+
 export const WebAmp = ( props ) => {
 	const { audio = [], currentSkin = '' } = props;
 	const divRef = useRef( null );
@@ -32,7 +37,7 @@ export const WebAmp = ( props ) => {
 			}
 		}
 
-		const player = new Webamp( options );
+		const player = new Webamp( { ...options, ...milkdropOptions } );
 		setWebamp( player );
 		player.renderWhenReady( divRef.current );
 
