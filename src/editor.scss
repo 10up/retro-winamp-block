@@ -27,3 +27,8 @@
 		}
 	}
 }
+
+/* Prevent overflow of menu elements */
+#webamp .playlist-menu {
+	overflow: hidden;
+}

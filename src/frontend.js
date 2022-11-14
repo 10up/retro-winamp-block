@@ -1,6 +1,11 @@
 import Webamp from 'webamp';
 import domReady from '@wordpress/dom-ready';
 
+/**
+ * Internal dependencies
+ */
+import milkdropOptions from './milkdrop';
+
 domReady( () => {
 	const container = document.querySelector( '.wp-block-tenup-winamp-block' );
 
@@ -43,5 +48,5 @@ domReady( () => {
 	}
 
 	// Render the player
-	new Webamp( options ).renderWhenReady( container );
+	new Webamp( { ...options, ...milkdropOptions } ).renderWhenReady( container );
 } );
