@@ -9,7 +9,12 @@ import { concat } from 'lodash';
 import { __ } from '@wordpress/i18n';
 import { compose } from '@wordpress/compose';
 import { createBlock } from '@wordpress/blocks';
-import { PanelBody, TextControl, withNotices, ToggleControl } from '@wordpress/components';
+import {
+	PanelBody,
+	TextControl,
+	withNotices,
+	ToggleControl,
+} from '@wordpress/components';
 import {
 	useBlockProps,
 	InspectorControls,
@@ -31,9 +36,9 @@ const ALLOWED_MEDIA_TYPES = [ 'audio' ];
 const PLACEHOLDER_TEXT = Platform.isNative
 	? __( 'ADD MEDIA', 'winamp-block' )
 	: __(
-		'To view the Winamp player, drag audio files, upload new ones, or select files from your library.',
-		'winamp-block'
-	);
+			'To view the Winamp player, drag audio files, upload new ones, or select files from your library.',
+			'winamp-block'
+	  );
 
 /**
  * The edit function describes the structure of your block in the context of the
@@ -113,14 +118,14 @@ function Edit( props ) {
 
 		const audioArray = newFileUploads
 			? Array.from( selectedAudio ).map( ( file ) => {
-				if ( ! file.url ) {
-					return {
-						url: createBlobURL( file ),
-					};
-				}
+					if ( ! file.url ) {
+						return {
+							url: createBlobURL( file ),
+						};
+					}
 
-				return file;
-			} )
+					return file;
+			  } )
 			: selectedAudio;
 
 		const processedAudio = audioArray
@@ -147,10 +152,10 @@ function Edit( props ) {
 
 		const existingAudioBlocks = ! newFileUploads
 			? innerBlockAudio.filter( ( block ) =>
-				processedAudio.find(
-					( img ) => img.id === block.attributes.id
-				)
-			)
+					processedAudio.find(
+						( img ) => img.id === block.attributes.id
+					)
+			  )
 			: innerBlockAudio;
 
 		const newAudioList = processedAudio.filter(
@@ -237,12 +242,16 @@ function Edit( props ) {
 								setAttributes( { currentSkin: skin } )
 							}
 						/>
-					)
-						:						(
-							<div className="preview-wrapper">
-								{ defaultSkins.length && defaultSkins.map( ( skin, index ) => {
+					) : (
+						<div className="preview-wrapper">
+							{ defaultSkins.length &&
+								defaultSkins.map( ( skin, index ) => {
 									return (
-										<label htmlFor={ skin } key={ index } className="winamp-radio-wrapper">
+										<label
+											htmlFor={ skin }
+											key={ index }
+											className="winamp-radio-wrapper"
+										>
 											<input
 												id={ skin }
 												type="radio"
@@ -250,17 +259,22 @@ function Edit( props ) {
 												value={ skin }
 												checked={ currentSkin === skin }
 												onChange={ ( e ) =>
-													setAttributes( { currentSkin: e.target.value } )
+													setAttributes( {
+														currentSkin:
+															e.target.value,
+													} )
 												}
 											/>
-											<img src={ skinPreviewUrl( skin ) } width="100" alt="winamp-skin" />
+											<img
+												src={ skinPreviewUrl( skin ) }
+												width="100"
+												alt="winamp-skin"
+											/>
 										</label>
 									);
-								} )
-								}
-							</div>
-						)
-					}
+								} ) }
+						</div>
+					) }
 					<ToggleControl
 						label={ __( 'Use Custom Skin?', 'winamp-block' ) }
 						checked={ useCustomUrl }

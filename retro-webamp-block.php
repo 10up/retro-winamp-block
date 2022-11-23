@@ -54,3 +54,42 @@ add_action(
 		);
 	}
 );
+
+add_filter(
+	'render_block',
+	function ( $block_content, $block, $instance ) {
+		if ( 'core/audio' !== $block['blockName'] ) {
+			return $block_content;
+		}
+		$attributes    = $block['attrs'] ?? array();
+		$attachment_id = $attributes['id'] ?? 0;
+		$attachment    = get_post( $attachment_id );
+
+		// Stop here if $attachment can't be found.
+		if ( ! $attachment ) {
+			return $block_content;
+		}
+
+		$metadata  = wp_get_attachment_metadata( $attachment_id );
+		$artist    = $metadata['artist'] ?? '';
+		$title     = $metadata['title'] ?? '';
+		$new_props = array(
+			'artist' => $artist,
+			'title'  => $title,
+		);
+
+		$new_attributes = array_reduce(
+			array_keys( $new_props ),
+			function ( $carry, $key ) use ( $new_props ) {
+				$value = $new_props[ $key ];
+
+				// Only return set values.
+				return empty( $value ) ? $carry : "$carry data-$key=\"$value\"";
+			}
+		);
+
+		return str_replace( '<audio ', "<audio $new_attributes ", $block_content );
+	},
+	100,
+	3
+);

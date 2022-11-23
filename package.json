@@ -20,7 +20,7 @@
 		"wp-env": "wp-env",
 		"lint:css": "wp-scripts lint-style",
 		"lint:js": "wp-scripts lint-js",
-		"start": "wp-scripts start",
+		"start": "NODE_ENVIRONMENT=development wp-scripts start",
 		"packages-update": "wp-scripts packages-update"
 	},
 	"dependencies": {
