@@ -2,7 +2,7 @@
 Contributors:      10up, dinhtungdu, fabiankaegy, dkotter, melchoyce, jeffpaul
 Tags:              winamp, webamp, mp3, music, audio, player, playlist, equalizer, block
 Requires at least: 5.8
-Tested up to:      6.0
+Tested up to:      6.1
 Stable tag:        1.1.0
 Requires PHP:      7.4
 License:           GPLv2 or later
