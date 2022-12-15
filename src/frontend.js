@@ -24,9 +24,17 @@ domReady( () => {
 		initialTracks: [],
 	};
 
-	audioElements.forEach( ( audio ) =>
-		options.initialTracks.push( { url: audio.dataset.src } )
-	);
+	audioElements.forEach( ( audio ) => {
+		const { src: url = '', artist = '', title = '' } = audio.dataset;
+
+		options.initialTracks.push( {
+			url,
+			metaData: {
+				artist,
+				title,
+			},
+		} );
+	} );
 
 	// Ensure our audio tracks were added correctly
 	if ( options.initialTracks.length === 0 ) {

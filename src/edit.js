@@ -9,7 +9,12 @@ import { concat } from 'lodash';
 import { __ } from '@wordpress/i18n';
 import { compose } from '@wordpress/compose';
 import { createBlock } from '@wordpress/blocks';
-import { PanelBody, TextControl, withNotices, ToggleControl } from '@wordpress/components';
+import {
+	PanelBody,
+	TextControl,
+	withNotices,
+	ToggleControl,
+} from '@wordpress/components';
 import {
 	useBlockProps,
 	InspectorControls,
@@ -237,12 +242,16 @@ function Edit( props ) {
 								setAttributes( { currentSkin: skin } )
 							}
 						/>
-					)
-						:						(
-							<div className="preview-wrapper">
-								{ defaultSkins.length && defaultSkins.map( ( skin, index ) => {
+					) : (
+						<div className="preview-wrapper">
+							{ defaultSkins.length &&
+								defaultSkins.map( ( skin, index ) => {
 									return (
-										<label htmlFor={ skin } key={ index } className="winamp-radio-wrapper">
+										<label
+											htmlFor={ skin }
+											key={ index }
+											className="winamp-radio-wrapper"
+										>
 											<input
 												id={ skin }
 												type="radio"
@@ -250,17 +259,22 @@ function Edit( props ) {
 												value={ skin }
 												checked={ currentSkin === skin }
 												onChange={ ( e ) =>
-													setAttributes( { currentSkin: e.target.value } )
+													setAttributes( {
+														currentSkin:
+															e.target.value,
+													} )
 												}
 											/>
-											<img src={ skinPreviewUrl( skin ) } width="100" alt="winamp-skin" />
+											<img
+												src={ skinPreviewUrl( skin ) }
+												width="100"
+												alt="winamp-skin"
+											/>
 										</label>
 									);
-								} )
-								}
-							</div>
-						)
-					}
+								} ) }
+						</div>
+					) }
 					<ToggleControl
 						label={ __( 'Use Custom Skin?', 'winamp-block' ) }
 						checked={ useCustomUrl }
