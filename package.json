@@ -20,7 +20,7 @@
 		"wp-env": "wp-env",
 		"lint:css": "wp-scripts lint-style",
 		"lint:js": "wp-scripts lint-js",
-		"start": "wp-scripts start",
+		"start": "NODE_ENVIRONMENT=development wp-scripts start",
 		"packages-update": "wp-scripts packages-update"
 	},
 	"dependencies": {
@@ -33,6 +33,8 @@
 		"@wordpress/element": "^4.0.4",
 		"@wordpress/i18n": "^4.2.3",
 		"@wordpress/primitives": "^3.0.4",
+		"butterchurn": "^2.6.7",
+		"butterchurn-presets": "^2.4.7",
 		"classnames": "^2.3.1",
 		"lodash": "^4.17.21",
 		"webamp": "^1.5.0"

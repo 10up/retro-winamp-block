@@ -5,7 +5,7 @@
  * Description:       A Winamp-styled audio block for all your retro music player needs.
  * Version:           1.1.0
  * Requires at least: 5.8
- * Requires PHP:      5.6
+ * Requires PHP:      7.4
  * Author:            10up
  * Author URI:        https://10up.com
  * License:           GPL v2 or later
@@ -53,4 +53,43 @@ add_action(
 			true
 		);
 	}
+);
+
+add_filter(
+	'render_block',
+	function ( $block_content, $block, $instance ) {
+		if ( 'core/audio' !== $block['blockName'] ) {
+			return $block_content;
+		}
+		$attributes    = $block['attrs'] ?? array();
+		$attachment_id = $attributes['id'] ?? 0;
+		$attachment    = get_post( $attachment_id );
+
+		// Stop here if $attachment can't be found.
+		if ( ! $attachment ) {
+			return $block_content;
+		}
+
+		$metadata  = wp_get_attachment_metadata( $attachment_id );
+		$artist    = $metadata['artist'] ?? '';
+		$title     = $metadata['title'] ?? '';
+		$new_props = array(
+			'artist' => $artist,
+			'title'  => $title,
+		);
+
+		$new_attributes = array_reduce(
+			array_keys( $new_props ),
+			function ( $carry, $key ) use ( $new_props ) {
+				$value = $new_props[ $key ];
+
+				// Only return set values.
+				return empty( $value ) ? $carry : "$carry data-$key=\"$value\"";
+			}
+		);
+
+		return str_replace( '<audio ', "<audio $new_attributes ", $block_content );
+	},
+	100,
+	3
 );

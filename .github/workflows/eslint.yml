@@ -15,10 +15,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: install node v16
-      uses: actions/setup-node@v1
+    - name: install node
+      uses: actions/setup-node@v3
       with:
-        node-version: 16
+        node-version-file: '.nvmrc'
     - name: Install dependencies
       run: npm install
     - name: Run JS linting

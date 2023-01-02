@@ -1,4 +1,10 @@
 <?xml version="1.0"?>
 <ruleset name="Project Rules">
 	<rule ref="WordPress" />
+	<config name="text_domain" value="winamp-block" />
+	<rule ref="WordPress.NamingConventions.PrefixAllGlobals">
+		<properties>
+			<property name="prefixes" type="string" value="" />
+		</properties>
+	</rule>
 </ruleset>
