@@ -6,7 +6,7 @@ The following acknowledges the Maintainers for this repository, those who have C
 
 The following individuals are responsible for curating the list of issues, responding to pull requests, and ensuring regular releases happen.
 
-[Jeffrey Paul](https://github.com/jeffpaul), [Darin Kotter (@dkotter)](https://github.com/dkotter), [Tung Du (@dinhtungdu)](https://github.com/dinhtungdu).
+[Jeffrey Paul (@jeffpaul)](https://github.com/jeffpaul), [Darin Kotter (@dkotter)](https://github.com/dkotter).
 
 ## Contributors
 
