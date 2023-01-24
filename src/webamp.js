@@ -39,7 +39,14 @@ export const WebAmp = ( props ) => {
 
 		const player = new Webamp( { ...options, ...milkdropOptions } );
 		setWebamp( player );
-		player.renderWhenReady( divRef.current );
+		player.renderWhenReady( divRef.current ).then( () => {
+			const webAmpContainer = document.getElementById( 'webamp' );
+
+			// Add is loaded class after artifical delay to reduce page jank
+			if ( webAmpContainer ) {
+				webAmpContainer.classList.add( 'is-loaded' );
+			}
+		} );
 
 		return () => {
 			player.dispose();
