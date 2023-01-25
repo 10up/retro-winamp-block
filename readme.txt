@@ -43,6 +43,27 @@ Details on how to create a new skin is available [here](https://github.com/WACUP
 
 == Changelog ==
 
+= 1.2.0 - 2023-01-25 =
+
+* **Added:** Ability to change player skin from predefined list of skins with an option for custom skin input (props [@zamanq](https://github.com/zamanq), [@Sidsector9](https://github.com/Sidsector9) via [#60](https://github.com/10up/retro-winamp-block/pull/60)).
+* **Added:** Support for Milkdrop visualisations (props [@Sidsector9](https://github.com/Sidsector9), [@iamdharmesh](https://github.com/iamdharmesh), [@jeffpaul](https://github.com/jeffpaul), [@iansvo](https://github.com/iansvo) via [#67](https://github.com/10up/retro-winamp-block/pull/67)).
+* **Changed:** Bump minimum PHP version from 5.6 to 7.4 (props [@Sidsector9](https://github.com/Sidsector9), [@cadic](https://github.com/cadic) via [#66](https://github.com/10up/retro-winamp-block/pull/66)).
+* **Changed:** Bump minimum node version from 12 to 16 (props [@Sidsector9](https://github.com/Sidsector9), [@cadic](https://github.com/cadic) via [#66](https://github.com/10up/retro-winamp-block/pull/66)).
+* **Changed:** Bump minimum composer version to 2 (props [@Sidsector9](https://github.com/Sidsector9), [@cadic](https://github.com/cadic) via [#66](https://github.com/10up/retro-winamp-block/pull/66)).
+* **Changed:** Bump Wordpress tested up to to 6.1 ([@jayedul](https://github.com/jayedul), [@dkotter](https://github.com/dkotter) via [#72](https://github.com/10up/retro-winamp-block/pull/72)).
+* **Fixed:** Updated initialTracks to include metaData to prevent a LockedStream console error (props [@iansvo](https://github.com/iansvo), [@ajmaurya99](https://github.com/ajmaurya99) via [#71](https://github.com/10up/retro-winamp-block/pull/71), [@Sidsector9](https://github.com/Sidsector9), [@cadic](https://github.com/cadic)).
+* **Fixed:** Page jank and scrolling as the webamp widget loads (props [@iansvo](https://github.com/iansvo), [@cadic](https://github.com/cadic), [@peterwilsoncc](https://github.com/peterwilsoncc), [@Sidsector9](https://github.com/Sidsector9) via [#56](https://github.com/10up/retro-winamp-block/pull/56)).
+* **Security:** Bump `terser` from 5.14.1 to 5.14.2 (props [@jeffpaul](https://github.com/jeffpaul) via [#58](https://github.com/10up/retro-winamp-block/pull/58)).
+* **Security:** Bump `moment` from 2.29.3 to 2.29.4 (props [@jeffpaul](https://github.com/jeffpaul) via [#58](https://github.com/10up/retro-winamp-block/pull/59)).
+* **Security:** Bump `moment-timezone` from 0.5.34 to 0.5.37 (props [@jeffpaul](https://github.com/jeffpaul) via [#58](https://github.com/10up/retro-winamp-block/pull/61)).
+* **Security:** Bump `markdown-it` from 12.0.4 to 12.3.2 (props [@faisal-alvi](https://github.com/faisal-alvi) via [#63](https://github.com/10up/retro-winamp-block/pull/63)).
+* **Security:** Bump `@wordpress/scripts` from 19.2.4 to 24.3.0 (props [@faisal-alvi](https://github.com/faisal-alvi) via [#63](https://github.com/10up/retro-winamp-block/pull/63)).
+* **Security:** Bump `got` from 10.7.0 to 11.8.5 (props [@faisal-alvi](https://github.com/faisal-alvi) via [#62](https://github.com/10up/retro-winamp-block/pull/62)).
+* **Security:** Bump `@wordpress/env` from 4.9.0 to 5.4.0 (props [@faisal-alvi](https://github.com/faisal-alvi) via [#62](https://github.com/10up/retro-winamp-block/pull/62)).
+* **Security:** Bump `loader-utils` from 2.0.3 to 2.0.4 (props [@Sidsector9](https://github.com/Sidsector9) via [#70](https://github.com/10up/retro-winamp-block/pull/70)).
+* **Security:** Bump `simple-git` from 3.14.1 to 3.15.1 (props [@jeffpaul](https://github.com/jeffpaul) via [#73](https://github.com/10up/retro-winamp-block/pull/73)).
+* **Security:** Bump `json5` from 1.0.1 to 1.0.2 (props [@peterwilsoncc](https://github.com/peterwilsoncc) via [#76](https://github.com/10up/retro-winamp-block/pull/76)).
+
 = 1.1.0 - 2021-06-21 =
 **Note that this release changes the minimum WordPress version to 5.8 and minimum PHP version to 5.6.**
 
