@@ -10,6 +10,7 @@ All notable changes to this project will be documented in this file, per [the Ke
 ### Added
 - Ability to change player skin from predefined list of skins with an option for custom skin input (props [@zamanq](https://github.com/zamanq), [@Sidsector9](https://github.com/Sidsector9) via [#60](https://github.com/10up/retro-winamp-block/pull/60)).
 - Support for Milkdrop visualisations (props [@Sidsector9](https://github.com/Sidsector9), [@iamdharmesh](https://github.com/iamdharmesh), [@jeffpaul](https://github.com/jeffpaul), [@iansvo](https://github.com/iansvo) via [#67](https://github.com/10up/retro-winamp-block/pull/67)).
+- Pre-release build ZIP Github Action workflow (props [@vikrampm1](https://github.com/vikrampm1), [@Sidsector9](https://github.com/Sidsector9) via [#74](https://github.com/10up/retro-winamp-block/issues/74)).
 
 ### Changed
 - Bump minimum PHP version from 5.6 to 7.4 (props [@Sidsector9](https://github.com/Sidsector9), [@cadic](https://github.com/cadic) via [#66](https://github.com/10up/retro-winamp-block/pull/66)).
