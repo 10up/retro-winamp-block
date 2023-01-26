@@ -10,17 +10,17 @@ All notable changes to this project will be documented in this file, per [the Ke
 ### Added
 - Ability to change player skin from predefined list of skins with an option for custom skin input (props [@zamanq](https://github.com/zamanq), [@Sidsector9](https://github.com/Sidsector9) via [#60](https://github.com/10up/retro-winamp-block/pull/60)).
 - Support for Milkdrop visualisations (props [@Sidsector9](https://github.com/Sidsector9), [@iamdharmesh](https://github.com/iamdharmesh), [@jeffpaul](https://github.com/jeffpaul), [@iansvo](https://github.com/iansvo) via [#67](https://github.com/10up/retro-winamp-block/pull/67)).
-- Pre-release build ZIP Github Action workflow (props [@vikrampm1](https://github.com/vikrampm1), [@Sidsector9](https://github.com/Sidsector9) via [#74](https://github.com/10up/retro-winamp-block/issues/74)).
+- Pre-release build ZIP Github Action workflow (props [@vikrampm1](https://github.com/vikrampm1), [@Sidsector9](https://github.com/Sidsector9), [@iamdharmesh](https://github.com/iamdharmesh) via [#80](https://github.com/10up/retro-winamp-block/pull/80)).
 
 ### Changed
 - Bump minimum PHP version from 5.6 to 7.4 (props [@Sidsector9](https://github.com/Sidsector9), [@cadic](https://github.com/cadic) via [#66](https://github.com/10up/retro-winamp-block/pull/66)).
-- Bump minimum node version from 12 to 16 (props [@Sidsector9](https://github.com/Sidsector9), [@cadic](https://github.com/cadic) via [#66](https://github.com/10up/retro-winamp-block/pull/66)).
-- Bump minimum composer version to 2 (props [@Sidsector9](https://github.com/Sidsector9), [@cadic](https://github.com/cadic) via [#66](https://github.com/10up/retro-winamp-block/pull/66)).
-- Bump Wordpress tested up to to 6.1 ([@jayedul](https://github.com/jayedul), [@dkotter](https://github.com/dkotter) via [#72](https://github.com/10up/retro-winamp-block/pull/72)).
+- Bump minimum Node version from 12 to 16 (props [@Sidsector9](https://github.com/Sidsector9), [@cadic](https://github.com/cadic) via [#66](https://github.com/10up/retro-winamp-block/pull/66)).
+- Bump minimum Composer version to 2 (props [@Sidsector9](https://github.com/Sidsector9), [@cadic](https://github.com/cadic) via [#66](https://github.com/10up/retro-winamp-block/pull/66)).
+- Bump WordPress "tested up to" version to 6.1 ([@jayedul](https://github.com/jayedul), [@dkotter](https://github.com/dkotter) via [#72](https://github.com/10up/retro-winamp-block/pull/72)).
 
 ### Fixed
-- Updated initialTracks to include metaData to prevent a LockedStream console error (props [@iansvo](https://github.com/iansvo), [@ajmaurya99](https://github.com/ajmaurya99) via [#71](https://github.com/10up/retro-winamp-block/pull/71), [@Sidsector9](https://github.com/Sidsector9), [@cadic](https://github.com/cadic)).
-- Page jank and scrolling as the webamp widget loads (props [@iansvo](https://github.com/iansvo), [@cadic](https://github.com/cadic), [@peterwilsoncc](https://github.com/peterwilsoncc), [@Sidsector9](https://github.com/Sidsector9) via [#56](https://github.com/10up/retro-winamp-block/pull/56)).
+- Updated initialTracks to include metaData to prevent a LockedStream console error (props [@iansvo](https://github.com/iansvo), [@ajmaurya99](https://github.com/ajmaurya99), [@Sidsector9](https://github.com/Sidsector9), [@cadic](https://github.com/cadic) via [#71](https://github.com/10up/retro-winamp-block/pull/71)).
+- Page jank and scrolling as the Webamp widget loads (props [@iansvo](https://github.com/iansvo), [@cadic](https://github.com/cadic), [@peterwilsoncc](https://github.com/peterwilsoncc), [@Sidsector9](https://github.com/Sidsector9), [@iamdharmesh](https://github.com/iamdharmesh) via [#56](https://github.com/10up/retro-winamp-block/pull/56), [#78](https://github.com/10up/retro-winamp-block/pull/78)).
 
 ### Security
 - Bump `terser` from 5.14.1 to 5.14.2 (props [@jeffpaul](https://github.com/jeffpaul) via [#58](https://github.com/10up/retro-winamp-block/pull/58)).
