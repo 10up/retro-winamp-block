@@ -22,3 +22,9 @@
 		display: block;
 	}
 }
+
+#webamp:not(.is-loaded) {
+	opacity: 0;
+	position: absolute;
+	visibility: hidden;
+}

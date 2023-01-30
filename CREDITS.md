@@ -6,13 +6,13 @@ The following acknowledges the Maintainers for this repository, those who have C
 
 The following individuals are responsible for curating the list of issues, responding to pull requests, and ensuring regular releases happen.
 
-[Jeffrey Paul](https://github.com/jeffpaul), [Darin Kotter (@dkotter)](https://github.com/dkotter), [Tung Du (@dinhtungdu)](https://github.com/dinhtungdu).
+[Jeffrey Paul (@jeffpaul)](https://github.com/jeffpaul), [Darin Kotter (@dkotter)](https://github.com/dkotter).
 
 ## Contributors
 
 Thank you to all the people who have already contributed to this repository via bug reports, code, design, ideas, project management, translation, testing, etc.
 
-[Jeffrey Paul (@jeffpaul)](https://github.com/jeffpaul), [Tung Du (@dinhtungdu)](https://github.com/dinhtungdu), [Fabian Kägy (@fabiankaegy)](https://github.com/fabiankaegy), [Darin Kotter (@dkotter)](https://github.com/dkotter), [Mel Choyce-Dwan (@melchoyce)](https://github.com/melchoyce), [Crisoforo Gaspar Hernández (@mitogh)](https://github.com/mitogh), [Helen Hou-Sandi (@helen)](https://github.com/helen), [Sudip Dadhaniya (@sudip-10up)](https://github.com/sudip-10up), [Dharmesh Patel (@iamdharmesh)](https://github.com/iamdharmesh), [Peter Wilson (@peterwilsoncc)](https://github.com/peterwilsoncc), [Faisal Alvi (@faisal-alvi)](https://github.com/faisal-alvi), [Siddharth Thevaril (@Sidsector9)](https://github.com/Sidsector9), [Vikram Moparthy (@vikrampm1)](https://github.com/vikrampm1).
+[Jeffrey Paul (@jeffpaul)](https://github.com/jeffpaul), [Tung Du (@dinhtungdu)](https://github.com/dinhtungdu), [Fabian Kägy (@fabiankaegy)](https://github.com/fabiankaegy), [Darin Kotter (@dkotter)](https://github.com/dkotter), [Mel Choyce-Dwan (@melchoyce)](https://github.com/melchoyce), [Crisoforo Gaspar Hernández (@mitogh)](https://github.com/mitogh), [Helen Hou-Sandi (@helen)](https://github.com/helen), [Sudip Dadhaniya (@sudip-10up)](https://github.com/sudip-10up), [Dharmesh Patel (@iamdharmesh)](https://github.com/iamdharmesh), [Peter Wilson (@peterwilsoncc)](https://github.com/peterwilsoncc), [Faisal Alvi (@faisal-alvi)](https://github.com/faisal-alvi), [Siddharth Thevaril (@Sidsector9)](https://github.com/Sidsector9), [Vikram Moparthy (@vikrampm1)](https://github.com/vikrampm1), [Peter Wilson (@peterwilsoncc)](https://github.com/peterwilsoncc), [Quamruz Zaman (@zamanq)](https://github.com/zamanq), [Ian Svoboda (@iansvo)](https://github.com/iansvo), [Ajay Maurya (@ajmaurya99)](https://github.com/ajmaurya99), [Max Lyuchin (@cadic)](https://github.com/cadic), [Jayedul Kabir (@jayedul)](https://github.com/jayedul)).
 
 ## Libraries
 

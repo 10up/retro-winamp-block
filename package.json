@@ -1,6 +1,6 @@
 {
 	"name": "winamp-block",
-	"version": "1.1.0",
+	"version": "1.2.0",
 	"description": "A Winamp-styled audio block for all your retro music player needs.",
 	"author": {
 		"name": "10up",
@@ -20,7 +20,7 @@
 		"wp-env": "wp-env",
 		"lint:css": "wp-scripts lint-style",
 		"lint:js": "wp-scripts lint-js",
-		"start": "wp-scripts start",
+		"start": "NODE_ENVIRONMENT=development wp-scripts start",
 		"packages-update": "wp-scripts packages-update"
 	},
 	"dependencies": {
@@ -30,16 +30,17 @@
 		"@wordpress/components": "^19.0.3",
 		"@wordpress/compose": "^5.0.6",
 		"@wordpress/data": "^6.1.4",
-		"@wordpress/dom-ready": "^3.2.3",
 		"@wordpress/element": "^4.0.4",
 		"@wordpress/i18n": "^4.2.3",
 		"@wordpress/primitives": "^3.0.4",
+		"butterchurn": "^2.6.7",
+		"butterchurn-presets": "^2.4.7",
 		"classnames": "^2.3.1",
 		"lodash": "^4.17.21",
 		"webamp": "^1.5.0"
 	},
 	"devDependencies": {
-		"@wordpress/env": "^4.1.2",
-		"@wordpress/scripts": "^19.2.2"
+		"@wordpress/env": "^5.5.0",
+		"@wordpress/scripts": "^24.3.0"
 	}
 }

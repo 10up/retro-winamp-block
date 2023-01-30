@@ -1,7 +1,12 @@
 import Webamp from 'webamp';
-import domReady from '@wordpress/dom-ready';
 
-domReady( () => {
+/**
+ * Internal dependencies
+ */
+import milkdropOptions from './milkdrop';
+
+// Run on window.load to reduce jank on page load
+window.addEventListener( 'load', () => {
 	const container = document.querySelector( '.wp-block-tenup-winamp-block' );
 
 	// Ensure our container exists
@@ -19,9 +24,17 @@ domReady( () => {
 		initialTracks: [],
 	};
 
-	audioElements.forEach( ( audio ) =>
-		options.initialTracks.push( { url: audio.dataset.src } )
-	);
+	audioElements.forEach( ( audio ) => {
+		const { src: url = '', artist = '', title = '' } = audio.dataset;
+
+		options.initialTracks.push( {
+			url,
+			metaData: {
+				artist,
+				title,
+			},
+		} );
+	} );
 
 	// Ensure our audio tracks were added correctly
 	if ( options.initialTracks.length === 0 ) {
@@ -43,5 +56,14 @@ domReady( () => {
 	}
 
 	// Render the player
-	new Webamp( options ).renderWhenReady( container );
+	new Webamp( { ...options, ...milkdropOptions } ).renderWhenReady( container ).then( () => {
+		const player = document.getElementById( 'webamp' );
+
+		// Add is loaded class after artifical delay to reduce page jank
+		if ( player ) {
+			setTimeout( () => {
+				player.classList.add( 'is-loaded' );
+			}, 1000 );
+		}
+	} );
 } );

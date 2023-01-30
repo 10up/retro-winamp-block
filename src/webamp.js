@@ -1,6 +1,11 @@
 import { useEffect, useState, useRef } from '@wordpress/element';
 import Webamp from 'webamp';
 
+/**
+ * Internal dependencies
+ */
+import milkdropOptions from './milkdrop';
+
 export const WebAmp = ( props ) => {
 	const { audio = [], currentSkin = '' } = props;
 	const divRef = useRef( null );
@@ -32,9 +37,16 @@ export const WebAmp = ( props ) => {
 			}
 		}
 
-		const player = new Webamp( options );
+		const player = new Webamp( { ...options, ...milkdropOptions } );
 		setWebamp( player );
-		player.renderWhenReady( divRef.current );
+		player.renderWhenReady( divRef.current ).then( () => {
+			const webAmpContainer = document.getElementById( 'webamp' );
+
+			// Add is loaded class after artifical delay to reduce page jank
+			if ( webAmpContainer ) {
+				webAmpContainer.classList.add( 'is-loaded' );
+			}
+		} );
 
 		return () => {
 			player.dispose();
