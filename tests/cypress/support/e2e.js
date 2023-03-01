@@ -14,6 +14,7 @@
 // ***********************************************************
 
 import "@10up/cypress-wp-utils";
+import 'cypress-file-upload';
 
 // Import commands.js using ES2015 syntax:
 import "./commands";

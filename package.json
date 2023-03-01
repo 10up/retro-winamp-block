@@ -49,6 +49,7 @@
     "@10up/cypress-wp-utils": "github:10up/cypress-wp-utils#build",
     "@wordpress/env": "^5.12.0",
     "@wordpress/scripts": "^24.3.0",
-    "cypress": "^10.11.0"
+    "cypress": "^10.11.0",
+    "cypress-file-upload": "^5.0.8"
   }
 }
