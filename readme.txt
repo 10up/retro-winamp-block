@@ -1,7 +1,7 @@
 === Retro Winamp Block ===
 Contributors:      10up, dinhtungdu, fabiankaegy, dkotter, melchoyce, jeffpaul
 Tags:              winamp, webamp, mp3, music, audio, player, playlist, equalizer, block
-Requires at least: 5.8
+Requires at least: 6.1
 Tested up to:      6.1
 Stable tag:        1.2.0
 Requires PHP:      7.4
