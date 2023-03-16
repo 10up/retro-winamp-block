@@ -62,3 +62,4 @@ Desktop.ini
 ##
 *.p8
 .env
+.wp-env.override.json

@@ -15,7 +15,7 @@ Do you miss the days of filling up your computer's harddrive with MP3 files, bur
 ## Requirements
 
 * PHP >=7.4
-* [WordPress](http://wordpress.org/) >=5.8
+* [WordPress](http://wordpress.org/) >=6.1
 
 ## Installation
 
