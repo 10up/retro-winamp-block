@@ -14,5 +14,5 @@ module.exports = {
 		},
 	},
 
-	ignorePatterns: [ '*.min.js' ],
+	ignorePatterns: [ '*.min.js', 'tests/*' ],
 };

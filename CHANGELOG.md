@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file, per [the Ke
 
 ## [Unreleased] - TBD
 
-## [1.2.0] - 2023-01-21
+## [1.2.0] - 2023-01-30
 **Note that this release changes the minimum PHP version to from 5.6 to 7.4.**
 
 ### Added
@@ -31,7 +31,7 @@ All notable changes to this project will be documented in this file, per [the Ke
 - Bump `got` from 10.7.0 to 11.8.5 (props [@faisal-alvi](https://github.com/faisal-alvi) via [#62](https://github.com/10up/retro-winamp-block/pull/62)).
 - Bump `@wordpress/env` from 4.9.0 to 5.4.0 (props [@faisal-alvi](https://github.com/faisal-alvi) via [#62](https://github.com/10up/retro-winamp-block/pull/62)).
 - Bump `loader-utils` from 2.0.3 to 2.0.4 (props [@Sidsector9](https://github.com/Sidsector9) via [#70](https://github.com/10up/retro-winamp-block/pull/70)).
-- Bump `simple-git` from 3.14.1 to 3.15.1 (props [@jeffpaul](https://github.com/jeffpaul) via [#73](https://github.com/10up/retro-winamp-block/pull/73)).
+- Bump `simple-git` from 3.14.1 to 3.16.0 (props [@jeffpaul](https://github.com/jeffpaul) via [#73](https://github.com/10up/retro-winamp-block/pull/73), [#82](https://github.com/10up/retro-winamp-block/pull/82)).
 - Bump `json5` from 1.0.1 to 1.0.2 (props [@peterwilsoncc](https://github.com/peterwilsoncc) via [#76](https://github.com/10up/retro-winamp-block/pull/76)).
 
 ## [1.1.0] - 2021-06-21
