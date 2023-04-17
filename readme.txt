@@ -52,7 +52,7 @@ Details on how to create a new skin is available [here](https://github.com/WACUP
 * **Security:** Bump `simple-git` from `3.15.1` to `3.16.0` (props [@Sidsector9](https://github.com/Sidsector9)) via [#82](https://github.com/10up/retro-winamp-block/pull/82).
 * **Security:** Bump `http-cache-semantics` from `4.1.0` to `4.1.1` (props [@peterwilsoncc](https://github.com/peterwilsoncc)) via [#85](https://github.com/10up/retro-winamp-block/pull/85).
 * **Security:** Bump `@sideway/formula` from `3.0.0` to `3.0.1` (props [@faisal-alvi](https://github.com/faisal-alvi)) via [#86](https://github.com/10up/retro-winamp-block/pull/86).
-* **Security:** Bump `webpack` from `5.73.0` to `5.76.2` (props [@faisal-alvi](https://github.com/faisal-alvi)).
+* **Security:** Bump `webpack` from `5.73.0` to `5.76.2` (props [@faisal-alvi](https://github.com/faisal-alvi)) via [#90](https://github.com/10up/retro-winamp-block/pull/90).
 
 = 1.2.0 - 2023-01-25 =
 **Note that this release changes the minimum PHP version to from 5.6 to 7.4.**
