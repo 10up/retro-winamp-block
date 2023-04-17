@@ -80,6 +80,7 @@ All notable changes to this project will be documented in this file, per [the Ke
 - Initial release of the Winamp Block plugin. 🎉
 
 [Unreleased]: https://github.com/10up/retro-winamp-block/compare/trunk...develop
+[1.3.0]: https://github.com/10up/retro-winamp-block/compare/1.2.0...1.3.0
 [1.2.0]: https://github.com/10up/retro-winamp-block/compare/1.1.0...1.2.0
 [1.1.0]: https://github.com/10up/retro-winamp-block/compare/1.0.1...1.1.0
 [1.0.1]: https://github.com/10up/retro-winamp-block/compare/1.0.0...1.0.1
