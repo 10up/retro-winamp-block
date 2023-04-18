@@ -4,6 +4,8 @@
 
 [![Support Level](https://img.shields.io/badge/support-stable-blue.svg)](#support-level) [![Release Version](https://img.shields.io/github/release/10up/retro-winamp-block.svg)](https://github.com/10up/retro-winamp-block/releases/latest) ![WordPress tested up to version](https://img.shields.io/wordpress/plugin/tested/retro-winamp-block?label=WordPress) [![GPLv2 License](https://img.shields.io/github/license/10up/retro-winamp-block.svg)](https://github.com/10up/retro-winamp-block/blob/develop/LICENSE.md)
 
+[![E2E test](https://github.com/10up/retro-winamp-block/actions/workflows/cypress.yml/badge.svg)](https://github.com/10up/retro-winamp-block/actions/workflows/cypress.yml) [![JS and CSS lint](https://github.com/10up/retro-winamp-block/actions/workflows/eslint.yml/badge.svg)](https://github.com/10up/retro-winamp-block/actions/workflows/eslint.yml) [![PHPCS](https://github.com/10up/retro-winamp-block/actions/workflows/phpcs.yml/badge.svg)](https://github.com/10up/retro-winamp-block/actions/workflows/phpcs.yml) [![PHP Compatibility](https://github.com/10up/retro-winamp-block/actions/workflows/php-compatibility.yml/badge.svg)](https://github.com/10up/retro-winamp-block/actions/workflows/php-compatibility.yml)
+
 ## Overview
 
 Do you miss the days of filling up your computer's harddrive with MP3 files, burning CDs with your favorite party mixes, the glam and grunge fashion styles, waiting every week for the latest episodes of Friends and Sex and the City (sorry, no binging on streaming episodes), and all that came with the 90s?  Do you wish the WordPress core blocks offered you more styles to match your interests?  Then look no further, because this plugin transforms a bland audio block into a llama-riffic Winamp-stlyed audio block!
