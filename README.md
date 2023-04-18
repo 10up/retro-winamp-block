@@ -12,6 +12,8 @@ Do you miss the days of filling up your computer's harddrive with MP3 files, bur
 
 ![Winamp Block](.wordpress-org/screenshot-1.png "The Winamp player with the base, default skin.")
 
+![Winamp Milkdrop visualisations](.wordpress-org/screenshot-3.png "The Winamp player with the Mildrop visualizer enabled.")
+
 ## Requirements
 
 * PHP >=7.4
@@ -25,7 +27,11 @@ Do you miss the days of filling up your computer's harddrive with MP3 files, bur
 
 ## Changing Player Skins
 
-In order to select alternate player skins, browse [the Winamp Skin Museum](https://skins.webamp.org/) and find a preferred skin, copy the URL of the specific skin (e.g., https://skins.webamp.org/skin/bb0bf8064d108271afea419308dcb6ea/NES_Duck_Hunt.wsz/), and paste that URL in the `Skin URL` field in the Winamp Block Skin settings.
+There are four default skins included in the plugin, these can be selected via the visual options in the "Winamp Player Skin" block sidebar option.
+
+![Winamp player skin selector](.wordpress-org/screenshot-4.png "Winamp Block settings showing the default skin selections and toggle to enable custom Skin URL entry.")
+
+In order to select alternate player skins, browse [the Winamp Skin Museum](https://skins.webamp.org/) and find a preferred skin, copy the URL of the specific skin (e.g., https://skins.webamp.org/skin/bb0bf8064d108271afea419308dcb6ea/NES_Duck_Hunt.wsz/), enable the "Use Custom Skin?" option, and paste the URL in the `Skin URL` field in the Winamp Block Skin settings.
 
 ![Winamp Block settings](.wordpress-org/screenshot-2.png "Winamp Block settings showing the Skin URL setting updated to an alternate Winamp skin.")
 
