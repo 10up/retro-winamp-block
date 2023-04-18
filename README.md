@@ -4,6 +4,8 @@
 
 [![Support Level](https://img.shields.io/badge/support-stable-blue.svg)](#support-level) [![Release Version](https://img.shields.io/github/release/10up/retro-winamp-block.svg)](https://github.com/10up/retro-winamp-block/releases/latest) ![WordPress tested up to version](https://img.shields.io/wordpress/plugin/tested/retro-winamp-block?label=WordPress) [![GPLv2 License](https://img.shields.io/github/license/10up/retro-winamp-block.svg)](https://github.com/10up/retro-winamp-block/blob/develop/LICENSE.md)
 
+[![E2E test](https://github.com/10up/retro-winamp-block/actions/workflows/cypress.yml/badge.svg)](https://github.com/10up/retro-winamp-block/actions/workflows/cypress.yml) [![JS and CSS lint](https://github.com/10up/retro-winamp-block/actions/workflows/eslint.yml/badge.svg)](https://github.com/10up/retro-winamp-block/actions/workflows/eslint.yml) [![PHPCS](https://github.com/10up/retro-winamp-block/actions/workflows/phpcs.yml/badge.svg)](https://github.com/10up/retro-winamp-block/actions/workflows/phpcs.yml) [![PHP Compatibility](https://github.com/10up/retro-winamp-block/actions/workflows/php-compatibility.yml/badge.svg)](https://github.com/10up/retro-winamp-block/actions/workflows/php-compatibility.yml)
+
 ## Overview
 
 Do you miss the days of filling up your computer's harddrive with MP3 files, burning CDs with your favorite party mixes, the glam and grunge fashion styles, waiting every week for the latest episodes of Friends and Sex and the City (sorry, no binging on streaming episodes), and all that came with the 90s?  Do you wish the WordPress core blocks offered you more styles to match your interests?  Then look no further, because this plugin transforms a bland audio block into a llama-riffic Winamp-stlyed audio block!
@@ -11,6 +13,8 @@ Do you miss the days of filling up your computer's harddrive with MP3 files, bur
 **Disclaimer:** _[Winamp](https://en.wikipedia.org/wiki/Winamp) and the Winamp logo are property of [Nullsoft Inc.](https://en.wikipedia.org/wiki/Nullsoft) and its owner [Radionomy Group](https://en.wikipedia.org/wiki/Radionomy) (now defunct).  This project also leverages the [MIT-licensed](https://github.com/captbaritone/webamp/blob/master/LICENSE.txt) [Webamp player](https://webamp.org/), many thanks to  Jordan Eldredge for his efforts there._
 
 ![Winamp Block](.wordpress-org/screenshot-1.png "The Winamp player with the base, default skin.")
+
+![Winamp Milkdrop visualisations](.wordpress-org/screenshot-3.png "The Winamp player with the Mildrop visualizer enabled.")
 
 ## Requirements
 
@@ -25,7 +29,11 @@ Do you miss the days of filling up your computer's harddrive with MP3 files, bur
 
 ## Changing Player Skins
 
-In order to select alternate player skins, browse [the Winamp Skin Museum](https://skins.webamp.org/) and find a preferred skin, copy the URL of the specific skin (e.g., https://skins.webamp.org/skin/bb0bf8064d108271afea419308dcb6ea/NES_Duck_Hunt.wsz/), and paste that URL in the `Skin URL` field in the Winamp Block Skin settings.
+There are four default skins included in the plugin, these can be selected via the visual options in the "Winamp Player Skin" block sidebar option.
+
+![Winamp player skin selector](.wordpress-org/screenshot-4.png "Winamp Block settings showing the default skin selections and toggle to enable custom Skin URL entry.")
+
+In order to select alternate player skins, browse [the Winamp Skin Museum](https://skins.webamp.org/) and find a preferred skin, copy the URL of the specific skin (e.g., https://skins.webamp.org/skin/bb0bf8064d108271afea419308dcb6ea/NES_Duck_Hunt.wsz/), enable the "Use Custom Skin?" option, and paste the URL in the `Skin URL` field in the Winamp Block Skin settings.
 
 ![Winamp Block settings](.wordpress-org/screenshot-2.png "Winamp Block settings showing the Skin URL setting updated to an alternate Winamp skin.")
 
