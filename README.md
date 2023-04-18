@@ -2,7 +2,9 @@
 
 > A Winamp-styled audio block for all your retro music player needs.
 
-[![Support Level](https://img.shields.io/badge/support-active-green.svg)](#support-level) [![Release Version](https://img.shields.io/github/release/10up/retro-winamp-block.svg)](https://github.com/10up/retro-winamp-block/releases/latest) ![WordPress tested up to version](https://img.shields.io/wordpress/plugin/tested/retro-winamp-block?label=WordPress) [![GPLv2 License](https://img.shields.io/github/license/10up/retro-winamp-block.svg)](https://github.com/10up/retro-winamp-block/blob/develop/LICENSE.md)
+[![Support Level](https://img.shields.io/badge/support-stable-blue.svg)](#support-level) [![Release Version](https://img.shields.io/github/release/10up/retro-winamp-block.svg)](https://github.com/10up/retro-winamp-block/releases/latest) ![WordPress tested up to version](https://img.shields.io/wordpress/plugin/tested/retro-winamp-block?label=WordPress) [![GPLv2 License](https://img.shields.io/github/license/10up/retro-winamp-block.svg)](https://github.com/10up/retro-winamp-block/blob/develop/LICENSE.md)
+
+[![E2E test](https://github.com/10up/retro-winamp-block/actions/workflows/cypress.yml/badge.svg)](https://github.com/10up/retro-winamp-block/actions/workflows/cypress.yml) [![JS and CSS lint](https://github.com/10up/retro-winamp-block/actions/workflows/eslint.yml/badge.svg)](https://github.com/10up/retro-winamp-block/actions/workflows/eslint.yml) [![PHPCS](https://github.com/10up/retro-winamp-block/actions/workflows/phpcs.yml/badge.svg)](https://github.com/10up/retro-winamp-block/actions/workflows/phpcs.yml) [![PHP Compatibility](https://github.com/10up/retro-winamp-block/actions/workflows/php-compatibility.yml/badge.svg)](https://github.com/10up/retro-winamp-block/actions/workflows/php-compatibility.yml)
 
 ## Overview
 
@@ -12,10 +14,12 @@ Do you miss the days of filling up your computer's harddrive with MP3 files, bur
 
 ![Winamp Block](.wordpress-org/screenshot-1.png "The Winamp player with the base, default skin.")
 
+![Winamp Milkdrop visualisations](.wordpress-org/screenshot-3.png "The Winamp player with the Mildrop visualizer enabled.")
+
 ## Requirements
 
 * PHP >=7.4
-* [WordPress](http://wordpress.org/) >=5.8
+* [WordPress](http://wordpress.org/) >=6.1
 
 ## Installation
 
@@ -25,7 +29,11 @@ Do you miss the days of filling up your computer's harddrive with MP3 files, bur
 
 ## Changing Player Skins
 
-In order to select alternate player skins, browse [the Winamp Skin Museum](https://skins.webamp.org/) and find a preferred skin, copy the URL of the specific skin (e.g., https://skins.webamp.org/skin/bb0bf8064d108271afea419308dcb6ea/NES_Duck_Hunt.wsz/), and paste that URL in the `Skin URL` field in the Winamp Block Skin settings.
+There are four default skins included in the plugin, these can be selected via the visual options in the "Winamp Player Skin" block sidebar option.
+
+![Winamp player skin selector](.wordpress-org/screenshot-4.png "Winamp Block settings showing the default skin selections and toggle to enable custom Skin URL entry.")
+
+In order to select alternate player skins, browse [the Winamp Skin Museum](https://skins.webamp.org/) and find a preferred skin, copy the URL of the specific skin (e.g., https://skins.webamp.org/skin/bb0bf8064d108271afea419308dcb6ea/NES_Duck_Hunt.wsz/), enable the "Use Custom Skin?" option, and paste the URL in the `Skin URL` field in the Winamp Block Skin settings.
 
 ![Winamp Block settings](.wordpress-org/screenshot-2.png "Winamp Block settings showing the Skin URL setting updated to an alternate Winamp skin.")
 
@@ -41,7 +49,7 @@ Details on how to create a new skin is available [here](https://github.com/WACUP
 
 ## Support Level
 
-**Active:** 10up is actively working on this, and we expect to continue work for the foreseeable future including keeping tested up to the most recent version of WordPress.  Bug reports, feature requests, questions, and pull requests are welcome.
+**Stable:** 10up is not planning to develop any new features for this, but will still respond to bug reports and security concerns. We welcome PRs, but any that include new features should be small and easy to integrate and should not include breaking changes. We otherwise intend to keep this tested up to the most recent version of WordPress.
 
 ## Changelog
 

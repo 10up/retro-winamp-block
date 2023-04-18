@@ -1,9 +1,9 @@
 === Retro Winamp Block ===
 Contributors:      10up, dinhtungdu, fabiankaegy, dkotter, melchoyce, jeffpaul
 Tags:              winamp, webamp, mp3, music, audio, player, playlist, equalizer, block
-Requires at least: 5.8
+Requires at least: 6.1
 Tested up to:      6.2
-Stable tag:        1.2.0
+Stable tag:        1.3.0
 Requires PHP:      7.4
 License:           GPLv2 or later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -40,8 +40,19 @@ Details on how to create a new skin is available [here](https://github.com/WACUP
 
 1. The Winamp player with the base, default skin.
 2. Winamp Block settings showing the Skin URL setting updated to an alternate Winamp skin.
+3. Winamp Milkdrop visualisations.
+4. Winamp player skin selector.
 
 == Changelog ==
+
+= 1.3.0 - 2023-04-18 =
+* **Added:** E2E tests using Cypress (props [@vikrampm1](https://github.com/vikrampm1), [@barneyjeffries](https://github.com/barneyjeffries), [@iamdharmesh](https://github.com/iamdharmesh), [@cadic](https://github.com/cadic)) via [#87](https://github.com/10up/retro-winamp-block/pull/87).
+* **Changed:** Bump WordPress "tested up to" version from 6.1 to 6.2 (props [@jayedul](https://github.com/jayedul), [@peterwilsoncc](https://github.com/peterwilsoncc)) via [#92](https://github.com/10up/retro-winamp-block/pull/92)
+* **Changed:** [Support Level](https://github.com/10up/retro-winamp-block#support-level) from `Active` to `Stable` (props [@jeffpaul](https://github.com/jeffpaul), [@Sidsector9](https://github.com/Sidsector9)) via [#94](https://github.com/10up/retro-winamp-block/pull/94).
+* **Security:** Bump `simple-git` from `3.15.1` to `3.16.0` (props [@Sidsector9](https://github.com/Sidsector9)) via [#82](https://github.com/10up/retro-winamp-block/pull/82).
+* **Security:** Bump `http-cache-semantics` from `4.1.0` to `4.1.1` (props [@peterwilsoncc](https://github.com/peterwilsoncc)) via [#85](https://github.com/10up/retro-winamp-block/pull/85).
+* **Security:** Bump `@sideway/formula` from `3.0.0` to `3.0.1` (props [@faisal-alvi](https://github.com/faisal-alvi)) via [#86](https://github.com/10up/retro-winamp-block/pull/86).
+* **Security:** Bump `webpack` from `5.73.0` to `5.76.2` (props [@faisal-alvi](https://github.com/faisal-alvi)) via [#90](https://github.com/10up/retro-winamp-block/pull/90).
 
 = 1.2.0 - 2023-01-25 =
 **Note that this release changes the minimum PHP version to from 5.6 to 7.4.**
