@@ -15,6 +15,55 @@
  * @package           tenup\Winamp_Block
  */
 
+namespace RetroWinampBlock;
+
+/**
+ * Get the minimum version of PHP required by this plugin.
+ *
+ * @since 1.3.1
+ *
+ * @return string Minimum version required.
+ */
+function minimum_php_requirement(): string {
+	return '7.4';
+}
+
+/**
+ * Whether PHP installation meets the minimum requirements
+ *
+ * @since 1.3.1
+ *
+ * @return bool True if meets minimum requirements, false otherwise.
+ */
+function site_meets_php_requirements(): bool {
+	return version_compare( phpversion(), minimum_php_requirement(), '>=' );
+}
+
+// Try to load the plugin files, ensuring our PHP version is met first.
+if ( ! site_meets_php_requirements() ) {
+	add_action(
+		'admin_notices',
+		function() {
+			?>
+			<div class="notice notice-error">
+				<p>
+					<?php
+					echo wp_kses_post(
+						sprintf(
+						/* translators: %s: Minimum required PHP version */
+							__( 'Retro Winamp Block requires PHP version %s or later. Please upgrade PHP or disable the plugin.', 'retro-winamp-block' ),
+							esc_html( minimum_php_requirement() )
+						)
+					);
+					?>
+				</p>
+			</div>
+			<?php
+		}
+	);
+	return;
+}
+
 /**
  * Registers the block using the metadata loaded from the `block.json` file.
  * Behind the scenes, it registers also all assets so they can be enqueued
