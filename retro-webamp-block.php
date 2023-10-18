@@ -110,8 +110,8 @@ add_filter(
 		if ( 'core/audio' !== $block['blockName'] ) {
 			return $block_content;
 		}
-		$attributes    = $block['attrs'] ?? array();
-		$attachment_id = $attributes['id'] ?? 0;
+		$attributes    = isset( $block['attrs'] ) ? $block['attrs'] : array();
+		$attachment_id = isset( $attributes['id'] ) ? $attributes['id'] : 0;
 		$attachment    = get_post( $attachment_id );
 
 		// Stop here if $attachment can't be found.
@@ -120,8 +120,8 @@ add_filter(
 		}
 
 		$metadata  = wp_get_attachment_metadata( $attachment_id );
-		$artist    = $metadata['artist'] ?? '';
-		$title     = $metadata['title'] ?? '';
+		$artist    = isset( $metadata['artist'] ) ? $metadata['artist'] : '';
+		$title     = isset( $metadata['title'] ) ? $metadata['title'] : '';
 		$new_props = array(
 			'artist' => $artist,
 			'title'  => $title,
