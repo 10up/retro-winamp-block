@@ -3,7 +3,7 @@
  * Plugin Name:       Retro Winamp Block
  * Plugin URI:        https://wordpress.org/plugins/retro-winamp-block/
  * Description:       A Winamp-styled audio block for all your retro music player needs.
- * Version:           1.3.0
+ * Version:           1.3.1
  * Requires at least: 6.1
  * Requires PHP:      7.4
  * Author:            10up
@@ -24,7 +24,7 @@ namespace RetroWinampBlock;
  *
  * @return string Minimum version required.
  */
-function minimum_php_requirement(): string {
+function minimum_php_requirement() {
 	return '7.4';
 }
 
@@ -35,7 +35,7 @@ function minimum_php_requirement(): string {
  *
  * @return bool True if meets minimum requirements, false otherwise.
  */
-function site_meets_php_requirements(): bool {
+function site_meets_php_requirements() {
 	return version_compare( phpversion(), minimum_php_requirement(), '>=' );
 }
 
@@ -110,8 +110,8 @@ add_filter(
 		if ( 'core/audio' !== $block['blockName'] ) {
 			return $block_content;
 		}
-		$attributes    = $block['attrs'] ?? array();
-		$attachment_id = $attributes['id'] ?? 0;
+		$attributes    = isset( $block['attrs'] ) ? $block['attrs'] : array();
+		$attachment_id = isset( $attributes['id'] ) ? $attributes['id'] : 0;
 		$attachment    = get_post( $attachment_id );
 
 		// Stop here if $attachment can't be found.
@@ -120,8 +120,8 @@ add_filter(
 		}
 
 		$metadata  = wp_get_attachment_metadata( $attachment_id );
-		$artist    = $metadata['artist'] ?? '';
-		$title     = $metadata['title'] ?? '';
+		$artist    = isset( $metadata['artist'] ) ? $metadata['artist'] : '';
+		$title     = isset( $metadata['title'] ) ? $metadata['title'] : '';
 		$new_props = array(
 			'artist' => $artist,
 			'title'  => $title,
