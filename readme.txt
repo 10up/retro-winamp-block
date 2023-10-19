@@ -3,7 +3,7 @@ Contributors:      10up, dinhtungdu, fabiankaegy, dkotter, melchoyce, jeffpaul
 Tags:              winamp, webamp, mp3, music, audio, player, playlist, equalizer, block
 Requires at least: 6.1
 Tested up to:      6.3
-Stable tag:        1.3.0
+Stable tag:        1.3.1
 Requires PHP:      7.4
 License:           GPLv2 or later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -44,6 +44,16 @@ Details on how to create a new skin is available [here](https://github.com/WACUP
 4. Winamp player skin selector.
 
 == Changelog ==
+
+= 1.3.1 - 2023-10-19 =
+* **Added:** Check for minimum required PHP version before loading the plugin (props [@kmgalanakis](https://github.com/kmgalanakis), [@Sidsector9](https://github.com/Sidsector9) via [#103](https://github.com/10up/retro-winamp-block/pull/103)).
+* **Changed:** Update our dependency review GitHub Action (props [@jeffpaul](https://github.com/jeffpaul), [@Sidsector9](https://github.com/Sidsector9) via [#97](https://github.com/10up/retro-winamp-block/pull/97)).
+* **Changed:** Bump WordPress "tested up to" version 6.3 (props [@kmgalanakis](https://github.com/kmgalanakis), [@iamdharmesh](https://github.com/iamdharmesh), [@jeffpaul](https://github.com/jeffpaul), [@peterwilsoncc](https://github.com/peterwilsoncc) via [#102](https://github.com/10up/retro-winamp-block/pull/102), [#105](https://github.com/10up/retro-winamp-block/pull/105)).
+* **Security:** Bump `semver` from 5.7.1 to 5.7.2 (props [@dependabot](https://github.com/apps/dependabot), [@ravinderk](https://github.com/ravinderk) via [#98](https://github.com/10up/retro-winamp-block/pull/98)).
+* **Security:** Bump `word-wrap` from 1.2.3 to 1.2.5 (props [@dependabot](https://github.com/apps/dependabot), [@peterwilsoncc](https://github.com/peterwilsoncc) via [#106](https://github.com/10up/retro-winamp-block/pull/106)).
+* **Security:** Bump `tough-cookie` from 4.1.2 to 4.1.3 and `@cypress/request` from 2.88.11 to 3.0.1 (props [@dependabot](https://github.com/apps/dependabot), [@Sidsector9](https://github.com/Sidsector9) via [#107](https://github.com/10up/retro-winamp-block/pull/107), [#108](https://github.com/10up/retro-winamp-block/pull/108)).
+* **Security:** Bump `cypress` from 10.11.0 to 13.1.0 (props [@dependabot](https://github.com/apps/dependabot), [@Sidsector9](https://github.com/Sidsector9) via [#108](https://github.com/10up/retro-winamp-block/pull/108)).
+* **Security:** Bump `postcss` from 8.4.20 to 8.4.31 (props [@dependabot](https://github.com/apps/dependabot), [@faisal-alvi](https://github.com/faisal-alvi) via [#110](https://github.com/10up/retro-winamp-block/pull/110)).
 
 = 1.3.0 - 2023-04-18 =
 * **Added:** E2E tests using Cypress (props [@vikrampm1](https://github.com/vikrampm1), [@barneyjeffries](https://github.com/barneyjeffries), [@iamdharmesh](https://github.com/iamdharmesh), [@cadic](https://github.com/cadic)) via [#87](https://github.com/10up/retro-winamp-block/pull/87).

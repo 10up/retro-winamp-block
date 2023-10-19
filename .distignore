@@ -4,19 +4,15 @@
 /.wordpress-org
 /node_modules
 /src
+/tests
 /vendor
 
 # Files
-.distignore
-.editorconfig
-.eslintrc.js
-.gitignore
-.nvmrc
-.phpcs.xml.dist
-.wp-env.json
+.*
 CHANGELOG.md
 CODE_OF_CONDUCT.md
 composer.json
+composer.lock
 CONTRIBUTING.md
 CREDITS.md
 LICENSE.md

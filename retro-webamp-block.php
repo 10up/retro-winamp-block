@@ -3,7 +3,7 @@
  * Plugin Name:       Retro Winamp Block
  * Plugin URI:        https://wordpress.org/plugins/retro-winamp-block/
  * Description:       A Winamp-styled audio block for all your retro music player needs.
- * Version:           1.3.0
+ * Version:           1.3.1
  * Requires at least: 6.1
  * Requires PHP:      7.4
  * Author:            10up
@@ -14,6 +14,55 @@
  *
  * @package           tenup\Winamp_Block
  */
+
+namespace RetroWinampBlock;
+
+/**
+ * Get the minimum version of PHP required by this plugin.
+ *
+ * @since 1.3.1
+ *
+ * @return string Minimum version required.
+ */
+function minimum_php_requirement() {
+	return '7.4';
+}
+
+/**
+ * Whether PHP installation meets the minimum requirements
+ *
+ * @since 1.3.1
+ *
+ * @return bool True if meets minimum requirements, false otherwise.
+ */
+function site_meets_php_requirements() {
+	return version_compare( phpversion(), minimum_php_requirement(), '>=' );
+}
+
+// Try to load the plugin files, ensuring our PHP version is met first.
+if ( ! site_meets_php_requirements() ) {
+	add_action(
+		'admin_notices',
+		function() {
+			?>
+			<div class="notice notice-error">
+				<p>
+					<?php
+					echo wp_kses_post(
+						sprintf(
+						/* translators: %s: Minimum required PHP version */
+							__( 'Retro Winamp Block requires PHP version %s or later. Please upgrade PHP or disable the plugin.', 'retro-winamp-block' ),
+							esc_html( minimum_php_requirement() )
+						)
+					);
+					?>
+				</p>
+			</div>
+			<?php
+		}
+	);
+	return;
+}
 
 /**
  * Registers the block using the metadata loaded from the `block.json` file.
@@ -61,8 +110,8 @@ add_filter(
 		if ( 'core/audio' !== $block['blockName'] ) {
 			return $block_content;
 		}
-		$attributes    = $block['attrs'] ?? array();
-		$attachment_id = $attributes['id'] ?? 0;
+		$attributes    = isset( $block['attrs'] ) ? $block['attrs'] : array();
+		$attachment_id = isset( $attributes['id'] ) ? $attributes['id'] : 0;
 		$attachment    = get_post( $attachment_id );
 
 		// Stop here if $attachment can't be found.
@@ -71,8 +120,8 @@ add_filter(
 		}
 
 		$metadata  = wp_get_attachment_metadata( $attachment_id );
-		$artist    = $metadata['artist'] ?? '';
-		$title     = $metadata['title'] ?? '';
+		$artist    = isset( $metadata['artist'] ) ? $metadata['artist'] : '';
+		$title     = isset( $metadata['title'] ) ? $metadata['title'] : '';
 		$new_props = array(
 			'artist' => $artist,
 			'title'  => $title,
