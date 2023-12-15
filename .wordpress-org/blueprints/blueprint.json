@@ -1,0 +1,33 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"landingPage": "\/wp-admin\/edit.php",
+	"preferredVersions": {
+		"php": "7.4",
+		"wp": "latest"
+	},
+	"phpExtensionBundles": ["kitchen-sink"],
+	"steps": [
+		{
+			"step": "login",
+			"username": "admin",
+			"password": "password"
+		},
+		{
+			"step": "installPlugin",
+			"pluginZipFile": {
+				"resource": "wordpress.org\/plugins",
+				"slug": "retro-winamp-block"
+			},
+			"options": {
+				"activate": true
+			}
+		},
+		{
+			"step": "importFile",
+			"file": {
+				"resource": "url",
+				"url": "https:\/\/raw.githubusercontent.com\/10up\/retro-winamp-block\/4eb4a1abf194d83c540b9172b7d15ca65622c097\/gutenberg-test-data\/gutenberg-test-data.xml"
+			}
+		}
+	]
+}
