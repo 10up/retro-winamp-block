@@ -1,6 +1,6 @@
 {
 	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
-	"landingPage": "\/wp-admin\/edit.php",
+	"landingPage": "\/wp-admin\/post.php?post=5&action=edit",
 	"preferredVersions": {
 		"php": "7.4",
 		"wp": "latest"
@@ -26,7 +26,7 @@
 			"step": "importFile",
 			"file": {
 				"resource": "url",
-				"url": "https:\/\/raw.githubusercontent.com\/10up\/retro-winamp-block\/4eb4a1abf194d83c540b9172b7d15ca65622c097\/gutenberg-test-data\/gutenberg-test-data.xml"
+				"url": "https:\/\/raw.githubusercontent.com\/10up\/retro-winamp-block\/0604bae83a894d24262a01c537c0a457fa0e8db1\/.wordpress-org\/blueprints\/demo-data.xml"
 			}
 		}
 	]
