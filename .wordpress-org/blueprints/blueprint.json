@@ -26,7 +26,7 @@
 			"step": "importFile",
 			"file": {
 				"resource": "url",
-				"url": "https:\/\/raw.githubusercontent.com\/10up\/retro-winamp-block\/0604bae83a894d24262a01c537c0a457fa0e8db1\/.wordpress-org\/blueprints\/demo-data.xml"
+				"url": "https:\/\/raw.githubusercontent.com\/10up\/retro-winamp-block\/4b998e304f5ab68b45c67c4bc4cf78a601e642e3\/.wordpress-org\/blueprints\/demo-data.xml"
 			}
 		}
 	]
