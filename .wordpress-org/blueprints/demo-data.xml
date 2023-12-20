@@ -67,9 +67,31 @@
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">http://xu-osp-plugins.local/?p=2</guid>
 		<description></description>
-		<content:encoded><![CDATA[<!-- wp:tenup/winamp-block -->
+		<content:encoded><![CDATA[<!-- wp:paragraph -->
+<p>This is a demo of the Winamp Block. The following audio files are used:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><!-- wp:list-item -->
+<li><a href="https://freesound.org/people/B_Lamerichs/sounds/266751" target="_blank" rel="noreferrer noopener">short-loops-12-03-2015-5.mp3</a> by <a href="https://freesound.org/people/B_Lamerichs" data-type="link" data-id="https://freesound.org/people/B_Lamerichs" target="_blank" rel="noreferrer noopener">B_Lamerichs</a> is licensed under <a href="https://creativecommons.org/licenses/by/3.0/?ref=openverse" target="_blank" rel="noreferrer noopener">CC BY 3.0</a></li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><a href="https://freesound.org/people/B_Lamerichs/sounds/264764" target="_blank" rel="noreferrer noopener">short-loops-21-02-2015-4.mp3</a> by <a href="https://freesound.org/people/B_Lamerichs" target="_blank" rel="noreferrer noopener">B_Lamerichs</a> is licensed under <a href="https://creativecommons.org/licenses/by/3.0/?ref=openverse" target="_blank" rel="noreferrer noopener">CC BY 3.0</a></li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:spacer {"height":"25px"} -->
+<div style="height:25px" aria-hidden="true" class="wp-block-spacer"></div>
+<!-- /wp:spacer -->
+
+<!-- wp:tenup/winamp-block -->
 <figure class="wp-block-tenup-winamp-block" data-skin=""><!-- wp:audio {"id":4} -->
-<figure class="wp-block-audio"><audio controls src="https://raw.githubusercontent.com/10up/retro-winamp-block/2afc0daaa15857c4465805c9d350458681b8cacf/.wordpress-org/blueprints/mp3-5mg.mp3"></audio></figure>
+<figure class="wp-block-audio"><audio controls src="https://raw.githubusercontent.com/10up/retro-winamp-block/1e6483db128ebc100249e09db62ad8148d155d7d/.wordpress-org/blueprints/short-loops-12-03-2015-5.mp3"></audio></figure>
+<!-- /wp:audio -->
+
+<!-- wp:audio {"id":4} -->
+<figure class="wp-block-audio"><audio controls src="https://raw.githubusercontent.com/10up/retro-winamp-block/1e6483db128ebc100249e09db62ad8148d155d7d/.wordpress-org/blueprints/short-loops-21-02-2015-4.mp3"></audio></figure>
 <!-- /wp:audio --></figure>
 <!-- /wp:tenup/winamp-block -->]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
