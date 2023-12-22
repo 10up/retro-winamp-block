@@ -47,7 +47,7 @@ const PLACEHOLDER_TEXT = Platform.isNative
  * @param {Object} props Block edit props.
  * @see https://developer.wordpress.org/block-editor/developers/block-api/block-edit-save/#edit
  *
- * @return {WPElement} Element to render.
+ * @return {JSX.Element} Element to render.
  */
 function Edit( props ) {
 	const {
