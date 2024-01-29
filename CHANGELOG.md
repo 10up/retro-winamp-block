@@ -4,20 +4,34 @@ All notable changes to this project will be documented in this file, per [the Ke
 
 ## [Unreleased] - TBD
 
-## [1.3.0] - TBD
-
+## [1.3.1] - 2023-10-19
 ### Added
-- E2E tests using Cypress (props [@vikrampm1](https://github.com/vikrampm1), [@barneyjeffries](https://github.com/barneyjeffries), [@iamdharmesh](https://github.com/iamdharmesh), [@cadic](https://github.com/cadic)) via [#87](https://github.com/10up/retro-winamp-block/pull/87).
+- Check for minimum required PHP version before loading the plugin (props [@kmgalanakis](https://github.com/kmgalanakis), [@Sidsector9](https://github.com/Sidsector9) via [#103](https://github.com/10up/retro-winamp-block/pull/103)).
 
 ### Changed
-- Bump WordPress "tested up to" version from 6.1 to 6.2 (props [@jayedul](https://github.com/jayedul), [@peterwilsoncc](https://github.com/peterwilsoncc)) via [#92](https://github.com/10up/retro-winamp-block/pull/92)
-- [Support Level](https://github.com/10up/retro-winamp-block#support-level) from `Active` to `Stable` (props [@jeffpaul](https://github.com/jeffpaul), [@Sidsector9](https://github.com/Sidsector9)) via [#94](https://github.com/10up/retro-winamp-block/pull/94).
+- Update our dependency review GitHub Action (props [@jeffpaul](https://github.com/jeffpaul), [@Sidsector9](https://github.com/Sidsector9) via [#97](https://github.com/10up/retro-winamp-block/pull/97)).
+- Bump WordPress "tested up to" version 6.3 (props [@kmgalanakis](https://github.com/kmgalanakis), [@iamdharmesh](https://github.com/iamdharmesh), [@jeffpaul](https://github.com/jeffpaul), [@peterwilsoncc](https://github.com/peterwilsoncc) via [#102](https://github.com/10up/retro-winamp-block/pull/102), [#105](https://github.com/10up/retro-winamp-block/pull/105)).
 
 ### Security
-- Bump `simple-git` from `3.15.1` to `3.16.0` (props [@Sidsector9](https://github.com/Sidsector9)) via [#82](https://github.com/10up/retro-winamp-block/pull/82).
-- Bump `http-cache-semantics` from `4.1.0` to `4.1.1` (props [@peterwilsoncc](https://github.com/peterwilsoncc)) via [#85](https://github.com/10up/retro-winamp-block/pull/85).
-- Bump `@sideway/formula` from `3.0.0` to `3.0.1` (props [@faisal-alvi](https://github.com/faisal-alvi)) via [#86](https://github.com/10up/retro-winamp-block/pull/86).
-- Bump `webpack` from `5.73.0` to `5.76.2` (props [@faisal-alvi](https://github.com/faisal-alvi)) via [#90](https://github.com/10up/retro-winamp-block/pull/90).
+- Bump `semver` from 5.7.1 to 5.7.2 (props [@dependabot](https://github.com/apps/dependabot), [@ravinderk](https://github.com/ravinderk) via [#98](https://github.com/10up/retro-winamp-block/pull/98)).
+- Bump `word-wrap` from 1.2.3 to 1.2.5 (props [@dependabot](https://github.com/apps/dependabot), [@peterwilsoncc](https://github.com/peterwilsoncc) via [#106](https://github.com/10up/retro-winamp-block/pull/106)).
+- Bump `tough-cookie` from 4.1.2 to 4.1.3 and `@cypress/request` from 2.88.11 to 3.0.1 (props [@dependabot](https://github.com/apps/dependabot), [@Sidsector9](https://github.com/Sidsector9) via [#107](https://github.com/10up/retro-winamp-block/pull/107), [#108](https://github.com/10up/retro-winamp-block/pull/108)).
+- Bump `cypress` from 10.11.0 to 13.1.0 (props [@dependabot](https://github.com/apps/dependabot), [@Sidsector9](https://github.com/Sidsector9) via [#108](https://github.com/10up/retro-winamp-block/pull/108)).
+- Bump `postcss` from 8.4.20 to 8.4.31 (props [@dependabot](https://github.com/apps/dependabot), [@faisal-alvi](https://github.com/faisal-alvi) via [#110](https://github.com/10up/retro-winamp-block/pull/110)).
+
+## [1.3.0] - 2023-04-18
+### Added
+- E2E tests using Cypress (props [@vikrampm1](https://github.com/vikrampm1), [@barneyjeffries](https://github.com/barneyjeffries), [@iamdharmesh](https://github.com/iamdharmesh), [@cadic](https://github.com/cadic) via [#87](https://github.com/10up/retro-winamp-block/pull/87)).
+
+### Changed
+- Bump WordPress "tested up to" version from 6.1 to 6.2 (props [@jayedul](https://github.com/jayedul), [@peterwilsoncc](https://github.com/peterwilsoncc) via [#92](https://github.com/10up/retro-winamp-block/pull/92)).
+- [Support Level](https://github.com/10up/retro-winamp-block#support-level) from `Active` to `Stable` (props [@jeffpaul](https://github.com/jeffpaul), [@Sidsector9](https://github.com/Sidsector9) via [#94](https://github.com/10up/retro-winamp-block/pull/94)).
+
+### Security
+- Bump `simple-git` from `3.15.1` to `3.16.0` (props [@Sidsector9](https://github.com/Sidsector9) via [#82](https://github.com/10up/retro-winamp-block/pull/82)).
+- Bump `http-cache-semantics` from `4.1.0` to `4.1.1` (props [@peterwilsoncc](https://github.com/peterwilsoncc) via [#85](https://github.com/10up/retro-winamp-block/pull/85)).
+- Bump `@sideway/formula` from `3.0.0` to `3.0.1` (props [@faisal-alvi](https://github.com/faisal-alvi) via [#86](https://github.com/10up/retro-winamp-block/pull/86)).
+- Bump `webpack` from `5.73.0` to `5.76.2` (props [@faisal-alvi](https://github.com/faisal-alvi) via [#90](https://github.com/10up/retro-winamp-block/pull/90)).
 
 ## [1.2.0] - 2023-01-30
 **Note that this release changes the minimum PHP version to from 5.6 to 7.4.**
@@ -80,6 +94,7 @@ All notable changes to this project will be documented in this file, per [the Ke
 - Initial release of the Winamp Block plugin. 🎉
 
 [Unreleased]: https://github.com/10up/retro-winamp-block/compare/trunk...develop
+[1.3.1]: https://github.com/10up/retro-winamp-block/compare/1.3.0...1.3.1
 [1.3.0]: https://github.com/10up/retro-winamp-block/compare/1.2.0...1.3.0
 [1.2.0]: https://github.com/10up/retro-winamp-block/compare/1.1.0...1.2.0
 [1.1.0]: https://github.com/10up/retro-winamp-block/compare/1.0.1...1.1.0
