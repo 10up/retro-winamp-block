@@ -16,12 +16,12 @@
   },
   "scripts": {
     "build": "wp-scripts build",
-    "format": "wp-scripts format",
+    "format": "wp-scripts format src",
     "wp-env": "wp-env",
     "env:start": "wp-env start",
     "env:stop": "wp-env stop",
-    "lint:css": "wp-scripts lint-style",
-    "lint:js": "wp-scripts lint-js",
+    "lint:css": "wp-scripts lint-style src/**/*.scss",
+    "lint:js": "wp-scripts lint-js src/**/*.js",
     "start": "NODE_ENVIRONMENT=development wp-scripts start",
     "packages-update": "wp-scripts packages-update",
     "cypress:open": "cypress open --config-file tests/cypress/config.js --e2e --browser chrome",
@@ -47,8 +47,8 @@
   },
   "devDependencies": {
     "@10up/cypress-wp-utils": "^0.2.0",
-    "@wordpress/env": "^8.9.0",
-    "@wordpress/scripts": "^26.19.0",
+    "@wordpress/env": "^9.2.0",
+    "@wordpress/scripts": "^27.1.0",
     "cypress": "^13.3.0"
   }
 }
