@@ -12,7 +12,6 @@ const useInnerBlocksProps = wp.blockEditor.useInnerBlocksProps
 	? wp.blockEditor.useInnerBlocksProps
 	: wp.blockEditor.__experimentalUseInnerBlocksProps;
 
-import { useState } from '@wordpress/element';
 import { View } from '@wordpress/primitives';
 
 /**
