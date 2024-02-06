@@ -280,6 +280,11 @@ function Edit( props ) {
 						checked={ useCustomUrl }
 						onChange={ () => setUseCustomUrl( ! useCustomUrl ) }
 					/>
+					<ToggleControl
+						label={ __( 'Show Preview?', 'winamp-block' ) }
+						checked={ preview }
+						onChange={ () => setAttributes( { preview: ! preview } ) }
+					/>
 				</PanelBody>
 			</InspectorControls>
 			{ noticeUI }
@@ -288,6 +293,7 @@ function Edit( props ) {
 				currentSkin={ currentSkin }
 				mediaPlaceholder={ mediaPlaceholder }
 				blockProps={ blockProps }
+				preview={ preview }
 			/>
 		</>
 	);
