@@ -30,7 +30,6 @@ import { createBlobURL } from '@wordpress/blob';
  */
 import './editor.scss';
 import Audio from './audio';
-import previewImg from '../assets/default-player.jpg';
 
 const ALLOWED_MEDIA_TYPES = [ 'audio' ];
 const PLACEHOLDER_TEXT = Platform.isNative
