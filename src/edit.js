@@ -61,17 +61,6 @@ function Edit( props ) {
 	const { currentSkin, preview } = attributes;
 	const [ useCustomUrl, setUseCustomUrl ] = useState( false );
 
-	if ( preview && previewImg ) {
-		return (
-			<>
-				<img
-					src={ previewImg }
-					alt={ __( 'Winamp Player', 'winamp-block' ) }
-				/>
-			</>
-		);
-	}
-
 	const blockProps = useBlockProps(); // eslint-disable-line react-hooks/rules-of-hooks
 	const { replaceInnerBlocks } = useDispatch( blockEditorStore ); // eslint-disable-line react-hooks/rules-of-hooks
 
