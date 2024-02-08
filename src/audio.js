@@ -38,7 +38,9 @@ export const Audio = ( props ) => {
 			) }
 		>
 			{ isPreview ? (
-				<WebAmp audio={ audio } currentSkin={ currentSkin } />
+				<div id="webamp-container">
+					<WebAmp audio={ audio } currentSkin={ currentSkin } preview={ isPreview } />
+				</div>
 			) : (
 				<>
 					{ children }
