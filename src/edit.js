@@ -282,6 +282,7 @@ function Edit( props ) {
 				mediaPlaceholder={ mediaPlaceholder }
 				blockProps={ blockProps }
 				preview={ preview }
+				setAttributes={ setAttributes }
 			/>
 		</>
 	);
