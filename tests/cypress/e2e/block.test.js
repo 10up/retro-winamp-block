@@ -38,9 +38,19 @@ describe( 'Admin can publish posts with winamp block', () => {
 		}).then( post => {
 			cy.visit( `/wp-admin/post.php?post=${post.id}&action=edit` );
 			// verify page contains new block
-			cy.get( '.wp-block-audio audio' )
+			cy.get( '.wp-block-tenup-winamp-block' );
+			// toggle to 'Manage Media' view
+			cy.get( '.components-tab-button.winamp-show-media').click();
+			// Confirm the audio file is present
+			cy.get('.wp-block-audio audio')				
 				.should( 'have.attr', 'src' )
 				.and( 'include', 'example' );
+			// toggle to 'Show Preview' view
+			cy.get( '.components-tab-button.winamp-show-preview').click();
+			// confirm webamp is showing
+			cy.get( '#webamp' )
+				.should( 'have.css', 'display', 'block' );
+
 		});
 	} );
 } );
