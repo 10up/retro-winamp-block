@@ -75,7 +75,7 @@ export const WebAmp = ( props ) => {
 		} );
 
 		return () => {
-			// Hide the player instaed of destroying it. This allows the player
+			// Hide the player instead of destroying it. This allows the player
 			// to persist between previews and playlist modification.
 			const webampContainer = document.getElementById( 'webamp' );
 			if ( webampContainer ) {
