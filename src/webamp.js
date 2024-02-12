@@ -7,7 +7,7 @@ import Webamp from 'webamp';
 import milkdropOptions from './milkdrop';
 
 export const WebAmp = ( props ) => {
-	const { audio = [], currentSkin = '' } = props;
+	const { audio = [], currentSkin = '', preview = true } = props;
 	const divRef = useRef( null );
 	const [ webamp, setWebamp ] = useState( null );
 
@@ -40,16 +40,47 @@ export const WebAmp = ( props ) => {
 		const player = new Webamp( { ...options, ...milkdropOptions } );
 		setWebamp( player );
 		player.renderWhenReady( divRef.current ).then( () => {
-			const webAmpContainer = document.getElementById( 'webamp' );
+			const webAmp = document.getElementById( 'webamp' );
+
+			// Move the Webamp player markup into the block
+			// so that the block can be interacted with while the player is visible
+			const webampContainer = document.getElementById( 'webamp-container' );
+
+			if ( webampContainer && webAmp ) {
+				webampContainer.appendChild( webAmp );
+			}
+
+			// This is a hack to move the UI elements into the correct position. The
+			// Webamp library tries to center the player in the window, but we want it
+			// to be tucked neatly in the block.
+			const webAmpUI = document.querySelectorAll( '#webamp > div > div > div' );
+			const mapping = {
+				0: 'translate( 0px, 0px )',
+				1: 'translate( 0px, 232px )',
+				2: 'translate( 0px, 116px )',
+				3: 'translate( 275px, 0px )',
+			};
+
+			// make sure all the UI elements are available to manipulate
+			if ( webAmpUI.length === 4 ) {
+				webAmpUI.forEach( ( ui, i ) => {
+					ui.style.transform = mapping[ i ];
+				} );
+			}
 
 			// Add is loaded class after artifical delay to reduce page jank
-			if ( webAmpContainer ) {
-				webAmpContainer.classList.add( 'is-loaded' );
+			if ( webAmp ) {
+				webAmp.classList.add( 'is-loaded' );
 			}
 		} );
 
 		return () => {
-			player.dispose();
+			// Hide the player instead of destroying it. This allows the player
+			// to persist between previews and playlist modification.
+			const webampContainer = document.getElementById( 'webamp' );
+			if ( webampContainer ) {
+				webampContainer.style.display = ! preview ? 'none' : 'block';
+			}
 		};
 	}, [ divRef.current ] );
 

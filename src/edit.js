@@ -30,7 +30,6 @@ import { createBlobURL } from '@wordpress/blob';
  */
 import './editor.scss';
 import Audio from './audio';
-import previewImg from '../assets/default-player.jpg';
 
 const ALLOWED_MEDIA_TYPES = [ 'audio' ];
 const PLACEHOLDER_TEXT = Platform.isNative
@@ -60,17 +59,6 @@ function Edit( props ) {
 	} = props;
 	const { currentSkin, preview } = attributes;
 	const [ useCustomUrl, setUseCustomUrl ] = useState( false );
-
-	if ( preview && previewImg ) {
-		return (
-			<>
-				<img
-					src={ previewImg }
-					alt={ __( 'Winamp Player', 'winamp-block' ) }
-				/>
-			</>
-		);
-	}
 
 	const blockProps = useBlockProps(); // eslint-disable-line react-hooks/rules-of-hooks
 	const { replaceInnerBlocks } = useDispatch( blockEditorStore ); // eslint-disable-line react-hooks/rules-of-hooks
@@ -280,6 +268,11 @@ function Edit( props ) {
 						checked={ useCustomUrl }
 						onChange={ () => setUseCustomUrl( ! useCustomUrl ) }
 					/>
+					<ToggleControl
+						label={ __( 'Show Preview?', 'winamp-block' ) }
+						checked={ preview }
+						onChange={ () => setAttributes( { preview: ! preview } ) }
+					/>
 				</PanelBody>
 			</InspectorControls>
 			{ noticeUI }
@@ -288,6 +281,8 @@ function Edit( props ) {
 				currentSkin={ currentSkin }
 				mediaPlaceholder={ mediaPlaceholder }
 				blockProps={ blockProps }
+				preview={ preview }
+				setAttributes={ setAttributes }
 			/>
 		</>
 	);
