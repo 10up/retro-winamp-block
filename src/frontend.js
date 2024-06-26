@@ -56,14 +56,16 @@ window.addEventListener( 'load', () => {
 	}
 
 	// Render the player
-	new Webamp( { ...options, ...milkdropOptions } ).renderWhenReady( container ).then( () => {
-		const player = document.getElementById( 'webamp' );
+	new Webamp( { ...options, ...milkdropOptions } )
+		.renderWhenReady( container )
+		.then( () => {
+			const player = document.getElementById( 'webamp' );
 
-		// Add is loaded class after artifical delay to reduce page jank
-		if ( player ) {
-			setTimeout( () => {
-				player.classList.add( 'is-loaded' );
-			}, 1000 );
-		}
-	} );
+			// Add is loaded class after artifical delay to reduce page jank
+			if ( player ) {
+				setTimeout( () => {
+					player.classList.add( 'is-loaded' );
+				}, 1000 );
+			}
+		} );
 } );

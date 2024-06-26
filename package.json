@@ -1,6 +1,6 @@
 {
   "name": "winamp-block",
-  "version": "1.3.1",
+  "version": "1.3.2",
   "description": "A Winamp-styled audio block for all your retro music player needs.",
   "author": {
     "name": "10up",
@@ -16,12 +16,12 @@
   },
   "scripts": {
     "build": "wp-scripts build",
-    "format": "wp-scripts format",
+    "format": "wp-scripts format src",
     "wp-env": "wp-env",
     "env:start": "wp-env start",
     "env:stop": "wp-env stop",
-    "lint:css": "wp-scripts lint-style",
-    "lint:js": "wp-scripts lint-js",
+    "lint:css": "wp-scripts lint-style src/**/*.scss",
+    "lint:js": "wp-scripts lint-js src/**/*.js",
     "start": "NODE_ENVIRONMENT=development wp-scripts start",
     "packages-update": "wp-scripts packages-update",
     "cypress:open": "cypress open --config-file tests/cypress/config.js --e2e --browser chrome",
@@ -31,12 +31,12 @@
   },
   "dependencies": {
     "@wordpress/blob": "^3.2.2",
-    "@wordpress/block-editor": "^7.0.4",
-    "@wordpress/blocks": "^11.1.2",
-    "@wordpress/components": "^19.0.3",
-    "@wordpress/compose": "^5.0.6",
-    "@wordpress/data": "^6.1.4",
-    "@wordpress/element": "^4.0.4",
+    "@wordpress/block-editor": "^11.0.0",
+    "@wordpress/blocks": "^12.25.0",
+    "@wordpress/components": "^25.0.0",
+    "@wordpress/compose": "^6.25.0",
+    "@wordpress/data": "^8.0.0",
+    "@wordpress/element": "^5.0.0",
     "@wordpress/i18n": "^4.2.3",
     "@wordpress/primitives": "^3.0.4",
     "butterchurn": "^2.6.7",
@@ -47,8 +47,8 @@
   },
   "devDependencies": {
     "@10up/cypress-wp-utils": "^0.2.0",
-    "@wordpress/env": "^8.9.0",
-    "@wordpress/scripts": "^24.3.0",
+    "@wordpress/env": "^9.2.0",
+    "@wordpress/scripts": "^27.1.0",
     "cypress": "^13.3.0"
   }
 }

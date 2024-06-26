@@ -15,7 +15,7 @@ import { InnerBlocks, useBlockProps } from '@wordpress/block-editor';
  * @param {Object} props.attributes The block attributes.
  * @see https://developer.wordpress.org/block-editor/developers/block-api/block-edit-save/#save
  *
- * @return {WPElement} Element to render.
+ * @return {JSX.Element} Element to render.
  */
 export default function save( { attributes } ) {
 	return (

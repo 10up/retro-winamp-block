@@ -4,6 +4,28 @@ All notable changes to this project will be documented in this file, per [the Ke
 
 ## [Unreleased] - TBD
 
+## [1.3.2] - 2024-06-20
+### Added
+- Support for the WordPress.org plugin preview (props [@dkotter](https://github.com/dkotter), [@jeffpaul](https://github.com/jeffpaul), [@peterwilsoncc](https://github.com/peterwilsoncc), [@ravinderk](https://github.com/ravinderk) via [#116](https://github.com/10up/retro-winamp-block/pull/116), [#118](https://github.com/10up/retro-winamp-block/pull/118)).
+- "Testing" section in the "CONTRIBUTING.md" file (props [@kmgalanakis](https://github.com/kmgalanakis), [@jeffpaul](https://github.com/jeffpaul) via [#132](https://github.com/10up/retro-winamp-block/pull/132)).
+
+### Changed
+- Winamp skin preview setting to be on by default (props [@jeffpaul](https://github.com/jeffpaul), [@psorensen](https://github.com/psorensen), [@dkotter](https://github.com/dkotter) via [#124](https://github.com/10up/retro-winamp-block/pull/124)).
+- Move preview toggle to inspector controls from block controls (props [@jeffpaul](https://github.com/jeffpaul), [@psorensen](https://github.com/psorensen), [@dkotter](https://github.com/dkotter) via [#124](https://github.com/10up/retro-winamp-block/pull/124)).
+- Nest webamp component inside the block to activate block selection when interacting with the component (props [@jeffpaul](https://github.com/jeffpaul), [@psorensen](https://github.com/psorensen), [@dkotter](https://github.com/dkotter) via [#124](https://github.com/10up/retro-winamp-block/pull/124)).
+- Bump WordPress "tested up to" version 6.5 (props [@severine-pozzo](https://github.com/severine-pozzo), [@sudip-md](https://github.com/sudip-md), [@jeffpaul](https://github.com/jeffpaul), [@dkotter](https://github.com/dkotter) via [#114](https://github.com/10up/retro-winamp-block/pull/114), [#131](https://github.com/10up/retro-winamp-block/pull/131)).
+- Bump WordPress minimum from 6.1 to 6.3 (props [@sudip-md](https://github.com/sudip-md), [@jeffpaul](https://github.com/jeffpaul), [@dkotter](https://github.com/dkotter) via [#131](https://github.com/10up/retro-winamp-block/pull/131)).
+- Clean up NPM dependencies and update node to v20 (props [@Sidsector9](https://github.com/Sidsector9), [@dkotter](https://github.com/dkotter) via [#123](https://github.com/10up/retro-winamp-block/pull/123)).
+- Replaced [lee-dohm/no-response](https://github.com/lee-dohm/no-response) with [actions/stale](https://github.com/actions/stale) to help with closing no-response/stale issues (props [@jeffpaul](https://github.com/jeffpaul), [@dkotter](https://github.com/dkotter) via [#128](https://github.com/10up/retro-winamp-block/pull/128)).
+
+### Security
+- Updates `axios` from 0.25.0 to 1.6.2 (props [@dependabot](https://github.com/apps/dependabot), [@faisal-alvi](https://github.com/faisal-alvi) via [#117](https://github.com/10up/retro-winamp-block/pull/117)).
+- Updates `@wordpress/scripts` from 24.6.0 to 26.19.0 (props [@dependabot](https://github.com/apps/dependabot), [@faisal-alvi](https://github.com/faisal-alvi) via [#117](https://github.com/10up/retro-winamp-block/pull/117)).
+- Updates `express` from 4.18.2 to 4.19.2 (props [@dependabot](https://github.com/apps/dependabot), [@desrosj](https://github.com/desrosj), [@Sidsector9](https://github.com/Sidsector9) via [#130](https://github.com/10up/retro-winamp-block/pull/130)).
+- Updates `follow-redirects` from 1.15.5 to 1.15.6 (props [@dependabot](https://github.com/apps/dependabot), [@desrosj](https://github.com/desrosj), [@Sidsector9](https://github.com/Sidsector9) via [#130](https://github.com/10up/retro-winamp-block/pull/130)).
+- Updates `ip` from 1.1.8 to 1.1.9 (props [@dependabot](https://github.com/apps/dependabot), [@desrosj](https://github.com/desrosj), [@Sidsector9](https://github.com/Sidsector9) via [#130](https://github.com/10up/retro-winamp-block/pull/130)).
+- Updates `webpack-dev-middleware` from 5.3.3 to 5.3.4 (props [@dependabot](https://github.com/apps/dependabot), [@desrosj](https://github.com/desrosj), [@Sidsector9](https://github.com/Sidsector9) via [#130](https://github.com/10up/retro-winamp-block/pull/130)).
+
 ## [1.3.1] - 2023-10-19
 ### Added
 - Check for minimum required PHP version before loading the plugin (props [@kmgalanakis](https://github.com/kmgalanakis), [@Sidsector9](https://github.com/Sidsector9) via [#103](https://github.com/10up/retro-winamp-block/pull/103)).
@@ -15,8 +37,9 @@ All notable changes to this project will be documented in this file, per [the Ke
 ### Security
 - Bump `semver` from 5.7.1 to 5.7.2 (props [@dependabot](https://github.com/apps/dependabot), [@ravinderk](https://github.com/ravinderk) via [#98](https://github.com/10up/retro-winamp-block/pull/98)).
 - Bump `word-wrap` from 1.2.3 to 1.2.5 (props [@dependabot](https://github.com/apps/dependabot), [@peterwilsoncc](https://github.com/peterwilsoncc) via [#106](https://github.com/10up/retro-winamp-block/pull/106)).
-- Bump `tough-cookie` from 4.1.2 to 4.1.3 and `@cypress/request` from 2.88.11 to 3.0.1 (props [@dependabot](https://github.com/apps/dependabot), [@Sidsector9](https://github.com/Sidsector9) via [#107](https://github.com/10up/retro-winamp-block/pull/107), [#108](https://github.com/10up/retro-winamp-block/pull/108)).
+- Bump `tough-cookie` from 4.1.2 to 4.1.3 and `@cypress/request` from 2.88.11 to 3.0.1 (props [@dependabot](https://github.com/apps/dependabot), [@Sidsector9](https://github.com/Sidsector9) via [#107](https://github.com/10up/retro-winamp-block/pull/107)).
 - Bump `cypress` from 10.11.0 to 13.1.0 (props [@dependabot](https://github.com/apps/dependabot), [@Sidsector9](https://github.com/Sidsector9) via [#108](https://github.com/10up/retro-winamp-block/pull/108)).
+- Bump `@cypress/request` from 2.88.11 to 3.0.1 (props [@dependabot](https://github.com/apps/dependabot), [@Sidsector9](https://github.com/Sidsector9) via [#108](https://github.com/10up/retro-winamp-block/pull/108)).
 - Bump `postcss` from 8.4.20 to 8.4.31 (props [@dependabot](https://github.com/apps/dependabot), [@faisal-alvi](https://github.com/faisal-alvi) via [#110](https://github.com/10up/retro-winamp-block/pull/110)).
 
 ## [1.3.0] - 2023-04-18
@@ -94,6 +117,7 @@ All notable changes to this project will be documented in this file, per [the Ke
 - Initial release of the Winamp Block plugin. 🎉
 
 [Unreleased]: https://github.com/10up/retro-winamp-block/compare/trunk...develop
+[1.3.2]: https://github.com/10up/retro-winamp-block/compare/1.3.1...1.3.2
 [1.3.1]: https://github.com/10up/retro-winamp-block/compare/1.3.0...1.3.1
 [1.3.0]: https://github.com/10up/retro-winamp-block/compare/1.2.0...1.3.0
 [1.2.0]: https://github.com/10up/retro-winamp-block/compare/1.1.0...1.2.0

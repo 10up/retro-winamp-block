@@ -37,7 +37,7 @@
 		},
 		"preview": {
 			"type": "boolean",
-			"default": false
+			"default": true
 		}
 	},
 	"example": {
