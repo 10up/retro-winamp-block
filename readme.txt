@@ -1,6 +1,6 @@
 === Retro Winamp Block ===
 Contributors:      10up, dinhtungdu, fabiankaegy, dkotter, melchoyce, jeffpaul
-Tags:              winamp, webamp, mp3, music, audio, player, playlist, equalizer, block
+Tags:              winamp, mp3, music, player, equalizer
 Tested up to:      6.6
 Stable tag:        1.3.2
 License:           GPLv2 or later
