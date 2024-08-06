@@ -1,6 +1,6 @@
 {
 	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
-	"landingPage": "\/wp-admin\/post.php?post=5&action=edit",
+	"landingPage": "\/wp-admin\/post.php?post=4&action=edit",
 	"preferredVersions": {
 		"php": "7.4",
 		"wp": "latest"
@@ -23,7 +23,7 @@
 			}
 		},
 		{
-			"step": "importFile",
+			"step": "importWxr",
 			"file": {
 				"resource": "url",
 				"url": "https:\/\/raw.githubusercontent.com\/10up\/retro-winamp-block\/d2ff63d1127713d9f2a11235a002f38f2927b0ca\/.wordpress-org\/blueprints\/demo-data.xml"
