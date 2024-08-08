@@ -2,7 +2,8 @@
 
 > A Winamp-styled audio block for all your retro music player needs.
 
-[![Support Level](https://img.shields.io/badge/support-stable-blue.svg)](#support-level) [![Release Version](https://img.shields.io/github/release/10up/retro-winamp-block.svg)](https://github.com/10up/retro-winamp-block/releases/latest) ![WordPress tested up to version](https://img.shields.io/wordpress/plugin/tested/retro-winamp-block?label=WordPress) [![GPLv2 License](https://img.shields.io/github/license/10up/retro-winamp-block.svg)](https://github.com/10up/retro-winamp-block/blob/develop/LICENSE.md)
+[![Support Level](https://img.shields.io/badge/support-stable-blue.svg)](#support-level) ![WordPress tested up to version](https://img.shields.io/wordpress/plugin/tested/retro-winamp-block?label=WordPress) [![GPLv2 License](https://img.shields.io/github/license/10up/retro-winamp-block.svg)](https://github.com/10up/retro-winamp-block/blob/develop/LICENSE.md) ![WordPress Playground Demo](https://img.shields.io/wordpress/plugin/v/retro-winamp-block?logo=wordpress&logoColor=FFFFFF&label=Playground%20Demo&labelColor=3858E9&color=3858E9)
+
 
 [![E2E test](https://github.com/10up/retro-winamp-block/actions/workflows/cypress.yml/badge.svg)](https://github.com/10up/retro-winamp-block/actions/workflows/cypress.yml) [![JS and CSS lint](https://github.com/10up/retro-winamp-block/actions/workflows/eslint.yml/badge.svg)](https://github.com/10up/retro-winamp-block/actions/workflows/eslint.yml) [![PHPCS](https://github.com/10up/retro-winamp-block/actions/workflows/phpcs.yml/badge.svg)](https://github.com/10up/retro-winamp-block/actions/workflows/phpcs.yml) [![PHP Compatibility](https://github.com/10up/retro-winamp-block/actions/workflows/php-compatibility.yml/badge.svg)](https://github.com/10up/retro-winamp-block/actions/workflows/php-compatibility.yml)
 
