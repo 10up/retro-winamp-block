@@ -1,7 +1,8 @@
 === Retro Winamp Block ===
 Contributors:      10up, dinhtungdu, fabiankaegy, dkotter, melchoyce, jeffpaul
 Tags:              winamp, webamp, mp3, music, audio, player, playlist, equalizer, block
-Tested up to:      6.6
+Requires at least: 6.5
+Tested up to:      6.7
 Stable tag:        1.3.2
 License:           GPLv2 or later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
