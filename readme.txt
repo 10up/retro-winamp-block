@@ -43,6 +43,16 @@ Details on how to create a new skin is available [here](https://github.com/WACUP
 
 == Changelog ==
 
+= 1.3.3 - 2025-02-03 =
+* **Changed:** Bump WordPress "tested up to" version 6.7 (props [@sudip-md](https://github.com/sudip-md), [@thrijith](https://github.com/thrijith), [@jeffpaul](https://github.com/jeffpaul), [@dkotter](https://github.com/dkotter) via [#140](https://github.com/10up/retro-winamp-block/pull/140), [#141](https://github.com/10up/retro-winamp-block/pull/141), [#153](https://github.com/10up/retro-winamp-block/pull/153)).
+* **Changed:** Bump WordPress minimum from 6.3 to 6.6 (props [@sudip-md](https://github.com/sudip-md), [@thrijith](https://github.com/thrijith), [@jeffpaul](https://github.com/jeffpaul), [@dkotter](https://github.com/dkotter), [@peterwilsoncc](https://github.com/peterwilsoncc) via [#140](https://github.com/10up/retro-winamp-block/pull/140), [#153](https://github.com/10up/retro-winamp-block/pull/153), [#155](https://github.com/10up/retro-winamp-block/pull/155)).
+* **Fixed:** JavaScript errors in block editor (props [@peterwilsoncc](https://github.com/peterwilsoncc), [@Sidsector9](https://github.com/Sidsector9) via [#134](https://github.com/10up/retro-winamp-block/pull/134)).
+* **Fixed:** Ensure the WordPress.org plugin preview works as expected (props [@dkotter](https://github.com/dkotter), [@jeffpaul](https://github.com/jeffpaul) via [#143](https://github.com/10up/retro-winamp-block/pull/143), [#144](https://github.com/10up/retro-winamp-block/pull/144)).
+* **Security:** Update NPM packages (props [@peterwilsoncc](https://github.com/peterwilsoncc), [@Sidsector9](https://github.com/Sidsector9) via [#134](https://github.com/10up/retro-winamp-block/pull/134)).
+* **Security:** Bump `axios` from 1.6.7 to 1.7.4 (props [@dependabot](https://github.com/apps/dependabot), [@faisal-alvi](https://github.com/faisal-alvi) via [#146](https://github.com/10up/retro-winamp-block/pull/146)).
+* **Security:** Bump `webpack` from 5.90.0 to 5.94.0 (props [@dependabot](https://github.com/apps/dependabot), [@faisal-alvi](https://github.com/faisal-alvi) via [#147](https://github.com/10up/retro-winamp-block/pull/147)).
+* **Security:** Bump `@wordpress/scripts` from 27.9.0 to 30.4.0, `express` from 4.19.2 to 4.21.1, `send` from 0.18.0 to 0.19.0 and `serve-static` from 1.15.0 to 1.16.2 (props [@dependabot](https://github.com/apps/dependabot), [@peterwilsoncc](https://github.com/peterwilsoncc) via [#15](https://github.com/10up/retro-winamp-block/pull/155)).
+
 = 1.3.2 - 2024-06-26 =
 * **Added:** Support for the WordPress.org plugin preview (props [@dkotter](https://github.com/dkotter), [@jeffpaul](https://github.com/jeffpaul), [@peterwilsoncc](https://github.com/peterwilsoncc), [@ravinderk](https://github.com/ravinderk) via [#116](https://github.com/10up/retro-winamp-block/pull/116), [#118](https://github.com/10up/retro-winamp-block/pull/118)).
 * **Added:** "Testing" section in the "CONTRIBUTING.md" file (props [@kmgalanakis](https://github.com/kmgalanakis), [@jeffpaul](https://github.com/jeffpaul) via [#132](https://github.com/10up/retro-winamp-block/pull/132)).
@@ -83,6 +93,9 @@ Details on how to create a new skin is available [here](https://github.com/WACUP
 [View historical changelog details here](https://github.com/10up/retro-winamp-block/blob/develop/CHANGELOG.md).
 
 == Upgrade Notice ==
+
+= 1.3.3 =
+Note that this release bumps the minimum required version of WordPress from 6.3 to 6.6.
 
 = 1.1.0 - 2021-06-21 =
 **Note that this release changes the minimum WordPress version to 5.8 and minimum PHP version to 5.6.**
