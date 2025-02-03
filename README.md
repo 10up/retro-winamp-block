@@ -1,10 +1,10 @@
 # Winamp Block for WordPress
 
+![Winamp Block](https://github.com/10up/retro-winamp-block/blob/develop/.wordpress-org/banner-1544x500.png)
+
+[![Support Level](https://img.shields.io/badge/support-stable-blue.svg)](#support-level) ![Required PHP Version](https://img.shields.io/wordpress/plugin/required-php/retro-winamp-block?label=Requires%20PHP) ![Required WP Version](https://img.shields.io/wordpress/plugin/wp-version/retro-winamp-block?label=Requires%20WordPress) ![WordPress tested up to version](https://img.shields.io/wordpress/plugin/tested/retro-winamp-block?label=WordPress) [![GPLv2 License](https://img.shields.io/github/license/10up/retro-winamp-block.svg)](https://github.com/10up/retro-winamp-block/blob/develop/LICENSE.md) [![Dependency Review](https://github.com/10up/retro-winamp-block/actions/workflows/dependency-review.yml/badge.svg)](https://github.com/10up/retro-winamp-block/actions/workflows/dependency-review.yml) [![E2E test](https://github.com/10up/retro-winamp-block/actions/workflows/cypress.yml/badge.svg)](https://github.com/10up/retro-winamp-block/actions/workflows/cypress.yml) [![JS and CSS lint](https://github.com/10up/retro-winamp-block/actions/workflows/eslint.yml/badge.svg)](https://github.com/10up/retro-winamp-block/actions/workflows/eslint.yml) [![PHPCS](https://github.com/10up/retro-winamp-block/actions/workflows/phpcs.yml/badge.svg)](https://github.com/10up/retro-winamp-block/actions/workflows/phpcs.yml) [![PHP Compatibility](https://github.com/10up/retro-winamp-block/actions/workflows/php-compatibility.yml/badge.svg)](https://github.com/10up/retro-winamp-block/actions/workflows/php-compatibility.yml) [![CodeQL](https://github.com/10up/retro-winamp-block/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/10up/retro-winamp-block/actions/workflows/codeql-analysis.yml) [![WordPress Playground Demo](https://img.shields.io/wordpress/plugin/v/retro-winamp-block?logo=wordpress&logoColor=FFFFFF&label=Playground%20Demo&labelColor=3858E9&color=3858E9)](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/10up/retro-winamp-block/add/playground-1/.wordpress-org/blueprints/blueprint.json)
+
 > A Winamp-styled audio block for all your retro music player needs.
-
-[![Support Level](https://img.shields.io/badge/support-stable-blue.svg)](#support-level) [![Release Version](https://img.shields.io/github/release/10up/retro-winamp-block.svg)](https://github.com/10up/retro-winamp-block/releases/latest) ![WordPress tested up to version](https://img.shields.io/wordpress/plugin/tested/retro-winamp-block?label=WordPress) [![GPLv2 License](https://img.shields.io/github/license/10up/retro-winamp-block.svg)](https://github.com/10up/retro-winamp-block/blob/develop/LICENSE.md)
-
-[![E2E test](https://github.com/10up/retro-winamp-block/actions/workflows/cypress.yml/badge.svg)](https://github.com/10up/retro-winamp-block/actions/workflows/cypress.yml) [![JS and CSS lint](https://github.com/10up/retro-winamp-block/actions/workflows/eslint.yml/badge.svg)](https://github.com/10up/retro-winamp-block/actions/workflows/eslint.yml) [![PHPCS](https://github.com/10up/retro-winamp-block/actions/workflows/phpcs.yml/badge.svg)](https://github.com/10up/retro-winamp-block/actions/workflows/phpcs.yml) [![PHP Compatibility](https://github.com/10up/retro-winamp-block/actions/workflows/php-compatibility.yml/badge.svg)](https://github.com/10up/retro-winamp-block/actions/workflows/php-compatibility.yml)
 
 ## Overview
 
@@ -19,7 +19,7 @@ Do you miss the days of filling up your computer's harddrive with MP3 files, bur
 ## Requirements
 
 * PHP >=7.4
-* [WordPress](http://wordpress.org/) >=6.1
+* [WordPress](http://wordpress.org/) >=6.6
 
 ## Installation
 

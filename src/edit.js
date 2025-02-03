@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { concat } from 'lodash';
+import { concat } from 'lodash'; // eslint-disable-line import/no-extraneous-dependencies
 
 /**
  * WordPress dependencies

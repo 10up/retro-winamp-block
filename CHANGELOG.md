@@ -4,7 +4,28 @@ All notable changes to this project will be documented in this file, per [the Ke
 
 ## [Unreleased] - TBD
 
-## [1.3.2] - 2024-06-20
+## [1.3.3] - 2025-02-03
+**Note that this release bumps the minimum required version of WordPress from 6.3 to 6.6.**
+
+### Changed
+- Bump WordPress "tested up to" version 6.7 (props [@sudip-md](https://github.com/sudip-md), [@thrijith](https://github.com/thrijith), [@jeffpaul](https://github.com/jeffpaul), [@dkotter](https://github.com/dkotter) via [#140](https://github.com/10up/retro-winamp-block/pull/140), [#141](https://github.com/10up/retro-winamp-block/pull/141), [#153](https://github.com/10up/retro-winamp-block/pull/153)).
+- Bump WordPress minimum from 6.3 to 6.6 (props [@sudip-md](https://github.com/sudip-md), [@thrijith](https://github.com/thrijith), [@jeffpaul](https://github.com/jeffpaul), [@dkotter](https://github.com/dkotter), [@peterwilsoncc](https://github.com/peterwilsoncc) via [#140](https://github.com/10up/retro-winamp-block/pull/140), [#153](https://github.com/10up/retro-winamp-block/pull/153), [#155](https://github.com/10up/retro-winamp-block/pull/155)).
+
+### Fixed
+- JavaScript errors in block editor (props [@peterwilsoncc](https://github.com/peterwilsoncc), [@Sidsector9](https://github.com/Sidsector9) via [#134](https://github.com/10up/retro-winamp-block/pull/134)).
+- Ensure the WordPress.org plugin preview works as expected (props [@dkotter](https://github.com/dkotter), [@jeffpaul](https://github.com/jeffpaul) via [#143](https://github.com/10up/retro-winamp-block/pull/143), [#144](https://github.com/10up/retro-winamp-block/pull/144)).
+
+### Security
+- Update NPM packages (props [@peterwilsoncc](https://github.com/peterwilsoncc), [@Sidsector9](https://github.com/Sidsector9) via [#134](https://github.com/10up/retro-winamp-block/pull/134)).
+- Bump `axios` from 1.6.7 to 1.7.4 (props [@dependabot](https://github.com/apps/dependabot), [@faisal-alvi](https://github.com/faisal-alvi) via [#146](https://github.com/10up/retro-winamp-block/pull/146)).
+- Bump `webpack` from 5.90.0 to 5.94.0 (props [@dependabot](https://github.com/apps/dependabot), [@faisal-alvi](https://github.com/faisal-alvi) via [#147](https://github.com/10up/retro-winamp-block/pull/147)).
+- Bump `@wordpress/scripts` from 27.9.0 to 30.4.0, `express` from 4.19.2 to 4.21.1, `send` from 0.18.0 to 0.19.0 and `serve-static` from 1.15.0 to 1.16.2 (props [@dependabot](https://github.com/apps/dependabot), [@peterwilsoncc](https://github.com/peterwilsoncc) via [#15](https://github.com/10up/retro-winamp-block/pull/155)).
+
+### Developer
+- Move from `actions/upload-release-asset` to `softprops/action-gh-release` Github action (props [@Sidsector9](https://github.com/Sidsector9), [@jeffpaul](https://github.com/jeffpaul) via [#142](https://github.com/10up/retro-winamp-block/pull/142)).
+- Add WordPress Playground badge and banner image to README and a few other minor tweaks (props [@jeffpaul](https://github.com/jeffpaul), [@dkotter](https://github.com/dkotter) via [#145](https://github.com/10up/retro-winamp-block/pull/145), [#148](https://github.com/10up/retro-winamp-block/pull/148), [#150](https://github.com/10up/retro-winamp-block/pull/150)).
+
+## [1.3.2] - 2024-06-26
 ### Added
 - Support for the WordPress.org plugin preview (props [@dkotter](https://github.com/dkotter), [@jeffpaul](https://github.com/jeffpaul), [@peterwilsoncc](https://github.com/peterwilsoncc), [@ravinderk](https://github.com/ravinderk) via [#116](https://github.com/10up/retro-winamp-block/pull/116), [#118](https://github.com/10up/retro-winamp-block/pull/118)).
 - "Testing" section in the "CONTRIBUTING.md" file (props [@kmgalanakis](https://github.com/kmgalanakis), [@jeffpaul](https://github.com/jeffpaul) via [#132](https://github.com/10up/retro-winamp-block/pull/132)).
@@ -117,6 +138,7 @@ All notable changes to this project will be documented in this file, per [the Ke
 - Initial release of the Winamp Block plugin. 🎉
 
 [Unreleased]: https://github.com/10up/retro-winamp-block/compare/trunk...develop
+[1.3.3]: https://github.com/10up/retro-winamp-block/compare/1.3.2...1.3.3
 [1.3.2]: https://github.com/10up/retro-winamp-block/compare/1.3.1...1.3.2
 [1.3.1]: https://github.com/10up/retro-winamp-block/compare/1.3.0...1.3.1
 [1.3.0]: https://github.com/10up/retro-winamp-block/compare/1.2.0...1.3.0
