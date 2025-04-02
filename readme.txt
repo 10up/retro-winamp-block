@@ -1,7 +1,7 @@
 === Retro Winamp Block ===
 Contributors:      10up, dinhtungdu, fabiankaegy, dkotter, melchoyce, jeffpaul
 Tags:              winamp, mp3, music, player, equalizer
-Tested up to:      6.7
+Tested up to:      6.8
 Stable tag:        1.3.3
 License:           GPLv2 or later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
