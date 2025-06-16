@@ -17,13 +17,7 @@ describe( 'Admin can publish posts with winamp block', () => {
 			title: 'Test Winamp Block',
 			beforeSave: () => {
 				cy.get( 'body' ).then( $body => {
-					if ( $body.find( 'button[aria-label="Toggle block inserter"]' ).length > 0 ) {
-						cy.get( 'button[aria-label="Toggle block inserter"]' ).click();
-						cy.get( '.block-editor-inserter__search input' ).type( 'tenup/winamp-block' );
-						cy.get( '.editor-block-list-item-tenup-winamp-block' ).click();
-					} else {
-						cy.insertBlock( 'tenup/winamp-block' );
-					}
+					cy.insertBlock( 'tenup/winamp-block' );
 				} );
 				// select mp3
 				cy.get('.wp-block-tenup-winamp-block').contains('button', 'Media Library').click();
@@ -40,7 +34,7 @@ describe( 'Admin can publish posts with winamp block', () => {
 			// toggle to 'Manage Media' view
 			cy.get( '.components-tab-button.winamp-show-media').click();
 			// Confirm the audio file is present
-			cy.get('.wp-block-audio audio')				
+			cy.get('.wp-block-audio audio')
 				.should( 'have.attr', 'src' )
 				.and( 'include', 'example' );
 			// toggle to 'Show Preview' view
