@@ -14,7 +14,7 @@
 		},
 		{
 			"step": "installPlugin",
-			"pluginZipFile": {
+			"pluginData": {
 				"resource": "wordpress.org\/plugins",
 				"slug": "retro-winamp-block"
 			},
