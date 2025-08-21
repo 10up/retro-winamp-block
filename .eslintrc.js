@@ -14,5 +14,19 @@ module.exports = {
 		},
 	},
 
+	settings: {
+		'import/resolver': {
+			node: {
+				extensions: [ '.js', '.jsx', '.ts', '.tsx' ],
+				moduleDirectory: [ 'node_modules', 'src' ],
+			},
+		},
+		'import/core-modules': [],
+		'import/ignore': [
+			'node_modules',
+			'\\.(css|scss|sass)$',
+		],
+	},
+
 	ignorePatterns: [ '*.min.js', 'tests/*' ],
 };
