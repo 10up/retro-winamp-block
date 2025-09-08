@@ -82,7 +82,7 @@ export const WebAmp = ( props ) => {
 				webampContainer.style.display = ! preview ? 'none' : 'block';
 			}
 		};
-	}, [ divRef.current ] );
+	}, [ audio, currentSkin, preview ] );
 
 	// Change the skin as it changes
 	useEffect( () => {
@@ -104,7 +104,7 @@ export const WebAmp = ( props ) => {
 				'https://cdn.webampskins.org/skins/5e4f10275dcb1fb211d4a8b4f1bda236.wsz'
 			);
 		}
-	}, [ currentSkin ] );
+	}, [ currentSkin, webamp ] );
 
 	return <div ref={ divRef } />;
 };
