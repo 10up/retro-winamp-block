@@ -33,7 +33,7 @@
     "butterchurn": "^2.6.7",
     "butterchurn-presets": "^2.4.7",
     "classnames": "^2.3.1",
-    "webamp": "^2.1.2"
+    "webamp": "^2.2.0"
   },
   "devDependencies": {
     "@10up/cypress-wp-utils": "^0.6.0",
