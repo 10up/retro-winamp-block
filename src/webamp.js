@@ -6,6 +6,57 @@ import Webamp from 'webamp';
  */
 import milkdropOptions from './milkdrop';
 
+const WINDOW_TRANSFORMS = {
+	0: 'translate( 0px, 0px )',
+	1: 'translate( 0px, 232px )',
+	2: 'translate( 0px, 116px )',
+	3: 'translate( 0px, 348px )',
+};
+
+/**
+ * In WP 7.1 the editor canvas is an iframe. Editor scripts still run in the
+ * admin document, which is also where Webamp injects #webamp and its skin CSS.
+ * Do not move those nodes into the iframe or the skin is lost. Pin #webamp
+ * over the block instead.
+ *
+ * @param {HTMLElement} blockEl Block element in the canvas.
+ */
+function pinWebampToBlock( blockEl ) {
+	const webAmp = document.getElementById( 'webamp' );
+	if ( ! webAmp || ! blockEl ) {
+		return;
+	}
+
+	const canvasWin = blockEl.ownerDocument.defaultView;
+	const iframe = canvasWin ? canvasWin.frameElement : null;
+	const blockRect = blockEl.getBoundingClientRect();
+	const iframeRect = iframe ? iframe.getBoundingClientRect() : { top: 0, left: 0 };
+
+	webAmp.style.position = 'fixed';
+	webAmp.style.top = `${ iframeRect.top + blockRect.top }px`;
+	webAmp.style.left = `${ iframeRect.left + blockRect.left }px`;
+	webAmp.style.right = 'auto';
+	webAmp.style.bottom = 'auto';
+}
+
+function layoutWindows( webAmp ) {
+	const webAmpUI = webAmp.querySelectorAll( ':scope > div > div > div' );
+	if ( webAmpUI.length === 4 ) {
+		webAmpUI.forEach( ( ui, i ) => {
+			ui.style.transform = WINDOW_TRANSFORMS[ i ];
+		} );
+	}
+}
+
+function getScrollTargets( element ) {
+	const targets = [ window ];
+	const canvasWin = element.ownerDocument.defaultView;
+	if ( canvasWin && canvasWin !== window ) {
+		targets.push( canvasWin );
+	}
+	return targets;
+}
+
 export const WebAmp = ( props ) => {
 	const { audio = [], currentSkin = '', preview = true } = props;
 	const divRef = useRef( null );
@@ -13,7 +64,7 @@ export const WebAmp = ( props ) => {
 
 	// Initial player load
 	useEffect( () => {
-		if ( divRef === null ) {
+		if ( ! divRef.current ) {
 			return;
 		}
 
@@ -39,47 +90,40 @@ export const WebAmp = ( props ) => {
 
 		const player = new Webamp( { ...options, ...milkdropOptions } );
 		setWebamp( player );
+
+		const reposition = () => {
+			const blockEl = divRef.current && divRef.current.parentElement;
+			pinWebampToBlock( blockEl );
+		};
+
 		player.renderWhenReady( divRef.current ).then( () => {
 			const webAmp = document.getElementById( 'webamp' );
-
-			// Move the Webamp player markup into the block
-			// so that the block can be interacted with while the player is visible
-			const webampContainer = document.getElementById( 'webamp-container' );
-
-			if ( webampContainer && webAmp ) {
-				webampContainer.appendChild( webAmp );
+			if ( ! webAmp ) {
+				return;
 			}
 
-			// This is a hack to move the UI elements into the correct position. The
-			// Webamp library tries to center the player in the window, but we want it
-			// to be tucked neatly in the block.
-			const webAmpUI = document.querySelectorAll( '#webamp > div > div > div' );
-			const mapping = {
-				0: 'translate( 0px, 0px )',
-				1: 'translate( 0px, 232px )',
-				2: 'translate( 0px, 116px )',
-				3: 'translate( 275px, 0px )',
-			};
+			layoutWindows( webAmp );
+			reposition();
+			webAmp.classList.add( 'is-loaded' );
+		} );
 
-			// make sure all the UI elements are available to manipulate
-			if ( webAmpUI.length === 4 ) {
-				webAmpUI.forEach( ( ui, i ) => {
-					ui.style.transform = mapping[ i ];
-				} );
-			}
-
-			// Add is loaded class after artifical delay to reduce page jank
-			if ( webAmp ) {
-				webAmp.classList.add( 'is-loaded' );
-			}
+		const scrollTargets = getScrollTargets( divRef.current );
+		scrollTargets.forEach( ( target ) => {
+			target.addEventListener( 'scroll', reposition, true );
+			target.addEventListener( 'resize', reposition );
 		} );
 
 		return () => {
+			scrollTargets.forEach( ( target ) => {
+				target.removeEventListener( 'scroll', reposition, true );
+				target.removeEventListener( 'resize', reposition );
+			} );
+
 			// Hide the player instead of destroying it. This allows the player
 			// to persist between previews and playlist modification.
-			const webampContainer = document.getElementById( 'webamp' );
-			if ( webampContainer ) {
-				webampContainer.style.display = ! preview ? 'none' : 'block';
+			const webAmp = document.getElementById( 'webamp' );
+			if ( webAmp ) {
+				webAmp.style.display = ! preview ? 'none' : 'block';
 			}
 		};
 	}, [ audio, currentSkin, preview ] );
