@@ -61,7 +61,7 @@ describe( 'Admin can publish posts with winamp block', () => {
 				cy.getBlockEditor()
 					.find( '.wp-block-tenup-winamp-block' )
 					.should( 'exist' )
-					.contains( 'button', 'Media Library' )
+					.contains( 'button', /Media Library/ )
 					.click();
 
 				// Media modal renders in the admin document.
